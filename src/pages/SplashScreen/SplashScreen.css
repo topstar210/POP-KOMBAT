@@ -1,0 +1,37 @@
+.splash-screen {
+  height: 100vh;
+  background-color: #282c34;
+  background-image: url(/src/assets/imgs/splash-bg.png);
+  background-size: cover;
+  color: white;
+  font-size: 2rem;
+}
+
+.splash-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #00000088;
+}
+
+.splash-bottom {
+  position: absolute;
+  text-align: center;
+  bottom: 100px;
+  font-weight: 400;
+  font-size: 24px;
+
+  text-shadow: 2px 5px 0px #101010;
+}
+
+.splash-bottom>p{
+  width: 300px;
+}
+
+.splash-bottom .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
