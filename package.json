@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://telegram-mini-apps.github.io/reactjs-template",
+  "homepage": "https://topstar210.github.io/POP-KOMBAT",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite",
