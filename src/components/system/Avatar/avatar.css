@@ -5,6 +5,7 @@
   max-width: 170px;
   height: 31px;
   text-shadow: 0px 1px 0px var(--dark, #101010);
+  color: #fff;
 }
 
 .user-avatar img {
