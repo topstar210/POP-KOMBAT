@@ -4,11 +4,11 @@
 :root {
   --dark-gray: #2c323a;
   --pink: #e6007a;
-  --pink-light: #FF8FCA;
+  --pink-light: #ff8fca;
   --black: #101010;
   --white: #fff;
-  --gray: #6E7D91;
-  
+  --gray: #6e7d91;
+
   --font-familyBody: "Outfit", sans-serif;
   --font-familyHeading: "Luckiest Guy", cursive;
   --font-sizexs: 11px;
@@ -50,4 +50,32 @@ select {
   font-family: "Luckiest Guy", cursive;
   font-weight: 11;
   font-style: normal;
+}
+
+.display-section {
+  background: linear-gradient(43.45deg, #691896 0%, #2e90fa 99.17%);
+  border-radius: 36px 36px 0px 0px;
+  border-top: 4px solid var(--pink, #e6007a);
+  margin-top: 32px;
+  overflow: hidden;
+  padding: 0px !important;
+}
+.display-section-cover {
+  min-height: 588px;
+  padding: 16px 16px 60px 16px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.display-section-cover:before {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background: url(/src/assets/imgs/bg-img-1.png);
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
 }

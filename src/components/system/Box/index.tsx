@@ -3,12 +3,13 @@ import { ReactNode } from "react";
 
 interface BoxProps {
   children: ReactNode;
-  style?: {}
-} 
+  className?: string;
+  style?: {};
+}
 
-const Box = ({ children, style, ...props }: BoxProps) => {
+const Box = ({ children, className = "", style, ...props }: BoxProps) => {
   return (
-    <div className="main-section" style={style} {...props}>
+    <div className={`main-section ${className}`} style={style} {...props}>
       {children}
     </div>
   );

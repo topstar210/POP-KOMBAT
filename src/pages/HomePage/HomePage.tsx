@@ -1,3 +1,5 @@
+import "./HomePage.css";
+
 import { Box, Avatar, Ranking, ProfitBox } from "@/components/system";
 
 const HomePage = () => {
@@ -13,8 +15,11 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <Ranking style={{width:'105px'}} />
+        <Ranking style={{ width: "105px" }} />
         <ProfitBox />
+      </Box>
+      <Box className="display-section">
+        <div className="display-section-cover">hey hey</div>
       </Box>
     </div>
   );
