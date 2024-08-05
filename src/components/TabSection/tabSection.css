@@ -1,0 +1,42 @@
+.app-tabsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+}
+.app-tab-pan {
+  width: 343px;
+  height: 343px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 2px 5px 0px 0px #101010;
+}
+.app-tab-pan-in {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  box-shadow: 0px 0px 7.6px 7px #10101066 inset;
+  background: var(--blue, #2e90fa);
+  border: 7px solid;
+  overflow: hidden;
+  border-image-source: linear-gradient(43.45deg, #2e90fa 0%, #aad2fd 99.17%);
+}
+
+.app-tab-pan-in:before {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background: url(/src/assets/imgs/bg-img.png);
+  opacity: 0.4;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  border-radius: 50%;
+  overflow: hidden;
+}
