@@ -5,7 +5,9 @@ import Tabbar from "@/layout/Tabbar/Tabbar";
 const MainLayout = () => {
   return (
     <div>
-      <Outlet />
+      <main style={{ paddingBottom: "75px" }}>
+        <Outlet />
+      </main>
       <Tabbar />
     </div>
   );
