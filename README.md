@@ -1,11 +1,11 @@
-# POP KOMBAT Telegram Mini Apps 
+# POP KOMBAT
 
-● Gameplay Tap/Scratch Mechanics
-● Upgrade System
-● Mission System 
-● Friends System 
-● Airdrop/wallet connect
-● External APIs/wallets/signups
+● Gameplay Tap/Scratch Mechanics <br />
+● Upgrade System <br />
+● Mission System  <br />
+● Friends System  <br />
+● Airdrop/wallet connect <br />
+● External APIs/wallets/signups <br />
 
 ## Install Dependencies
 
