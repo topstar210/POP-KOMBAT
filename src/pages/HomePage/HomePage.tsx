@@ -1,6 +1,5 @@
-import "./HomePage.css";
-
 import { Box, Avatar, Ranking, ProfitBox } from "@/components/system";
+import CountCounter from "@/components/CoinCounter";
 
 const HomePage = () => {
   return (
@@ -19,7 +18,9 @@ const HomePage = () => {
         <ProfitBox />
       </Box>
       <Box className="display-section">
-        <div className="display-section-cover">hey hey</div>
+        <div className="display-section-cover">
+          <CountCounter value={538507456} />
+        </div>
       </Box>
     </div>
   );
