@@ -28,7 +28,7 @@ const TabSection = ({ ...props }: TabSectionProps) => {
   return (
     <div className="app-tabsection" {...props}>
       <div style={{ position: "relative" }}>
-        <div className="app-tab-pan" onClick={handleTabClick} onTouchEnd={handleTabClick}>
+        <div className="app-tab-pan" onClick={handleTabClick}>
           <div className="app-tab-pan-in">
             <img src={heroCharacter} alt="" />
           </div>
