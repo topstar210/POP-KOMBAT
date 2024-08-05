@@ -1,5 +1,9 @@
 import { Box, Avatar, Ranking, ProfitBox } from "@/components/system";
 import CountCounter from "@/components/CoinCounter";
+import InfoBox from "@/components/InfoBox";
+
+import energyIcon from "@/assets/icons/energyIcon.png"
+import boostIcon from "@/assets/icons/boost.png"
 
 const HomePage = () => {
   return (
@@ -20,6 +24,16 @@ const HomePage = () => {
       <Box className="display-section">
         <div className="display-section-cover">
           <CountCounter value={538507456} />
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <InfoBox value={`6500 / 6500`} img={energyIcon} /> 
+            <InfoBox value={`Boost`} img={boostIcon} /> 
+          </Box>
         </div>
       </Box>
     </div>
