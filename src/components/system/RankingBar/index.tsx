@@ -1,10 +1,12 @@
 import "./rankingBar.css";
 import ProgressBar from "../ProgressBar";
 
-interface RankingProps {}
-const Ranking = ({ ...props }: RankingProps) => {
+interface RankingProps {
+  style: {};
+}
+const Ranking = ({ style, ...props }: RankingProps) => {
   return (
-    <div className="system-ranking" {...props}>
+    <div className="system-ranking" style={style} {...props}>
       <div className="system-rank-display">
         <div>Legendary &gt;</div>
         <div>

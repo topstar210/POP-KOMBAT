@@ -13,7 +13,7 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <Ranking />
+        <Ranking style={{width:'105px'}} />
         <ProfitBox />
       </Box>
     </div>
