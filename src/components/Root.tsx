@@ -1,4 +1,4 @@
-import { SDKProvider, useLaunchParams, initBackButton } from "@telegram-apps/sdk-react";
+import { SDKProvider, useLaunchParams } from "@telegram-apps/sdk-react";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { type FC, useEffect, useMemo, useState } from "react";
 
@@ -22,10 +22,6 @@ const ErrorBoundaryError: FC<{ error: unknown }> = ({ error }) => (
 );
 
 const Inner: FC = () => {
-  // showing the back button
-  const [backButton] = initBackButton();
-  backButton.show();
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
