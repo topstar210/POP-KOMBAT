@@ -1,10 +1,12 @@
 .app-tabsection {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 32px 0;
 }
 .app-tab-pan {
+  position: relative;
   width: 343px;
   height: 343px;
   border-radius: 50%;
@@ -39,4 +41,25 @@
   height: calc(100% - 14px);
   border-radius: 50%;
   overflow: hidden;
+}
+
+@keyframes riseAndDisappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.plus-one {
+  position: absolute;
+  z-index: 9;
+  color: white;
+  font-size: var(--font-sizexl);
+  font-family: var(--font-familyHeading);
+  animation: riseAndDisappear 1.2s forwards;
+  pointer-events: none;
 }
