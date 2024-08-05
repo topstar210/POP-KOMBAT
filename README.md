@@ -9,7 +9,7 @@
 
 ## Install Dependencies
 
-If you have just cloned this template, you should install the project dependencies using the
+If you have just cloned this, you should install the project dependencies using the
 command:
 
 ```Bash
