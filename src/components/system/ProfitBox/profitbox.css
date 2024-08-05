@@ -1,0 +1,46 @@
+.system-profit-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 163px;
+  height: 38px;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 1px 0px 0px var(--black, #101010);
+  background: var(--white, #ffffff);
+  color: var(--black);
+}
+
+.system-profit-detail {
+  text-align: center;
+}
+
+.system-profit-box button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.system-profit-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 13.3px;
+  font-weight: 700;
+}
+
+.system-profit-setting-divider {
+  border: 0.5px solid var(--gray, #6e7d91);
+  height: 22px;
+  width: 0;
+  gap: 0px;
+  position: absolute;
+}
+
+.system-profit-setting-btn {
+  padding-left: 7px;
+}

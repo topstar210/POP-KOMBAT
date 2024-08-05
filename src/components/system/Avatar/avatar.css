@@ -1,0 +1,15 @@
+.user-avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 170px;
+  height: 31px;
+  text-shadow: 0px 1px 0px var(--dark, #101010);
+}
+
+.user-avatar img {
+  height: 100%;
+  border: 0.5px solid var(--black, #101010);
+  border-radius: 2px;
+  box-shadow: 0px 1px 0px 0px var(--black, #101010);
+}

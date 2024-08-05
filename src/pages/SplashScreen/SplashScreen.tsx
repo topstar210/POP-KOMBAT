@@ -7,9 +7,9 @@ import discord from "@/assets/icons/discord.svg";
 
 const SplashScreen = () => {
   return (
-    <div className="splash-screen">
+    <div className="splash-screen luckiest">
       <div className="splash-cover">
-        <img src={logo} alt="logo" style={{ marginTop: -100 }} />
+        <img src={logo} alt="logo" style={{ marginTop: -200 }} />
 
         <div className="splash-bottom">
           <p>

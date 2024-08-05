@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Outfit:wght@100..900&display=swap");
 
 :root {
   --dark-gray: #2c323a;
   --pink: #e6007a;
+  --pink-light: #FF8FCA;
+  --black: #101010;
+  --white: #fff;
+  --gray: #6E7D91;
+  
+  --font-familyBody: "Outfit", sans-serif;
+  --font-familyHeading: "Luckiest Guy", cursive;
+  --font-sizexs: 11px;
+  --line-heighthxs: 12px;
 }
 
 body {
@@ -11,6 +21,9 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  /* font-weight: 11.1; */
 }
 
 a,
@@ -22,7 +35,19 @@ input,
 div,
 section,
 select {
-  font-family: "Luckiest Guy", cursive;
+  font-optical-sizing: auto;
   font-style: normal;
-  color: #fff;
+}
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 11;
+  font-style: normal;
+}
+
+.luckiest {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 11;
+  font-style: normal;
 }
