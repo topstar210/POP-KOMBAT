@@ -29,7 +29,7 @@ const TabSection = ({ ...props }: TabSectionProps) => {
     // Reset the animation
     setTimeout(() => {
       appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
-    }, 300);
+    }, 150);
 
     plusOne.addEventListener("animationend", () => {
       plusOne.remove();
