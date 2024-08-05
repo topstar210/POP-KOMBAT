@@ -20,6 +20,17 @@ const TabSection = ({ ...props }: TabSectionProps) => {
     const grandparent = parent.parentElement;
     grandparent.appendChild(plusOne);
 
+    // Animate the .app-tab-pan
+    const appTabPan = parent;
+    const rotateX = ((y - rect.height / 2) / rect.height) * 20; // Adjust the factor to control the rotation
+    const rotateY = ((x - rect.width / 2) / rect.width) * -20; // Adjust the factor to control the rotation
+    appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+    // Reset the animation
+    setTimeout(() => {
+      appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
+    }, 300);
+
     plusOne.addEventListener("animationend", () => {
       plusOne.remove();
     });

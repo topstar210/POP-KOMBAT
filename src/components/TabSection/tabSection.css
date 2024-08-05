@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 32px 0;
+  perspective: 1000px; /* Add perspective for 3D effect */
 }
 .app-tab-pan {
   position: relative;
@@ -12,6 +13,8 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 2px 5px 0px 0px #101010;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d; /* Ensure child elements are transformed in 3D space */
 }
 .app-tab-pan-in {
   position: relative;
