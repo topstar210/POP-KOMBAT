@@ -6,4 +6,5 @@
   font-size: var(--font-size4xl);
   font-family: var(--font-familyHeading);
   text-shadow: 1px 2px 0px #101010;
+  color: #fff;
 }
