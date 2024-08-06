@@ -32,19 +32,19 @@ const tabmenu: Tabmune[] = [
     id: "friends",
     title: "Friends",
     icon: friendsIcon,
-    route: '/home'
+    route: '/friends'
   },
   {
     id: "earn",
     title: "Earn",
     icon: earnIcon,
-    route: '/home'
+    route: '/earn'
   },
   {
     id: "airdrop",
     title: "Airdrop",
     icon: airdropIcon,
-    route: '/launch-params'
+    route: '/airdrop'
   },
 ];
 

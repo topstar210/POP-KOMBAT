@@ -8,6 +8,10 @@ import { useMemo } from "react";
 import Layout from "@/layout/MainLayout";
 import HomePage from "@/pages/HomePage/HomePage";
 import MinePage from "@/pages/MinePage/MinePage";
+import FriendsPage from "@/pages/FriendsPage/FriendsPage";
+import EarnPage from "@/pages/EarnPage/EarnPage";
+import AirdropPage from "@/pages/AirdropPage/AirdropPage";
+
 // import { IndexPage } from "@/pages/IndexPage/IndexPage";
 import { InitDataPage } from "@/pages/InitDataPage/InitDataPage";
 import { LaunchParamsPage } from "@/pages/LaunchParamsPage/LaunchParamsPage";
@@ -33,6 +37,10 @@ const AppRouter = () => {
           <Route index element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/mine" element={<MinePage />} />
+          <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/earn" element={<EarnPage />} />
+          <Route path="/airdrop" element={<AirdropPage />} />
+          
           <Route path="/init-data" element={<InitDataPage />} />
           <Route path="/launch-params" element={<LaunchParamsPage />} />
           <Route path="/ton-connect" element={<TONConnectPage />} />
