@@ -4,10 +4,12 @@ import settingIcon from "@/assets/icons/settings.png";
 import tokenIcon from "@/assets/icons/token.png";
 import warningIcon from "@/assets/icons/warning-circle.svg";
 
-interface ProfitBoxProps {}
-const ProfitBox = ({ ...props }: ProfitBoxProps) => {
+interface ProfitBoxProps {
+  className?: string;
+}
+const ProfitBox = ({ className, ...props }: ProfitBoxProps) => {
   return (
-    <div className="system-profit-box" {...props}>
+    <div className={`system-profit-box ${className}`} {...props}>
       <div className="system-profit-detail">
         <div>Profit per hour</div>
         <div className="system-profit-status">

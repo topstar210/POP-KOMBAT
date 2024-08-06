@@ -2,11 +2,12 @@ import "./rankingBar.css";
 import ProgressBar from "../ProgressBar";
 
 interface RankingProps {
+  className?: string;
   style: {};
 }
-const Ranking = ({ style, ...props }: RankingProps) => {
+const Ranking = ({ style, className, ...props }: RankingProps) => {
   return (
-    <div className="system-ranking" style={style} {...props}>
+    <div className={`system-ranking ${className}`} style={style} {...props}>
       <div className="system-rank-display">
         <div>Legendary &gt;</div>
         <div>

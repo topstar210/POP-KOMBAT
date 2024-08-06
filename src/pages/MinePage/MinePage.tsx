@@ -14,13 +14,13 @@ const MinePage = () => {
           alignItems: "center",
         }}
       >
-        <Ranking style={{ width: "105px" }} />
-        <ProfitBox />
+        <Ranking className="fade-right" style={{ width: "105px" }} />
+        <ProfitBox className="fade-left" />
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
-          <CountCounter value={538507456} />
-          <TabSection />
+          <CountCounter className="fade-in" value={538507456} />
+          <TabSection className="zoom-in" />
           <Box
             style={{
               display: "flex",
@@ -28,8 +28,12 @@ const MinePage = () => {
               alignItems: "center",
             }}
           >
-            <InfoBox value={`6500 / 6500`} img={energyIcon} />
-            <InfoBox value={`Boost`} img={boostIcon} />
+            <InfoBox
+              className="fade-right"
+              value={`6500 / 6500`}
+              img={energyIcon}
+            />
+            <InfoBox className="fade-left" value={`Boost`} img={boostIcon} />
           </Box>
         </div>
       </Box>

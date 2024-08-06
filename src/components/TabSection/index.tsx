@@ -2,9 +2,11 @@ import "./tabSection.css";
 
 import heroCharacter from "@/assets/imgs/heroCharacter.png";
 
-interface TabSectionProps {}
+interface TabSectionProps {
+  className?: string;
+}
 
-const TabSection = ({ ...props }: TabSectionProps) => {
+const TabSection = ({ className, ...props }: TabSectionProps) => {
   const handleTabClick = (e: any) => {
     const parent = e.currentTarget;
     const rect = parent.getBoundingClientRect();
@@ -37,7 +39,7 @@ const TabSection = ({ ...props }: TabSectionProps) => {
   };
 
   return (
-    <div className="app-tabsection" {...props}>
+    <div className={`app-tabsection ${className}`} {...props}>
       <div style={{ position: "relative" }}>
         <div className="app-tab-pan" onClick={handleTabClick}>
           <div className="app-tab-pan-in">
