@@ -7,6 +7,7 @@ import { useMemo } from "react";
 // import { routes } from '@/navigation/routes.tsx';
 import Layout from "@/layout/MainLayout";
 import HomePage from "@/pages/HomePage/HomePage";
+import MinePage from "@/pages/MinePage/MinePage";
 // import { IndexPage } from "@/pages/IndexPage/IndexPage";
 import { InitDataPage } from "@/pages/InitDataPage/InitDataPage";
 import { LaunchParamsPage } from "@/pages/LaunchParamsPage/LaunchParamsPage";
@@ -31,6 +32,7 @@ const AppRouter = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/mine" element={<MinePage />} />
           <Route path="/init-data" element={<InitDataPage />} />
           <Route path="/launch-params" element={<LaunchParamsPage />} />
           <Route path="/ton-connect" element={<TONConnectPage />} />

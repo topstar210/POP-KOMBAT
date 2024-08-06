@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Tabbar.css";
+import { useNavigate } from "react-router-dom";
 
 import exchangeIcon from "@/assets/icons/exchange.png";
 import mineIcon from "@/assets/icons/mine.png";
@@ -11,6 +12,7 @@ interface Tabmune {
   id: string;
   title: string;
   icon: string;
+  route: string;
 }
 
 const tabmenu: Tabmune[] = [
@@ -18,34 +20,41 @@ const tabmenu: Tabmune[] = [
     id: "exchange",
     title: "Exchange",
     icon: exchangeIcon,
+    route: '/home'
   },
   {
     id: "mine",
     title: "Mine",
     icon: mineIcon,
+    route: '/mine'
   },
   {
     id: "friends",
     title: "Friends",
     icon: friendsIcon,
+    route: '/home'
   },
   {
     id: "earn",
     title: "Earn",
     icon: earnIcon,
+    route: '/home'
   },
   {
     id: "airdrop",
     title: "Airdrop",
     icon: airdropIcon,
+    route: '/launch-params'
   },
 ];
 
 const Tabbar = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("exchange");
 
-  const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId);
+  const handleTabClick = (tab: Tabmune) => {
+    navigate(tab.route);
+    setActiveTab(tab.id);
   };
 
   return (
@@ -55,7 +64,7 @@ const Tabbar = () => {
           <button
             key={i}
             className={`${tab.id === activeTab && "active"}`}
-            onClick={() => handleTabClick(tab.id)}
+            onClick={() => handleTabClick(tab)}
           >
             {tab.id === activeTab && <img src={tab.icon} alt={tab.id} />}
             <div>{tab.title}</div>
