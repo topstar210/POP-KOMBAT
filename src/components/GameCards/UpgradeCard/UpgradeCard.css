@@ -9,6 +9,7 @@
   border-radius: 8px;
   border: 1px solid var(--black, #101010);
   box-shadow: 0px 1px 0px 0px var(--black, #101010);
+  margin-bottom: 8px;
 }
 
 .app-upgcard-body {
