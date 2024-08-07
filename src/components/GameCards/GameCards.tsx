@@ -57,15 +57,16 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
         handleClickTab={handleClickTabItem}
       >
         <div className="card-group">
-          {mineData[activeTab].map((data: UpgradeCardIFC) => (
-            <UpgradeCard
-              name={data.name}
-              img_link={data.img_link}
-              profit_per_hour={data.profit_per_hour}
-              level={data.level}
-              total={data.total}
-            />
-          ))}
+          {mineData[activeTab] &&
+            mineData[activeTab].map((data: UpgradeCardIFC) => (
+              <UpgradeCard
+                name={data.name}
+                img_link={data.img_link}
+                profit_per_hour={data.profit_per_hour}
+                level={data.level}
+                total={data.total}
+              />
+            ))}
         </div>
       </Tap>
     </div>
