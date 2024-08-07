@@ -25,7 +25,7 @@ const MyCard = ({
         <div className="app-mycard-profit-perhour">
           <div className="font-xs">Profit per hour</div>
           <div className="app-upgcard-row">
-            <img src={tokenIcon} alt="" width={10} />
+            <img src={tokenIcon} alt="" width={14} height={14} />
             <span className="font-xs">{profit_per_hour}</span>
           </div>
         </div>
@@ -35,7 +35,7 @@ const MyCard = ({
         <span>lvl 15</span>
         <div className="vertical-divider"></div>
         <div className="app-upgcard-row">
-          <img src={tokenIcon} alt="" width={12} />
+          <img src={tokenIcon} alt="" width={16} height={16} />
           <span>{total}</span>
         </div>
       </div>

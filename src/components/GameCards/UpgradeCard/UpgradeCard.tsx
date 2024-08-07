@@ -28,7 +28,7 @@ const UpgradeCard = ({
           <div className="upgcard-profit-perhour">
             <div className="font-xs">Profit per hour</div>
             <div className="app-upgcard-row">
-              <img src={img_link || tokenIcon} alt="" width={10} />
+              <img src={img_link || tokenIcon} alt="" width={14} />
               <span className="font-xs">{profit_per_hour}</span>
             </div>
           </div>
