@@ -1,9 +1,6 @@
+import { ReactNode, createContext, useContext, useMemo } from "react";
 import {
-  ReactNode,
-  createContext,
-  useContext,
-} from "react";
-import {
+  initNavigator,
   useInitData,
   useLaunchParams,
   type InitDataParsed,
@@ -12,6 +9,7 @@ import { Placeholder } from "@telegram-apps/telegram-ui";
 
 interface AppContextType {
   initData: InitDataParsed;
+  navigator: any;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -19,6 +17,10 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const initDataRaw = useLaunchParams().initDataRaw;
   const initData = useInitData();
+
+  // Create a new application navigator and attach it to the browser history, so it could modify
+  // it and listen to its changes.
+  const navigator = useMemo(() => initNavigator("app-navigation-state"), []);
 
   if (!initData || !initDataRaw) {
     return (
@@ -35,7 +37,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
   }
   return (
-    <AppContext.Provider value={{ initData }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ initData, navigator }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

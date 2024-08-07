@@ -1,8 +1,7 @@
 import { useIntegration } from "@telegram-apps/react-router-integration";
-import { initNavigator } from "@telegram-apps/sdk-react";
 import { Navigate, Route, Router, Routes } from "react-router-dom";
 
-import { useMemo } from "react";
+import { useApp } from "@/providers/useApp";
 
 // import { routes } from '@/navigation/routes.tsx';
 import Layout from "@/layout/MainLayout";
@@ -18,9 +17,7 @@ import { LaunchParamsPage } from "@/pages/LaunchParamsPage/LaunchParamsPage";
 import { TONConnectPage } from "@/pages/TONConnectPage/TONConnectPage";
 
 const AppRouter = () => {
-  // Create a new application navigator and attach it to the browser history, so it could modify
-  // it and listen to its changes.
-  const navigator = useMemo(() => initNavigator("app-navigation-state"), []);
+  const { navigator } = useApp();
   const [location, reactNavigator] = useIntegration(navigator);
 
   // // Don't forget to attach the navigator to allow it to control the BackButton state as well
@@ -40,7 +37,7 @@ const AppRouter = () => {
           <Route path="/friends" element={<FriendsPage />} />
           <Route path="/earn" element={<EarnPage />} />
           <Route path="/airdrop" element={<AirdropPage />} />
-          
+
           <Route path="/init-data" element={<InitDataPage />} />
           <Route path="/launch-params" element={<LaunchParamsPage />} />
           <Route path="/ton-connect" element={<TONConnectPage />} />

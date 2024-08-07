@@ -1,6 +1,8 @@
-import { useState } from "react";
 import "./Tabbar.css";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useIntegration } from "@telegram-apps/react-router-integration";
+import { useApp } from "@/providers/useApp";
 
 import exchangeIcon from "@/assets/icons/exchange.png";
 import mineIcon from "@/assets/icons/mine.png";
@@ -20,37 +22,46 @@ const tabmenu: Tabmune[] = [
     id: "exchange",
     title: "Exchange",
     icon: exchangeIcon,
-    route: '/home'
+    route: "/home",
   },
   {
     id: "mine",
     title: "Mine",
     icon: mineIcon,
-    route: '/mine'
+    route: "/mine",
   },
   {
     id: "friends",
     title: "Friends",
     icon: friendsIcon,
-    route: '/friends'
+    route: "/friends",
   },
   {
     id: "earn",
     title: "Earn",
     icon: earnIcon,
-    route: '/earn'
+    route: "/earn",
   },
   {
     id: "airdrop",
     title: "Airdrop",
     icon: airdropIcon,
-    route: '/airdrop'
+    route: "/airdrop",
   },
 ];
 
 const Tabbar = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("exchange");
+
+  const { navigator } = useApp();
+  const [location] = useIntegration(navigator);
+
+  useEffect(() => {
+    tabmenu.map((tab) => {
+      location.pathname.includes(tab.id) && setActiveTab(tab.id);
+    });
+  }, [location]);
 
   const handleTabClick = (tab: Tabmune) => {
     navigate(tab.route);
