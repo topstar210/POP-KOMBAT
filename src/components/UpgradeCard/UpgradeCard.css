@@ -20,7 +20,7 @@
 .upgcard-title {
   font-weight: 700;
   padding-bottom: 14px;
-  font-size: 14px;
+  font-size: var(--font-sizexs);
 }
 
 .app-upgcard-row {

@@ -21,9 +21,7 @@ const MinePage = () => {
         <div className="display-section-cover">
           <CountCounter className="fade-in" value={538507456} />
 
-          <Box>
-            <GameCards />
-          </Box>
+          <GameCards />
 
           <TabSection className="zoom-in" />
           <Box
