@@ -1,5 +1,6 @@
 import "./MyCard.css";
 import { type MyCardIFC } from "@/types/Cards";
+import { formatToFixed } from "@/utilities/number";
 
 import tokenIcon from "@/assets/icons/token.png";
 
@@ -26,7 +27,7 @@ const MyCard = ({
           <div className="font-xs">Profit per hour</div>
           <div className="app-upgcard-row">
             <img src={tokenIcon} alt="" width={14} height={14} />
-            <span className="font-xs">{profit_per_hour}</span>
+            <span className="font-xs">{formatToFixed(profit_per_hour)}</span>
           </div>
         </div>
       </div>
@@ -36,7 +37,7 @@ const MyCard = ({
         <div className="vertical-divider"></div>
         <div className="app-upgcard-row">
           <img src={tokenIcon} alt="" width={16} height={16} />
-          <span>{total}</span>
+          <span>{formatToFixed(total)}</span>
         </div>
       </div>
     </div>
