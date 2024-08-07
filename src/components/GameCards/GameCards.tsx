@@ -3,20 +3,15 @@ import "./GameCards.css";
 import { useState } from "react";
 import { Tap } from "@/components/system";
 import { type Tab as TabInterface } from "@/components/system/Tab";
-import UpgradeCard from "../UpgradeCard/UpgradeCard";
+import { type UpgradeCardIFC } from "@/types/Cards";
+
+import UpgradeCard from "./UpgradeCard/UpgradeCard";
+import SpecialList from "./SpecialList";
 
 import { mineData } from "@/data/mine";
 
 interface GameCardsProps {
   className?: string;
-}
-
-export interface UpgradeCardIFC {
-  name: string;
-  level: number;
-  img_link: string;
-  profit_per_hour: number;
-  total: number;
 }
 
 const categories: TabInterface[] = [
@@ -56,9 +51,9 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
         active={activeTab}
         handleClickTab={handleClickTabItem}
       >
-        <div className="card-group">
-          {mineData[activeTab] &&
-            mineData[activeTab].map((data: UpgradeCardIFC) => (
+        {mineData[activeTab] && (
+          <div className="card-group">
+            {mineData[activeTab].map((data: UpgradeCardIFC) => (
               <UpgradeCard
                 name={data.name}
                 img_link={data.img_link}
@@ -67,7 +62,10 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
                 total={data.total}
               />
             ))}
-        </div>
+          </div>
+        )}
+
+        {activeTab === "special" && <SpecialList />}
       </Tap>
     </div>
   );

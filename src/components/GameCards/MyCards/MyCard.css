@@ -1,0 +1,60 @@
+.app-mycard {
+  background: linear-gradient(43.45deg, #691896 0%, #ca8ded 99.17%);
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 1px 0px 0px var(--black, #101010);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  padding-bottom: 21px;
+}
+
+.app-mycard-card-body {
+  padding: 24px 0px 8px 0px;
+  gap: 9px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-mycard-img {
+  width: 65%;
+  aspect-ratio: 1.38;
+  margin: 0 auto;
+  border: 0.5px solid var(--black, #101010);
+  box-shadow: 1px 2px 0px 0px var(--black, #101010);
+}
+
+.app-mycard-title {
+  font-size: var(--font-sizexs);
+  font-weight: 800;
+}
+
+.app-mycard-discription {
+  font-size: var(--font-sizexxs);
+  color: var(--gray-light);
+}
+
+.app-mycard-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--font-sizesm);
+}
+
+.app-mycard-profit-perhour {
+  color: var(--gray-light);
+  font-size: var(--font-sizexxs);
+  display: flex;
+  justify-content: center;
+}
+
+.app-mycard-profit-perhour span {
+  color: #fff;
+  font-size: var(--font-sizexs);
+}
+
+.app-mycard-card-footer span {
+  font-weight: 800;
+}

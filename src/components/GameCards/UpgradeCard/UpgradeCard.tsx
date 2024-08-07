@@ -1,5 +1,5 @@
 import "./UpgradeCard.css";
-import { type UpgradeCardIFC } from "../GameCards/GameCards";
+import { type UpgradeCardIFC } from "@/types/Cards";
 
 import defaultImg from "@/assets/imgs/mission-image.png";
 import tokenIcon from "@/assets/icons/token.png";

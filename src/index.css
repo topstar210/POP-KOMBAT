@@ -11,11 +11,14 @@
   --gray: #6e7d91;
   --blue: #2e90fa;
   --gray-dark: #2c323a;
+  --gray-light: #e2e5e9;
+  --teal: #00f0b5;
 
   --font-familyBody: "Outfit", sans-serif;
   --font-familyHeading: "Luckiest Guy", cursive;
   --font-sizexxs: 9.25px;
   --font-sizexs: 11px;
+  --font-sizesm: 13.3px;
   --font-sizexl: 24px;
   --font-size4xl: 40px;
   --line-heighthxs: 12px;

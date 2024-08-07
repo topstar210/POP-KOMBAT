@@ -3,3 +3,22 @@
   gap: 8px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+.app-special-cardtab {
+  display: flex;
+  gap: 10px;
+  font-weight: 800;
+  margin-bottom: 17px;
+}
+
+.app-special-cardtab button {
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-size: var(--font-sizexs);
+}
+
+.app-special-cardtab button.active {
+  color: var(--teal);
+  text-decoration: underline;
+}
