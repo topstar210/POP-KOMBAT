@@ -11,6 +11,7 @@
   box-shadow: 0px 1px 0px 0px var(--black, #101010);
   background: var(--white, #ffffff);
   color: var(--black);
+  position: relative;
 }
 
 .system-profit-detail {
