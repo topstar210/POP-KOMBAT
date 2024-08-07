@@ -10,9 +10,11 @@
   --white: #fff;
   --gray: #6e7d91;
   --blue: #2e90fa;
+  --gray-dark: #2c323a;
 
   --font-familyBody: "Outfit", sans-serif;
   --font-familyHeading: "Luckiest Guy", cursive;
+  --font-sizexxs: 9.25px;
   --font-sizexs: 11px;
   --font-sizexl: 24px;
   --font-size4xl: 40px;
@@ -61,6 +63,16 @@ select {
   font-family: "Luckiest Guy", cursive;
   font-weight: 11;
   font-style: normal;
+}
+
+.font-xs {
+  font-size: var(--font-sizexs);
+}
+.font-xl {
+  font-size: var(--font-sizexl);
+}
+.font-4xl {
+  font-size: var(--font-size4xl);
 }
 
 .main-page {

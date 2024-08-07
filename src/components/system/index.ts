@@ -3,6 +3,7 @@ import Ranking from "./RankingBar";
 import Box from "./Box";
 import ProgressBar from "./ProgressBar";
 import ProfitBox from "./ProfitBox";
+import Tap from "./Tab";
 
 export {
   Box,
@@ -10,4 +11,5 @@ export {
   Ranking,
   ProgressBar,
   ProfitBox,
+  Tap
 }
