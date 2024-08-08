@@ -4,12 +4,6 @@ import Box from "./Box";
 import ProgressBar from "./ProgressBar";
 import ProfitBox from "./ProfitBox";
 import Tap from "./Tab";
+import Item from "./ListItem";
 
-export {
-  Box,
-  Avatar,
-  Ranking,
-  ProgressBar,
-  ProfitBox,
-  Tap
-}
+export { Box, Avatar, Ranking, ProgressBar, ProfitBox, Tap, Item };

@@ -1,0 +1,68 @@
+/* for InviteItem */
+.fp-status-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+  color: #fff;
+}
+
+.fp-status-data div {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.fp-status-data h1 {
+  font-size: var(--font-sizebase);
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.fp-status-data span {
+  color: var(--yellow-light);
+  font-weight: 700;
+}
+
+/*  for InfoItem */
+.fp-friend-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fp-friend-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fp-friend-coin {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  font-weight: 400;
+  font-size: var(--font-sizexs);
+}
+
+.fp-friend-name {
+  font-size: var(--font-sizesm);
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.fp-friend-level {
+  font-size: var(--font-sizexs);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fp-friend-level > .coin {
+  font-weight: 400;
+}

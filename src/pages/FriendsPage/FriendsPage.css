@@ -1,0 +1,89 @@
+.fp-header {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  gap: 10;
+  color: #fff;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.fp-title {
+  font-size: var(--font-size3xl);
+  font-family: var(--font-familyHeading);
+}
+
+.fp-subtitle {
+  font-size: var(--font-sizelg);
+  font-family: var(--font-familyBody);
+  font-weight: 300;
+}
+
+.fp-status-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.fp-yourfriends > h2,
+.fp-levelbonus > h2 {
+  font-size: var(--font-sizelg);
+  font-family: var(--font-familyHeading);
+  font-weight: 400;
+}
+
+.fp-bounse-levels {
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--gray-dark, #2c323a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 1px 2px 0px 0px #101010;
+}
+.fp-bounseinfo-table {
+  width: 100%;
+}
+.fp-bounseinfo-table thead {
+  text-align: left;
+}
+.fp-bounseinfo-table tbody td,
+.fp-bounseinfo-table thead th {
+  font-size: var(--font-sizexs);
+}
+.fp-bounseinfo-table tbody td {
+  border-bottom: 0.5px solid var(--gray, #6e7d91);
+  padding: 4px 0;
+}
+.fp-bounseinfo-table tbody td div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fp-bounseinfo-table tbody td div span.coin {
+  color: var(--yellow-light);
+  font-weight: 400;
+}
+
+.fp-invitebtn-section {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px
+}
+
+.fp-invitebtn-section button {
+  background: var(--blue, #2e90fa);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 1px 2px 0px 0px #101010;
+  border-radius: 8px;
+}
+
+.fp-invitebtn-section button.invite {
+  font-family: var(--font-familyHeading);
+  padding: 16px 32px;
+  color: #fff;
+  flex: 1;
+}
+.fp-invitebtn-section button.copy {
+  padding: 8px;
+}

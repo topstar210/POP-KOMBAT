@@ -1,0 +1,7 @@
+.system-listitem {
+  box-shadow: 1px 2px 0px 0px #101010;
+  border: 1px solid var(--black, #101010);
+  background: var(--gray-dark, #2c323a);
+  border-radius: 8px;
+  padding: 8px;
+}
