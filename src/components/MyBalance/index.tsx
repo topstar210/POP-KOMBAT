@@ -12,7 +12,7 @@ const MyBalance = ({ value, className, ...props }: MyBalanceProps) => {
 
   return (
     <div className={`coin-counter ${className}`} {...props}>
-      <img src={coinImg} alt="" width={40} />
+      <img src={coinImg} alt="" width={40} height={40} />
       <span>{coinVal}</span>
     </div>
   );
