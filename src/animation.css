@@ -68,7 +68,7 @@
 }
 
 .fade-down {
-  animation: fadeDown 1s ease-in-out;
+  animation: fadeDown 0.15s ease-in-out;
 }
 
 @keyframes zoomIn {

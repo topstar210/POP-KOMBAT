@@ -15,7 +15,7 @@ interface InviteItemProps {
 const InviteItem = ({ title, coinVal, onClick }: InviteItemProps) => {
   return (
     <Item className="fp-status-item" onClick={onClick}>
-      <img src={giftIcon} alt="" />
+      <img src={giftIcon} className="zoom-in" alt="" />
       <div className="fp-status-data">
         <h1>{title}</h1>
         <div>

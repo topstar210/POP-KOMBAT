@@ -13,8 +13,8 @@ const FriendsPage = () => {
   return (
     <div className="main-page">
       <Box className="fp-header">
-        <div className="fp-title">INvite friends!</div>
-        <div className="fp-subtitle">Earn bonuses for you and your friends</div>
+        <div className="fp-title fade-down">INvite friends!</div>
+        <div className="fp-subtitle fade-left">Earn bonuses for you and your friends</div>
       </Box>
       <Box className="fp-status-section">
         <InviteItem

@@ -17,8 +17,8 @@ const EarnPage = () => {
       <Box className="display-section">
         <div className="display-section-cover">
           <div className="er-header">
-            <img src={tokenimg} alt="" width={"50%"} />
-            <h1>Earn More Coins</h1>
+            <img src={tokenimg} className="fade-down" alt="" width={"50%"} />
+            <h1 className="fade-left">Earn More Coins</h1>
           </div>
           <div className="er-list-cointainer">
             <h2>Spotify STreaming</h2>

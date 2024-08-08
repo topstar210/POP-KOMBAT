@@ -12,7 +12,7 @@ const InfoItem = () => {
       <div className="fp-friend-info">
         <img
           src={userAvatar}
-          className="avatar"
+          className="avatar zoom-in"
           alt=""
           width={32}
           height={32}

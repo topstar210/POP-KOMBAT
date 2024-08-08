@@ -26,7 +26,7 @@ const EarnItem = ({
 }: EarnItemProps) => {
   return (
     <div className={`app-earnitem ${className}`} {...props} onClick={onClick}>
-      <img src={icon} alt="" width={32} height={32} />
+      <img src={icon} className="zoom-in" alt="" width={32} height={32} />
       <div className="item-earn-info">
         <div className="title">{title}</div>
         <div className="coin">
