@@ -1,10 +1,10 @@
-import CountCounter from "./CoinCounter";
+import MyBalance from "./MyBalance";
 import InfoBox from "./InfoBox";
 import TabSection from "./TabSection";
 import GameCards from "./GameCards/GameCards";
 
 export {
-  CountCounter,
+  MyBalance,
   InfoBox,
   TabSection,
   GameCards

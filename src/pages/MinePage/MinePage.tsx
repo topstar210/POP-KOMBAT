@@ -1,5 +1,5 @@
 import { Box, Ranking, ProfitBox } from "@/components/system";
-import { CountCounter, InfoBox, TabSection, GameCards } from "@/components";
+import { MyBalance, InfoBox, TabSection, GameCards } from "@/components";
 
 import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
@@ -19,7 +19,7 @@ const MinePage = () => {
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
-          <CountCounter className="fade-in" value={538507456} />
+          <MyBalance className="fade-in" value={538507456} />
 
           <GameCards />
 

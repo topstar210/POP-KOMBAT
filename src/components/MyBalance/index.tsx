@@ -1,13 +1,13 @@
-import "./coinCounter.css";
+import "./MyBalance.css";
 
 import coinImg from "@/assets/imgs/token-image.png";
 
-interface CountCounterProps {
+interface MyBalanceProps {
   value: number;
   className?: string;
 }
 
-const CountCounter = ({ value, className, ...props }: CountCounterProps) => {
+const MyBalance = ({ value, className, ...props }: MyBalanceProps) => {
   const coinVal = new Intl.NumberFormat("en-US").format(value);
 
   return (
@@ -18,4 +18,4 @@ const CountCounter = ({ value, className, ...props }: CountCounterProps) => {
   );
 };
 
-export default CountCounter;
+export default MyBalance;
