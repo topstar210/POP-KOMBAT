@@ -12,7 +12,7 @@ const BoostPage = () => {
   return (
     <div className="main-page">
       <Box className="bp-header">
-        <h1 className="bp-title">Your Balance</h1>
+        <h1 className="bp-title fade-down">Your Balance</h1>
         <div className="bp-mybalance">
           <MyBalance className="fade-in" value={538507456} />
         </div>
