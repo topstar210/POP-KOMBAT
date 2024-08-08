@@ -1,0 +1,26 @@
+.earn-page .display-section {
+  margin-top: -4px;
+}
+
+.er-header {
+  text-align: center;
+}
+.er-header img {
+  margin: 0 auto;
+}
+.er-header h1 {
+  font-family: var(--font-familyHeading);
+  font-size: var(--font-size3xl);
+  text-shadow: 2px 3px 1px #101010;
+  font-weight: 400;
+  color: #fff;
+}
+
+.er-list-cointainer h2 {
+  text-shadow: 1px 2px 1px #101010;
+  font-family: var(--font-familyHeading);
+  font-size: var(--font-sizebase);
+  font-weight: 400;
+  color: #fff;
+  margin-top: 32px;
+}
