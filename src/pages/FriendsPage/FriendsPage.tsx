@@ -3,10 +3,11 @@ import "./FriendsPage.css";
 import { Box } from "@/components/system";
 import InviteItem from "@/components/Friend/InviteItem";
 import InfoItem from "@/components/Friend/InfoItem";
-
 import { formatNum } from "@/utilities/number";
+
 import tokenIcon from "@/assets/icons/token.png";
-import copyIcon from "@/assets/icons/copy.png"
+import copyIcon from "@/assets/icons/copy.png";
+import userAvatar from "@/assets/imgs/avatar/user1.jfif";
 
 const FriendsPage = () => {
   return (
@@ -54,7 +55,7 @@ const FriendsPage = () => {
                   <td>
                     <div>
                       <img
-                        src="src/assets/imgs/avatar/user1.jfif"
+                        src={userAvatar}
                         className="avatar"
                         width={36}
                         height={36}
