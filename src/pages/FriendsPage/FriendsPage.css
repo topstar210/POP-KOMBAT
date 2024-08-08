@@ -30,6 +30,7 @@
   font-size: var(--font-sizelg);
   font-family: var(--font-familyHeading);
   font-weight: 400;
+  color: #fff;
 }
 
 .fp-bounse-levels {
@@ -48,6 +49,7 @@
 .fp-bounseinfo-table tbody td,
 .fp-bounseinfo-table thead th {
   font-size: var(--font-sizexs);
+  color: #fff;
 }
 .fp-bounseinfo-table tbody td {
   border-bottom: 0.5px solid var(--gray, #6e7d91);
@@ -68,7 +70,7 @@
   margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
-  gap: 8px
+  gap: 8px;
 }
 
 .fp-invitebtn-section button {
