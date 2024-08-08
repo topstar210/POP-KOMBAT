@@ -53,8 +53,9 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       >
         {mineData[activeTab] && (
           <div className="card-group">
-            {mineData[activeTab].map((data: UpgradeCardIFC) => (
+            {mineData[activeTab].map((data: UpgradeCardIFC, i: any) => (
               <UpgradeCard
+                key={i}
                 name={data.name}
                 img_link={data.img_link}
                 profit_per_hour={data.profit_per_hour}

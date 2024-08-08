@@ -25,8 +25,9 @@ const Tap = ({
   return (
     <div className={`system-tab ${className}`} {...props}>
       <div className="system-tab-container">
-        {menu.map((val: any) => (
+        {menu.map((val: any, i) => (
           <button
+            key={i}
             className={`${val.id === active ? "sys-active-tab" : ""}`}
             onClick={() => handleClickTab(val)}
           >

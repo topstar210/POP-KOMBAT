@@ -19,7 +19,7 @@ interface Tabmune {
 
 const tabmenu: Tabmune[] = [
   {
-    id: "exchange",
+    id: "home",
     title: "Exchange",
     icon: exchangeIcon,
     route: "/home",
@@ -58,9 +58,14 @@ const Tabbar = () => {
   const [location] = useIntegration(navigator);
 
   useEffect(() => {
+    let isSet = false;
     tabmenu.map((tab) => {
-      location.pathname.includes(tab.id) && setActiveTab(tab.id);
+      if (location.pathname.includes(tab.id)) {
+        setActiveTab(tab.id);
+        isSet = true;
+      }
     });
+    !isSet && setActiveTab("");
   }, [location]);
 
   const handleTabClick = (tab: Tabmune) => {

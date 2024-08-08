@@ -45,13 +45,15 @@ const FriendsPage = () => {
             cellPadding={0}
           >
             <thead>
-              <th>Level</th>
-              <th>For Friend</th>
-              <th>Premium</th>
+              <tr>
+                <th>Level</th>
+                <th>For Friend</th>
+                <th>Premium</th>
+              </tr>
             </thead>
             <tbody>
-              {[1, 2, 3, 4].map(() => (
-                <tr>
+              {[1, 2, 3, 4].map((val: any) => (
+                <tr key={val}>
                   <td>
                     <div>
                       <img

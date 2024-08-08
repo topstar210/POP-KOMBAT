@@ -1,0 +1,65 @@
+.bp-header {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+  padding: 32px 0;
+}
+
+.bp-header h1 {
+  text-align: center;
+  font-size: var(--font-sizexl);
+  font-family: var(--font-familyBody);
+}
+
+.bp-boosters h2 {
+  font-family: var(--font-familyHeading);
+  color: #fff;
+  text-shadow: 1px 2px 1px #101010;
+  font-size: var(--font-sizebase);
+  font-weight: 400;
+}
+
+/* items */
+.app-boostitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--gray-dark, #2c323a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 1px 2px 0px 0px #101010;
+  border-radius: 8px;
+  padding: 0 8px;
+  margin-bottom: 16px;
+  height: 77px;
+}
+.app-boostitem-info {
+  color: #fff;
+  flex: 1;
+}
+.app-boostitem-info .title {
+  font-size: var(--font-sizebase);
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+.app-boostitem-info .description {
+  font-size: var(--font-sizesm);
+}
+
+.app-boosters {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-boosters .title {
+  font-weight: 700;
+  padding-bottom: 2px;
+}
+.app-boosters .coin {
+  display: flex;
+  align-items: center;
+}
+.app-boosters .coin span {
+  font-weight: 700;
+}

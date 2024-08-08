@@ -1,0 +1,7 @@
+.app-earnitem {
+  background: var(--gray-dark, #2c323a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 1px 2px 0px 0px #101010;
+  border-radius: 8px;
+  padding: 0 8px;
+}

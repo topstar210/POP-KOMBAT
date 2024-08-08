@@ -1,10 +1,18 @@
+import { useNavigate } from "react-router-dom";
+
 import { Box, Avatar, Ranking, ProfitBox } from "@/components/system";
-import { CountCounter, InfoBox, TabSection } from "@/components";
+import { MyBalance, InfoBox, TabSection } from "@/components";
 
 import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleClickBoost = () => {
+    navigate("/boost");
+  };
+
   return (
     <div className="main-page">
       <Box className="fade-right">
@@ -22,7 +30,7 @@ const HomePage = () => {
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
-          <CountCounter className="fade-in" value={538507456} />
+          <MyBalance className="fade-in" value={538507456} />
           <TabSection className="zoom-in" />
           <Box
             style={{
@@ -36,7 +44,12 @@ const HomePage = () => {
               value={`6500 / 6500`}
               img={energyIcon}
             />
-            <InfoBox className="fade-left" value={`Boost`} img={boostIcon} />
+            <InfoBox
+              className="fade-left"
+              value={`Boost`}
+              img={boostIcon}
+              onClick={handleClickBoost}
+            />
           </Box>
         </div>
       </Box>

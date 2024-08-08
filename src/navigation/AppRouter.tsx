@@ -10,6 +10,7 @@ import MinePage from "@/pages/MinePage/MinePage";
 import FriendsPage from "@/pages/FriendsPage/FriendsPage";
 import EarnPage from "@/pages/EarnPage/EarnPage";
 import AirdropPage from "@/pages/AirdropPage/AirdropPage";
+import BoostPage from "@/pages/BoostPage/BoostPage";
 
 // import { IndexPage } from "@/pages/IndexPage/IndexPage";
 import { InitDataPage } from "@/pages/InitDataPage/InitDataPage";
@@ -37,6 +38,7 @@ const AppRouter = () => {
           <Route path="/friends" element={<FriendsPage />} />
           <Route path="/earn" element={<EarnPage />} />
           <Route path="/airdrop" element={<AirdropPage />} />
+          <Route path="/boost" element={<BoostPage />} />
 
           <Route path="/init-data" element={<InitDataPage />} />
           <Route path="/launch-params" element={<LaunchParamsPage />} />

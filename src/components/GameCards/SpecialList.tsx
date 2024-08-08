@@ -13,8 +13,9 @@ const SpecialList = () => {
         <button>Missed Opportunities</button>
       </div>
       <div className="card-group">
-        {specialData.map((data: MyCardIFC) => (
+        {specialData.map((data: MyCardIFC, i: any) => (
           <MyCard
+            key={i}
             title={data.title}
             description={data.description}
             img={data.img}
