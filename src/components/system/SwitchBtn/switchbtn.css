@@ -7,9 +7,10 @@
 }
 
 .rightcontent {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: end;
   justify-content: flex-end;
-  justify-content: end;
 }
 
 .sys-switch-btn {
