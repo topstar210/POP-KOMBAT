@@ -6,7 +6,7 @@ const ComingSoon = () => {
       style={{
         height: "100%",
         width: "100%",
-        background: "url(/src/assets/imgs/splash-bg.png)",
+        background: "url('./splash-bg.png')",
         backgroundSize: "cover",
       }}
     >
@@ -16,8 +16,7 @@ const ComingSoon = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          height: "100%",
-          marginTop: "-60px",
+          height: "100vh",
         }}
       >
         <div style={{ textAlign: "center" }}>
