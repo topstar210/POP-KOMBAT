@@ -1,0 +1,46 @@
+.sys-switch-wrap {
+  background: var(--blue, #2e90fa);
+  border: 0.5px solid var(--black, #101010);
+  width: 80px;
+  height: 36px;
+  border-radius: 80px;
+  display: flex;
+}
+
+.rightcontent{
+  justify-content:end
+}
+
+.sys-switch-btn {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  background: #fff;
+  border-radius: 30px;
+  border: 0.5px solid var(--black, #101010);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sys-switch-btn-inner {
+  border: 0.5px solid var(--gray-light, #e2e5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.sys-switch-btn-inner.smile {
+  background-color: var(--blue, #2e90fa);
+}
+.sys-switch-btn-inner.annoy {
+  background-color: var(--pink, #e6007a);
+}
+
+.sys-switch-btn-inner img {
+  width: 70%;
+}

@@ -1,0 +1,9 @@
+.setting-header h1{
+  font-family: var(--font-familyHeading);
+  font-size: var(--font-size3xl);
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 1px 2px 0px #101010;
+  text-align: center;
+  margin-top: 40px;
+}
