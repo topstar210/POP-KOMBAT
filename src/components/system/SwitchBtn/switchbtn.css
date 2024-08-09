@@ -4,11 +4,12 @@
   width: 80px;
   height: 36px;
   border-radius: 80px;
-  display: flex;
 }
 
-.rightcontent{
-  justify-content:end
+.rightcontent {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: end;
 }
 
 .sys-switch-btn {
