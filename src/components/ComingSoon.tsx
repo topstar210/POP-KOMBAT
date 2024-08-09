@@ -19,7 +19,7 @@ const ComingSoon = () => {
           height: "100vh",
         }}
       >
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", marginTop: '-80px' }}>
           <img src={tokenImg} alt="" />
           <div
             className="luckiest"
