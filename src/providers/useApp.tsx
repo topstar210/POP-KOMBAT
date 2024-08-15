@@ -13,6 +13,7 @@ interface AppContextType {
   initData: InitDataParsed;
   navigator: any;
   gameData: GameDataIFC;
+  setGameData: any;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -56,7 +57,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
   }
   return (
-    <AppContext.Provider value={{ initData, navigator, gameData }}>
+    <AppContext.Provider value={{ initData, navigator, gameData, setGameData }}>
       {children}
     </AppContext.Provider>
   );

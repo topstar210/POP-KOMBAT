@@ -9,7 +9,7 @@ import boostIcon from "@/assets/icons/boost.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const { initData: initData, gameData } = useApp();
+  const { initData: initData, gameData, setGameData } = useApp();
   const userData = initData.user;
 
   const handleClickBoost = () => {
@@ -31,13 +31,21 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <Ranking level={gameData.level} className="fade-right" style={{ width: "105px" }} />
+        <Ranking
+          level={gameData.level}
+          className="fade-right"
+          style={{ width: "105px" }}
+        />
         <ProfitBox className="fade-left" />
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
           <MyBalance className="fade-in" value={gameData.balance} />
-          <TabSection className="zoom-in" />
+          <TabSection
+            gameData={gameData}
+            setGameData={setGameData}
+            className="zoom-in"
+          />
           <Box
             style={{
               display: "flex",

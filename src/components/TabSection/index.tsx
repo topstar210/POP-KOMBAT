@@ -1,13 +1,29 @@
 import "./tabSection.css";
+import type { GameDataIFC } from "@/types/game";
 
 import heroCharacter from "@/assets/imgs/heroCharacter.png";
 
 interface TabSectionProps {
+  gameData: GameDataIFC;
+  setGameData: any;
   className?: string;
 }
 
-const TabSection = ({ className, ...props }: TabSectionProps) => {
+const TabSection = ({
+  gameData,
+  setGameData,
+  className,
+  ...props
+}: TabSectionProps) => {
   const handleTabClick = (e: any) => {
+    setGameData({
+      ...gameData,
+      balance: gameData.balance + 1,
+    });
+
+    /**
+     * animation section start -----------------------------------------------------
+     */
     const parent = e.currentTarget;
     const rect = parent.getBoundingClientRect();
     const x = e.clientX - rect.left - 8;
@@ -36,6 +52,7 @@ const TabSection = ({ className, ...props }: TabSectionProps) => {
     plusOne.addEventListener("animationend", () => {
       plusOne.remove();
     });
+    // animation section end -----------------------------------------------------
   };
 
   return (
