@@ -1,10 +1,13 @@
 import { Box, Ranking, ProfitBox } from "@/components/system";
 import { MyBalance, InfoBox, TabSection, GameCards } from "@/components";
+import { useApp } from "@/providers/useApp";
 
 import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
 
 const MinePage = () => {
+  const { gameData, setGameData } = useApp();
+
   return (
     <div className="main-page">
       <Box
@@ -14,7 +17,11 @@ const MinePage = () => {
           alignItems: "center",
         }}
       >
-        <Ranking className="fade-right" style={{ width: "105px" }} />
+        <Ranking
+          level={gameData.level}
+          className="fade-right"
+          style={{ width: "105px" }}
+        />
         <ProfitBox className="fade-left" />
       </Box>
       <Box className="display-section">
@@ -23,7 +30,11 @@ const MinePage = () => {
 
           <GameCards />
 
-          <TabSection className="zoom-in" />
+          <TabSection
+            gameData={gameData}
+            setGameData={setGameData}
+            className="zoom-in"
+          />
           <Box
             style={{
               display: "flex",
