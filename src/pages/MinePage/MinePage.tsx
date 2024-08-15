@@ -6,7 +6,8 @@ import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
 
 const MinePage = () => {
-  const { gameData, setGameData } = useApp();
+  const { gameData, curEenergy, handleSetGameData, handleDecrementCurEnergy } =
+    useApp();
 
   return (
     <div className="main-page">
@@ -32,7 +33,8 @@ const MinePage = () => {
 
           <TabSection
             gameData={gameData}
-            setGameData={setGameData}
+            setBalance={handleSetGameData}
+            setDecrementCurEnergy={handleDecrementCurEnergy}
             className="zoom-in"
           />
           <Box
@@ -44,7 +46,7 @@ const MinePage = () => {
           >
             <InfoBox
               className="fade-right"
-              value={`6500 / 6500`}
+              value={`${curEenergy} / ${gameData.energy}`}
               img={energyIcon}
             />
             <InfoBox className="fade-left" value={`Boost`} img={boostIcon} />

@@ -1,4 +1,11 @@
-import { ReactNode, createContext, useContext, useMemo, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+  useEffect,
+} from "react";
 import {
   initNavigator,
   useInitData,
@@ -13,7 +20,9 @@ interface AppContextType {
   initData: InitDataParsed;
   navigator: any;
   gameData: GameDataIFC;
-  setGameData: any;
+  handleSetGameData: (values: any) => void;
+  curEenergy: number;
+  handleDecrementCurEnergy: () => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -38,6 +47,33 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     ...initGameData,
   });
 
+  const handleSetGameData = (values: any) => {
+    setGameData({
+      ...gameData,
+      ...values,
+    });
+  };
+
+  const [curEenergy, setCurEenergy] = useState(initGameData.energy);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurEenergy((prevCurEenergy) =>
+        prevCurEenergy < initGameData.energy
+          ? prevCurEenergy + 1
+          : initGameData.energy
+      );
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDecrementCurEnergy = () => {
+    setCurEenergy((prevCurEenergy) =>
+      prevCurEenergy > 0 ? prevCurEenergy - 1 : 0
+    );
+  };
+
   // Create a new application navigator and attach it to the browser history, so it could modify
   // it and listen to its changes.
   const navigator = useMemo(() => initNavigator("app-navigation-state"), []);
@@ -57,7 +93,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
   }
   return (
-    <AppContext.Provider value={{ initData, navigator, gameData, setGameData }}>
+    <AppContext.Provider
+      value={{
+        initData,
+        navigator,
+        gameData,
+        handleSetGameData,
+        curEenergy,
+        handleDecrementCurEnergy,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

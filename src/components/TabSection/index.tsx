@@ -5,21 +5,24 @@ import heroCharacter from "@/assets/imgs/heroCharacter.png";
 
 interface TabSectionProps {
   gameData: GameDataIFC;
-  setGameData: any;
+  setBalance: (values: any) => void;
+  setDecrementCurEnergy: () => void;
   className?: string;
 }
 
 const TabSection = ({
   gameData,
-  setGameData,
+  setBalance,
+  setDecrementCurEnergy,
   className,
   ...props
 }: TabSectionProps) => {
   const handleTabClick = (e: any) => {
-    setGameData({
-      ...gameData,
+    setBalance({
       balance: gameData.balance + 1,
     });
+
+    setDecrementCurEnergy();
 
     /**
      * animation section start -----------------------------------------------------

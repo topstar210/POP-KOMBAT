@@ -9,7 +9,13 @@ import boostIcon from "@/assets/icons/boost.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const { initData: initData, gameData, setGameData } = useApp();
+  const {
+    initData: initData,
+    gameData,
+    curEenergy,
+    handleSetGameData,
+    handleDecrementCurEnergy,
+  } = useApp();
   const userData = initData.user;
 
   const handleClickBoost = () => {
@@ -43,7 +49,8 @@ const HomePage = () => {
           <MyBalance className="fade-in" value={gameData.balance} />
           <TabSection
             gameData={gameData}
-            setGameData={setGameData}
+            setBalance={handleSetGameData}
+            setDecrementCurEnergy={handleDecrementCurEnergy}
             className="zoom-in"
           />
           <Box
@@ -55,7 +62,7 @@ const HomePage = () => {
           >
             <InfoBox
               className="fade-right"
-              value={`${gameData.energy} / ${gameData.energy}`}
+              value={`${curEenergy} / ${gameData.energy}`}
               img={energyIcon}
             />
             <InfoBox
