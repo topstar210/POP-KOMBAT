@@ -1,6 +1,6 @@
 import "./GameCards.css";
 import MyCard from "./MyCards/MyCard";
-import { type MyCardIFC } from "@/types/cards";
+import { type MyCardIFC } from "@/types/card";
 
 import { specialData } from "@/data/specialData";
 

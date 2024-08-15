@@ -1,6 +1,6 @@
 import "./UpgradeCard.css";
 import { formatToFixed } from "@/utilities/number";
-import { type UpgradeCardIFC } from "@/types/cards";
+import { type UpgradeCardIFC } from "@/types/card";
 
 import defaultImg from "@/assets/imgs/mission-image.png";
 import tokenIcon from "@/assets/icons/token.png";

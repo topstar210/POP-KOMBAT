@@ -3,7 +3,7 @@ import "./GameCards.css";
 import { useState } from "react";
 import { Tap } from "@/components/system";
 import { type Tab as TabInterface } from "@/components/system/Tab";
-import { type UpgradeCardIFC } from "@/types/cards";
+import { type UpgradeCardIFC } from "@/types/card";
 
 import UpgradeCard from "./UpgradeCard/UpgradeCard";
 import SpecialList from "./SpecialList";

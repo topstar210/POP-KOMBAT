@@ -1,5 +1,5 @@
 import "./MyCard.css";
-import { type MyCardIFC } from "@/types/cards";
+import { type MyCardIFC } from "@/types/card";
 import { formatToFixed } from "@/utilities/number";
 
 import tokenIcon from "@/assets/icons/token.png";
