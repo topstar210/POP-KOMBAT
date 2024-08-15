@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useMemo } from "react";
+import { ReactNode, createContext, useContext, useMemo, useState } from "react";
 import {
   initNavigator,
   useInitData,
@@ -7,16 +7,35 @@ import {
 } from "@telegram-apps/sdk-react";
 import { Placeholder } from "@telegram-apps/telegram-ui";
 
+import type { GameDataIFC } from "@/types/game";
+
 interface AppContextType {
   initData: InitDataParsed;
   navigator: any;
+  gameData: GameDataIFC;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
+const initGameData: GameDataIFC = {
+  level: 0,
+  balance: 1000,
+  energy: 1000,
+  yesterdayLogin: false,
+  todayLogin: false,
+  isJoinTG: false,
+  isJoinX: false,
+  isJoinBinance: false,
+  isInvite1Friend: false,
+  isInvite3Friend: false,
+};
+
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const initDataRaw = useLaunchParams().initDataRaw;
   const initData = useInitData();
+  const [gameData, setGameData] = useState<GameDataIFC>({
+    ...initGameData,
+  });
 
   // Create a new application navigator and attach it to the browser history, so it could modify
   // it and listen to its changes.
@@ -37,7 +56,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
   }
   return (
-    <AppContext.Provider value={{ initData, navigator }}>
+    <AppContext.Provider value={{ initData, navigator, gameData }}>
       {children}
     </AppContext.Provider>
   );
