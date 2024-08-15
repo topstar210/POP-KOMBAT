@@ -36,7 +36,7 @@ const HomePage = () => {
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
-          <MyBalance className="fade-in" value={538507456} />
+          <MyBalance className="fade-in" value={gameData.balance} />
           <TabSection className="zoom-in" />
           <Box
             style={{
@@ -47,7 +47,7 @@ const HomePage = () => {
           >
             <InfoBox
               className="fade-right"
-              value={`6500 / 6500`}
+              value={`${gameData.energy} / ${gameData.energy}`}
               img={energyIcon}
             />
             <InfoBox
