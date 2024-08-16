@@ -33,7 +33,7 @@ const MinePage = () => {
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
-          <MyBalance className="fade-in" value={538507456} />
+          <MyBalance className="fade-in" value={gameData.balance} />
 
           <GameCards />
 
