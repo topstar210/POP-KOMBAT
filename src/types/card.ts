@@ -2,8 +2,8 @@ export interface UpgradeCardIFC {
   name: string;
   level: number;
   img_link?: string;
-  profit_per_hour: number;
-  total: number;
+  cost: number;
+  reward: number;
 }
 
 export interface MyCardIFC {
@@ -11,6 +11,6 @@ export interface MyCardIFC {
   description?: string;
   img?: string;
   level: number;
-  profit_per_hour: number;
-  total: number;
+  cost: number;
+  reward: number;
 }

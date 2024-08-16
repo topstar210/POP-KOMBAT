@@ -20,8 +20,8 @@ const SpecialList = () => {
             description={data.description}
             img={data.img}
             level={data.level}
-            total={data.total}
-            profit_per_hour={data.profit_per_hour}
+            reward={data.reward}
+            cost={data.cost}
           />
         ))}
       </div>

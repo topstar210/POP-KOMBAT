@@ -58,9 +58,9 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
                 key={i}
                 name={data.name}
                 img_link={data.img_link}
-                profit_per_hour={data.profit_per_hour}
+                cost={data.cost}
                 level={data.level}
-                total={data.total}
+                reward={data.reward}
               />
             ))}
           </div>

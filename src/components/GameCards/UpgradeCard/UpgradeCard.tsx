@@ -13,8 +13,8 @@ const UpgradeCard = ({
   name,
   level,
   img_link,
-  profit_per_hour,
-  total,
+  cost,
+  reward,
   className,
   ...props
 }: UpgradeCardProps) => {
@@ -30,7 +30,7 @@ const UpgradeCard = ({
             <div className="font-xs">Profit per hour</div>
             <div className="app-upgcard-row">
               <img src={img_link || tokenIcon} alt="" width={14} />
-              <span className="font-xs">{formatToFixed(profit_per_hour)}</span>
+              <span className="font-xs">{formatToFixed(reward)}</span>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const UpgradeCard = ({
         <div className="vertical-divider"></div>
         <div className="app-upgcard-row">
           <img src={tokenIcon} alt="" width={12} />
-          <span>{formatToFixed(total)}</span>
+          <span>{formatToFixed(cost)}</span>
         </div>
       </div>
     </div>
