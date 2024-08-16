@@ -1,7 +1,7 @@
 import { levels } from "@/data/constant";
 
 /**
- * return level information by key
+ * return user level information by key
  * @param key
  */
 export const getLevelInfo = (key: number) => {
