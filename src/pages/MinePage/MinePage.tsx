@@ -1,13 +1,19 @@
 import { Box, Ranking, ProfitBox } from "@/components/system";
 import { MyBalance, InfoBox, TabSection, GameCards } from "@/components";
 import { useApp } from "@/providers/useApp";
+import { getMissionData } from "@/utilities/mission";
 
 import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
+import { useEffect } from "react";
 
 const MinePage = () => {
   const { gameData, curEenergy, handleSetGameData, handleDecrementCurEnergy } =
     useApp();
+
+  useEffect(() => {
+    console.log("getMissionData : ", getMissionData("agent", 3));
+  }, []);
 
   return (
     <div className="main-page">

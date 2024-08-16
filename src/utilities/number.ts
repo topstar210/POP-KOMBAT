@@ -25,3 +25,13 @@ export const formatToFixed = (num: number) => {
 export const formatNum = (num: number) => {
   return new Intl.NumberFormat("en-US").format(num);
 };
+
+/**
+ * Rounds a number up to the nearest integer multiple of specified significance factor.
+ * @param value
+ * @param factor
+ * @returns
+ */
+export const ceiling = (value: number, factor = 1) => {
+  return Math.ceil(value / factor) * factor;
+};
