@@ -5,6 +5,7 @@ export interface MyMissionsIFC {
 
 export interface GameDataIFC {
   level: number; // user level 0 ~ 10
+  totalEarning: number; // user total earning so far
   balance: number; // user balance
   energy: number;
   yesterdayLogin?: boolean;
@@ -18,7 +19,7 @@ export interface GameDataIFC {
 
 export interface LevelIFC {
   title: string;
-  total: number;
+  length: number;
   current: number;
   balance: number;
 }

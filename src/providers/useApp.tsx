@@ -16,6 +16,7 @@ import { Placeholder } from "@telegram-apps/telegram-ui";
 
 import type { GameDataIFC, MyMissionsIFC } from "@/types/game";
 import { getMissionData } from "@/utilities/mission";
+import { getLevelByBalance } from "@/utilities/level";
 
 interface AppContextType {
   initData: InitDataParsed;
@@ -32,6 +33,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const initGameData: GameDataIFC = {
   level: 0,
+  totalEarning: 10000000,
   balance: 10000000,
   energy: 1000,
   yesterdayLogin: false,
@@ -93,6 +95,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       prevCurEenergy > 0 ? prevCurEenergy - 1 : 0
     );
   };
+
+  useEffect(() => {
+    /**
+     * @todo: use gameData.totalEarning instead of gameData.balance later
+     */
+    const res = getLevelByBalance(gameData.balance);
+    setGameData({
+      ...gameData,
+      level: res.current - 1,
+    });
+  }, [gameData.balance]);
 
   // Create a new application navigator and attach it to the browser history, so it could modify
   // it and listen to its changes.
