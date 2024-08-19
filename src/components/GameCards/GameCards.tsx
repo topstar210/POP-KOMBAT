@@ -43,7 +43,7 @@ const categories: TabInterface[] = [
 ];
 
 const GameCards = ({ className, ...props }: GameCardsProps) => {
-  const { missions } = useApp();
+  const { missions, handleSetMission } = useApp();
 
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("team");
@@ -56,6 +56,14 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
   const openMissionData = (modalData: UpgradeCardIFC) => {
     setMission(modalData);
     setIsOpenModal(true);
+  };
+
+  const handleClickSetMission = (data: any) => {
+    handleSetMission({
+      id: data.id || "",
+      level: data.level + 1,
+    });
+    setIsOpenModal(false);
   };
 
   return (
@@ -121,7 +129,9 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
             <img src={tokenIcon} alt="" width={28} height={28} />
             <span>{formatNum(mission?.cost ?? 0)}</span>
           </div>
-          <button>Go ahead</button>
+          <button onClick={() => handleClickSetMission(mission)}>
+            Go ahead
+          </button>
         </div>
       </Modal>
     </div>

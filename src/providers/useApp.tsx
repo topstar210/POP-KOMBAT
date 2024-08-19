@@ -63,7 +63,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     },
   ]);
   const handleSetMission = (mission: MyMissionsIFC) => {
-    setMissions([...missions, mission]);
+    const existInd = missions.findIndex((res) => mission.id === res.id);
+    let copiedMission = [...missions];
+    if (existInd > -1) copiedMission[existInd].level = mission.level;
+    else copiedMission = [...missions, mission];
+    setMissions(copiedMission);
   };
 
   const [curEenergy, setCurEenergy] = useState(initGameData.energy);
