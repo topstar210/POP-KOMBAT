@@ -1,9 +1,10 @@
 import "./GameCards.css";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tap } from "@/components/system";
 import { type Tab as TabInterface } from "@/components/system/Tab";
 import { type UpgradeCardIFC } from "@/types/card";
+import { useApp } from "@/providers/useApp";
+import { getMissionData } from "@/utilities/mission";
 
 import UpgradeCard from "./UpgradeCard/UpgradeCard";
 import SpecialList from "./SpecialList";
@@ -38,11 +39,19 @@ const categories: TabInterface[] = [
 ];
 
 const GameCards = ({ className, ...props }: GameCardsProps) => {
+  const { missions } = useApp();
+
   const [activeTab, setActiveTab] = useState<string>("team");
 
   const handleClickTabItem = (tab: TabInterface) => {
     setActiveTab(tab.id);
   };
+
+  useEffect(() => {
+    console.log("missions :::::", missions);
+
+    // console.log("getMissionData : ", getMissionData("agent", 3));
+  }, [missions]);
 
   return (
     <div className={`${className}`} {...props}>
@@ -53,16 +62,31 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       >
         {mineData[activeTab] && (
           <div className="card-group">
-            {mineData[activeTab].map((data: UpgradeCardIFC, i: any) => (
-              <UpgradeCard
-                key={i}
-                name={data.name}
-                img_link={data.img_link}
-                cost={data.cost}
-                level={data.level}
-                reward={data.reward}
-              />
-            ))}
+            {mineData[activeTab].map((data: UpgradeCardIFC, i: any) => {
+              let missionData;
+              const settedMission = missions.find(
+                (mission) => mission.id === data.id
+              );
+              if (settedMission) {
+                missionData = getMissionData(
+                  settedMission.id,
+                  settedMission.level
+                );
+              } else {
+                missionData = { ...data, level: 0 };
+              }
+
+              return (
+                <UpgradeCard
+                  key={i}
+                  name={missionData.name}
+                  img_link={missionData.img_link}
+                  cost={missionData.cost}
+                  level={missionData.level}
+                  reward={missionData.reward}
+                />
+              );
+            })}
           </div>
         )}
 

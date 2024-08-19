@@ -18,9 +18,10 @@
 }
 
 .upgcard-title {
-  font-weight: 700;
+  font-weight: 300;
   padding-bottom: 14px;
   font-size: var(--font-sizexs);
+  color: var(--gray-light);
 }
 
 .app-upgcard-row {
@@ -50,4 +51,12 @@
   height: 0;
   border: 0.2px solid var(--gray, #6e7d91);
   margin: 8px 0;
+}
+
+.actived-level .upgcard-title {
+  font-weight: 700;
+  color: #fff !important;
+}
+.actived-level .level {
+  font-weight: 700;
 }

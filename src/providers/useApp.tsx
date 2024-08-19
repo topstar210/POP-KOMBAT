@@ -14,7 +14,7 @@ import {
 } from "@telegram-apps/sdk-react";
 import { Placeholder } from "@telegram-apps/telegram-ui";
 
-import type { GameDataIFC } from "@/types/game";
+import type { GameDataIFC, MyMissionsIFC } from "@/types/game";
 
 interface AppContextType {
   initData: InitDataParsed;
@@ -23,6 +23,8 @@ interface AppContextType {
   handleSetGameData: (values: any) => void;
   curEenergy: number;
   handleDecrementCurEnergy: () => void;
+  missions: MyMissionsIFC[];
+  handleSetMission: (values: MyMissionsIFC) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -43,10 +45,10 @@ const initGameData: GameDataIFC = {
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const initDataRaw = useLaunchParams().initDataRaw;
   const initData = useInitData();
+
   const [gameData, setGameData] = useState<GameDataIFC>({
     ...initGameData,
   });
-
   const handleSetGameData = (values: any) => {
     setGameData({
       ...gameData,
@@ -54,8 +56,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  const [curEenergy, setCurEenergy] = useState(initGameData.energy);
+  const [missions, setMissions] = useState<MyMissionsIFC[]>([
+    {
+      id: "agent",
+      level: 1,
+    },
+  ]);
+  const handleSetMission = (mission: MyMissionsIFC) => {
+    setMissions([...missions, mission]);
+  };
 
+  const [curEenergy, setCurEenergy] = useState(initGameData.energy);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurEenergy((prevCurEenergy) =>
@@ -64,10 +75,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           : initGameData.energy
       );
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
-
   const handleDecrementCurEnergy = () => {
     setCurEenergy((prevCurEenergy) =>
       prevCurEenergy > 0 ? prevCurEenergy - 1 : 0
@@ -101,6 +110,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         handleSetGameData,
         curEenergy,
         handleDecrementCurEnergy,
+        missions,
+        handleSetMission,
       }}
     >
       {children}

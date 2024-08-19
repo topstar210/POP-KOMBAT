@@ -19,7 +19,10 @@ const UpgradeCard = ({
   ...props
 }: UpgradeCardProps) => {
   return (
-    <div className={`app-upgcard ${className}`} {...props}>
+    <div
+      className={`app-upgcard ${level > 0 ? "actived-level" : ""} ${className}`}
+      {...props}
+    >
       <div className="app-upgcard-body">
         <div>
           <img src={defaultImg} alt="" sizes="48px" />
@@ -37,7 +40,7 @@ const UpgradeCard = ({
       </div>
       <div className="horizontal-divider"></div>
       <div className="app-upgcard-bottom">
-        <span>lvl {level}</span>
+        <span className="level">lvl {level}</span>
         <div className="vertical-divider"></div>
         <div className="app-upgcard-row">
           <img src={tokenIcon} alt="" width={12} />

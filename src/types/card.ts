@@ -1,5 +1,5 @@
 export interface UpgradeCardIFC {
-  id: string;
+  id?: string;
   name: string;
   level: number;
   img_link?: string;

@@ -1,3 +1,8 @@
+export interface MyMissionsIFC {
+  id: string;
+  level: number;
+}
+
 export interface GameDataIFC {
   level: number; // user level 0 ~ 10
   balance: number; // user balance
