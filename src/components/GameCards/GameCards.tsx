@@ -85,6 +85,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
                   settedMission.id,
                   settedMission.level + 1
                 );
+                missionData.level -= 1;
               } else {
                 missionData = { ...data, level: 0 };
               }
