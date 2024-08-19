@@ -1,6 +1,10 @@
 import "./profitbox.css";
 
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { formatToFixed } from "@/utilities/number";
+import { useApp } from "@/providers/useApp";
+import { getMissionData } from "@/utilities/mission";
 
 import settingIcon from "@/assets/icons/settings.png";
 import tokenIcon from "@/assets/icons/token.png";
@@ -12,6 +16,17 @@ interface ProfitBoxProps {
 
 const ProfitBox = ({ className }: ProfitBoxProps) => {
   const navigate = useNavigate();
+  const { missions } = useApp();
+  const [reward, setReward] = useState(0);
+
+  useEffect(() => {
+    let totalReward = 0;
+    missions.map((mission) => {
+      const res = getMissionData(mission.id, mission.level);
+      totalReward += res.reward;
+    });
+    setReward(totalReward);
+  }, [missions]);
 
   const handleClickSetting = () => {
     navigate("/setting");
@@ -22,7 +37,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
         <div>Profit per hour</div>
         <div className="system-profit-status">
           <img src={tokenIcon} alt="Token" />
-          <div>+1.33m</div>
+          <div>+{formatToFixed(reward)}</div>
           <button>
             <img src={warningIcon} alt="Token" />
           </button>
