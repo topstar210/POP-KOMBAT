@@ -80,6 +80,7 @@ const calcCardVal = (
 
   return {
     ...obj,
+    level,
     cost,
     reward,
   };
