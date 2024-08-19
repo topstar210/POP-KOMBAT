@@ -47,14 +47,14 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
 
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("team");
+  const [mission, setMission] = useState<UpgradeCardIFC | null>(null);
 
   const handleClickTabItem = (tab: TabInterface) => {
     setActiveTab(tab.id);
   };
 
   const openMissionData = (modalData: UpgradeCardIFC) => {
-    console.log("modalData :::: ", modalData);
-
+    setMission(modalData);
     setIsOpenModal(true);
   };
 
@@ -102,22 +102,26 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <div className="app-mission-section">
           <img
-            src={defaultImg}
+            src={mission?.img_link ? mission?.img_link : defaultImg}
             alt="mission-img"
             className="mission-img"
             width={103}
             height={103}
           />
-          <h2>Mission Title</h2>
+          <h2>{mission?.name}</h2>
           <div className="app-mission-des">
-            Mission Description Eu orci maecenas nisi arcu sit in praesent
-            tempus. Vitae
+            <p>{mission?.description}</p>
+            <div className="token-row">
+              <span>Profit per hour &nbsp;&nbsp;</span>
+              <img src={tokenIcon} alt="" width={14} height={14} />
+              <span>+{formatNum(mission?.reward ?? 0)}</span>
+            </div>
           </div>
           <div className="token-row">
             <img src={tokenIcon} alt="" width={28} height={28} />
-            <span>+{formatNum(1522321)}</span>
+            <span>{formatNum(mission?.cost ?? 0)}</span>
           </div>
-          <button>Button Text</button>
+          <button>Go ahead</button>
         </div>
       </Modal>
     </div>

@@ -42,10 +42,16 @@
   border: 1px solid var(--black, #101010);
   box-shadow: 1px 2px 0px 0px #101010;
 }
-.app-mission-section .app-mission-des{
+.app-mission-section .app-mission-des {
   padding: 0 32px;
 }
-.app-mission-section .token-row {
+.app-mission-section .app-mission-des .token-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.app-mission-section > .token-row {
   display: flex;
   align-items: center;
   justify-content: center;

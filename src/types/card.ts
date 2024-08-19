@@ -3,6 +3,7 @@ export interface UpgradeCardIFC {
   name: string;
   level: number;
   img_link?: string;
+  description?: string;
   cost: number;
   reward: number;
   cost_increase?: number;
