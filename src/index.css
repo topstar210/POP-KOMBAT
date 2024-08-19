@@ -23,6 +23,7 @@
   --font-sizebase: 16px;
   --font-sizelg: 19.2px;
   --font-sizexl: 24px;
+  --font-size2xl: 27.3px;
   --font-size3xl: 33.18px;
   --font-size4xl: 40px;
   --line-heighthxs: 12px;
@@ -44,7 +45,6 @@ body {
   font-family: "Outfit", sans-serif;
   color: #fff;
   font-weight: 300;
-  anchor-name: --appbody;
 }
 
 a,

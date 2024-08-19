@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import "./modal.css";
 
 interface ModalProps {
@@ -24,6 +24,13 @@ const Modal = ({
       closeModal();
     }
   };
+
+  useEffect(() => {
+    // @ts-ignore
+    document.getElementsByClassName("tabbar")[0].style.display = isOpen
+      ? "none"
+      : "block";
+  }, [isOpen]);
 
   if (!isOpen) return null;
 

@@ -5,11 +5,15 @@ import { type Tab as TabInterface } from "@/components/system/Tab";
 import { type UpgradeCardIFC } from "@/types/card";
 import { useApp } from "@/providers/useApp";
 import { getMissionData } from "@/utilities/mission";
+import { formatNum } from "@/utilities/number";
 
 import UpgradeCard from "./UpgradeCard/UpgradeCard";
 import SpecialList from "./SpecialList";
 
 import { mineData } from "@/data/mine";
+
+import defaultImg from "@/assets/imgs/mission-image.png";
+import tokenIcon from "@/assets/imgs/token-image.png";
 
 interface GameCardsProps {
   className?: string;
@@ -48,7 +52,9 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
     setActiveTab(tab.id);
   };
 
-  const openMissionData = () => {
+  const openMissionData = (modalData: UpgradeCardIFC) => {
+    console.log("modalData :::: ", modalData);
+
     setIsOpenModal(true);
   };
 
@@ -83,7 +89,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
                   cost={missionData.cost}
                   level={missionData.level}
                   reward={missionData.reward}
-                  onClick={openMissionData}
+                  onClick={() => openMissionData(missionData)}
                 />
               );
             })}
@@ -94,7 +100,25 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       </Tap>
 
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
-        asdf
+        <div className="app-mission-section">
+          <img
+            src={defaultImg}
+            alt="mission-img"
+            className="mission-img"
+            width={103}
+            height={103}
+          />
+          <h2>Mission Title</h2>
+          <div className="app-mission-des">
+            Mission Description Eu orci maecenas nisi arcu sit in praesent
+            tempus. Vitae
+          </div>
+          <div className="token-row">
+            <img src={tokenIcon} alt="" width={28} height={28} />
+            <span>+{formatNum(1522321)}</span>
+          </div>
+          <button>Button Text</button>
+        </div>
       </Modal>
     </div>
   );

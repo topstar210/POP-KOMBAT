@@ -1,8 +1,7 @@
 .app-modal-cover {
-  position-anchor: --appbody;
   position: fixed;
-  left: anchor(left);
-  bottom: anchor(bottom);
+  left: 0;
+  bottom: 0;
   z-index: 11;
   width: 100vw;
   height: 100vh;

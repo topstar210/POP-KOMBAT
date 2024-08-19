@@ -22,3 +22,46 @@
   color: var(--teal);
   text-decoration: underline;
 }
+
+.app-mission-section {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  font-size: var(--font-sizebase);
+}
+.app-mission-section h2 {
+  font-size: var(--font-size2xl);
+}
+.app-mission-section .mission-img {
+  background: radial-gradient(
+    45.78% 52.5% at 48.61% 45%,
+    #6e7d91 0%,
+    #2c323a 100%
+  );
+  border: 1px solid var(--black, #101010);
+  box-shadow: 1px 2px 0px 0px #101010;
+}
+.app-mission-section .app-mission-des{
+  padding: 0 32px;
+}
+.app-mission-section .token-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px;
+  font-size: var(--font-sizexl);
+}
+.app-mission-section button {
+  background: var(--pink, #e6007a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 8px 0px 0px #101010;
+  border-radius: 8px;
+  padding: 24px 32px;
+  color: #fff;
+  font-size: var(--font-size3xl);
+  text-shadow: 1px 2px 0px #101010;
+  font-family: var(--font-familyHeading);
+  width: 100%;
+}
