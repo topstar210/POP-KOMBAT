@@ -1,6 +1,6 @@
 import "./GameCards.css";
-import { useState, useEffect } from "react";
-import { Tap } from "@/components/system";
+import { useState } from "react";
+import { Tap, Modal } from "@/components/system";
 import { type Tab as TabInterface } from "@/components/system/Tab";
 import { type UpgradeCardIFC } from "@/types/card";
 import { useApp } from "@/providers/useApp";
@@ -41,17 +41,16 @@ const categories: TabInterface[] = [
 const GameCards = ({ className, ...props }: GameCardsProps) => {
   const { missions } = useApp();
 
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("team");
 
   const handleClickTabItem = (tab: TabInterface) => {
     setActiveTab(tab.id);
   };
 
-  useEffect(() => {
-    console.log("missions :::::", missions);
-
-    // console.log("getMissionData : ", getMissionData("agent", 3));
-  }, [missions]);
+  const openMissionData = () => {
+    setIsOpenModal(true);
+  };
 
   return (
     <div className={`${className}`} {...props}>
@@ -84,6 +83,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
                   cost={missionData.cost}
                   level={missionData.level}
                   reward={missionData.reward}
+                  onClick={openMissionData}
                 />
               );
             })}
@@ -92,6 +92,10 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
 
         {activeTab === "special" && <SpecialList />}
       </Tap>
+
+      <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
+        asdf
+      </Modal>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import tokenIcon from "@/assets/icons/token.png";
 
 interface UpgradeCardProps extends UpgradeCardIFC {
   className?: string;
+  onClick?: () => void;
 }
 
 const UpgradeCard = ({
@@ -16,11 +17,13 @@ const UpgradeCard = ({
   cost,
   reward,
   className,
+  onClick,
   ...props
 }: UpgradeCardProps) => {
   return (
     <div
       className={`app-upgcard ${level > 0 ? "actived-level" : ""} ${className}`}
+      onClick={onClick}
       {...props}
     >
       <div className="app-upgcard-body">

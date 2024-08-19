@@ -1,0 +1,35 @@
+.app-modal-cover {
+  position-anchor: --appbody;
+  position: fixed;
+  left: anchor(left);
+  bottom: anchor(bottom);
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+  background: #10101066;
+}
+
+.app-modal {
+  position: absolute;
+  bottom: 0;
+  z-index: 12;
+  min-height: 300px;
+  width: -webkit-fill-available;
+  background: linear-gradient(8.76deg, #101010 6.66%, #2c323a 93.3%);
+  border-top: 4px solid var(--pink, #e6007a);
+  box-shadow: 0px -76px 108px 0px #e6007a66;
+  border-radius: 36px 36px 0 0;
+  padding: 16px 16px 32px 16px;
+}
+
+.app-modal-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: url(/src/assets/icons/close_circle.png);
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  border-radius: 23px;
+  border: 0;
+}

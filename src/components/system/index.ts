@@ -6,5 +6,16 @@ import ProfitBox from "./ProfitBox";
 import Tap from "./Tab";
 import Item from "./ListItem";
 import SwitchBtn from "./SwitchBtn";
+import Modal from "./Modal";
 
-export { Box, Avatar, Ranking, ProgressBar, ProfitBox, Tap, Item, SwitchBtn };
+export {
+  Box,
+  Avatar,
+  Ranking,
+  ProgressBar,
+  ProfitBox,
+  Tap,
+  Item,
+  SwitchBtn,
+  Modal,
+};

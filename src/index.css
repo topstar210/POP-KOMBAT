@@ -44,6 +44,7 @@ body {
   font-family: "Outfit", sans-serif;
   color: #fff;
   font-weight: 300;
+  anchor-name: --appbody;
 }
 
 a,
