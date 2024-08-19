@@ -15,6 +15,7 @@ import {
 import { Placeholder } from "@telegram-apps/telegram-ui";
 
 import type { GameDataIFC, MyMissionsIFC } from "@/types/game";
+import { getMissionData } from "@/utilities/mission";
 
 interface AppContextType {
   initData: InitDataParsed;
@@ -31,7 +32,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const initGameData: GameDataIFC = {
   level: 0,
-  balance: 1000,
+  balance: 10000000,
   energy: 1000,
   yesterdayLogin: false,
   todayLogin: false,
@@ -68,6 +69,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (existInd > -1) copiedMission[existInd].level = mission.level;
     else copiedMission = [...missions, mission];
     setMissions(copiedMission);
+
+    const missionCost = getMissionData(mission.id, mission.level - 1).cost;
+    setGameData({
+      ...gameData,
+      balance: gameData.balance - missionCost,
+    });
   };
 
   const [curEenergy, setCurEenergy] = useState(initGameData.energy);
