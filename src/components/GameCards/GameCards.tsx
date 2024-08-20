@@ -1,5 +1,6 @@
 import "./GameCards.css";
 import { useState } from "react";
+import toast from "react-simple-toasts";
 import { Tap, Modal } from "@/components/system";
 import { type Tab as TabInterface } from "@/components/system/Tab";
 import { type UpgradeCardIFC } from "@/types/card";
@@ -43,7 +44,7 @@ const categories: TabInterface[] = [
 ];
 
 const GameCards = ({ className, ...props }: GameCardsProps) => {
-  const { missions, handleSetMission } = useApp();
+  const { missions, handleSetMission, gameData } = useApp();
 
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("team");
@@ -59,6 +60,14 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
   };
 
   const handleClickSetMission = (data: any) => {
+    if (data.cost > gameData.balance) {
+      toast("You don't have enough balance", {
+        className: "app-toast",
+        position: "top-center",
+      });
+      setIsOpenModal(false);
+      return true;
+    }
     handleSetMission({
       id: data.id || "",
       level: data.level + 1,

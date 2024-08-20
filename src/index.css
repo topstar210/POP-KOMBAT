@@ -138,3 +138,13 @@ select {
   justify-content: space-between;
   margin-bottom: 8px;
 }
+
+.app-toast {
+  background: #fff;
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 1px 0px 0px #101010;
+  border-radius: 8;
+  padding: 4px 8px;
+  font-size: 13.3px;
+  color: #2c323a;
+}
