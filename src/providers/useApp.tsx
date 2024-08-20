@@ -73,12 +73,19 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     //   level: 1,
     // },
   ]);
-  const handleSetMission = (mission: MyMissionsIFC) => {
+  const handleSetMission = async (mission: MyMissionsIFC) => {
     const existInd = missions.findIndex((res) => mission.id === res.id);
     let copiedMission = [...missions];
     if (existInd > -1) copiedMission[existInd].level = mission.level;
     else copiedMission = [...missions, mission];
-    setMissions(copiedMission);
+    try {
+      const user = initData?.user;
+      await postData(`missions/save`, {
+        userId: user?.id,
+        missions: copiedMission,
+      });
+      setMissions(copiedMission);
+    } catch (error) {}
 
     const missionCost = getMissionData(mission.id, mission.level - 1).cost;
     handleSetGameData({
@@ -91,10 +98,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const initAppData = async () => {
       const user = initData?.user;
       try {
+        // get and set user data from database
         await postData("users/save", user);
 
+        // get game data of user
         const gameRes = await fetchData(`games/${user?.id}`);
         handleSetGameData({ ...gameRes });
+
+        // get mission data of user
+        const missionRes = await fetchData(`missions/${user?.id}`);
+        setMissions(missionRes);
       } catch (error) {
         console.log(error);
       }

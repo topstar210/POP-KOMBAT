@@ -68,10 +68,16 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       setIsOpenModal(false);
       return true;
     }
-    handleSetMission({
-      id: data.id || "",
-      level: data.level + 1,
-    });
+    try {
+      handleSetMission({
+        id: data.id || "",
+        level: data.level + 1,
+      });
+      toast(`${data.name} level was set to  ${data.level + 1}`, {
+        className: "app-toast",
+        position: "top-center",
+      });
+    } catch (error) {}
     setIsOpenModal(false);
   };
 
