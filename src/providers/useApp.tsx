@@ -17,6 +17,7 @@ import { Placeholder } from "@telegram-apps/telegram-ui";
 import type { GameDataIFC, MyMissionsIFC } from "@/types/game";
 import { getMissionData } from "@/utilities/mission";
 import { getLevelByBalance } from "@/utilities/level";
+import { postData, fetchData } from "@/services/apiService";
 
 interface AppContextType {
   initData: InitDataParsed;
@@ -33,8 +34,8 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const initGameData: GameDataIFC = {
   level: 0,
-  totalEarning: 10000000,
-  balance: 10000000,
+  totalEarning: 1000,
+  balance: 1000,
   energy: 1000,
   yesterdayLogin: false,
   todayLogin: false,
@@ -52,18 +53,25 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [gameData, setGameData] = useState<GameDataIFC>({
     ...initGameData,
   });
-  const handleSetGameData = (values: any) => {
-    setGameData({
+  const handleSetGameData = async (values: any) => {
+    const user = initData?.user;
+    let data = {
       ...gameData,
       ...values,
-    });
+    };
+    const userLevel = getLevelByBalance(data.totalEarning);
+    data.level = userLevel.current - 1;
+    try {
+      await postData(`games/${user?.id}`, data);
+      setGameData(data);
+    } catch (error) {}
   };
 
   const [missions, setMissions] = useState<MyMissionsIFC[]>([
-    {
-      id: "agent",
-      level: 1,
-    },
+    // {
+    //   id: "agent",
+    //   level: 1,
+    // },
   ]);
   const handleSetMission = (mission: MyMissionsIFC) => {
     const existInd = missions.findIndex((res) => mission.id === res.id);
@@ -73,14 +81,26 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setMissions(copiedMission);
 
     const missionCost = getMissionData(mission.id, mission.level - 1).cost;
-    setGameData({
-      ...gameData,
+    handleSetGameData({
       balance: gameData.balance - missionCost,
     });
   };
 
   const [curEenergy, setCurEenergy] = useState(initGameData.energy);
   useEffect(() => {
+    const initAppData = async () => {
+      const user = initData?.user;
+      try {
+        await postData("users/save", user);
+
+        const gameRes = await fetchData(`games/${user?.id}`);
+        handleSetGameData({ ...gameRes });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    initAppData();
+
     const interval = setInterval(() => {
       setCurEenergy((prevCurEenergy) =>
         prevCurEenergy < initGameData.energy
@@ -95,17 +115,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       prevCurEenergy > 0 ? prevCurEenergy - 1 : 0
     );
   };
-
-  useEffect(() => {
-    /**
-     * @todo: use gameData.totalEarning instead of gameData.balance later
-     */
-    const res = getLevelByBalance(gameData.balance);
-    setGameData({
-      ...gameData,
-      level: res.current - 1,
-    });
-  }, [gameData.balance]);
 
   // Create a new application navigator and attach it to the browser history, so it could modify
   // it and listen to its changes.

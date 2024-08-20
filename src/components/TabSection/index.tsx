@@ -20,6 +20,7 @@ const TabSection = ({
   const handleTabClick = (e: any) => {
     setBalance({
       balance: gameData.balance + 1,
+      totalEarning: gameData.totalEarning + 1,
     });
 
     setDecrementCurEnergy();
