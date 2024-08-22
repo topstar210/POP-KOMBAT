@@ -61,9 +61,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     };
     const userLevel = getLevelByBalance(data.totalEarning);
     data.level = userLevel.current - 1;
+    setGameData(data);
     try {
       await postData(`games/${user?.id}`, data);
-      setGameData(data);
     } catch (error) {}
   };
 
