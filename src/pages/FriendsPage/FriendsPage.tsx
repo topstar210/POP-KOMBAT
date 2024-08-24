@@ -1,20 +1,36 @@
 import "./FriendsPage.css";
 
+import toast from "react-simple-toasts";
 import { Box } from "@/components/system";
 import InviteItem from "@/components/Friend/InviteItem";
 import InfoItem from "@/components/Friend/InfoItem";
 import { formatNum } from "@/utilities/number";
+import { useApp } from "@/providers/useApp";
 
 import tokenIcon from "@/assets/icons/token.png";
 import copyIcon from "@/assets/icons/copy.png";
 import userAvatar from "@/assets/imgs/avatar/user1.jfif";
 
 const FriendsPage = () => {
+  const { initData } = useApp();
+  const user = initData?.user;
+
+  const copyInviteLink = async () => {
+    const link = `https://t.me/pop_kombat_bot?start=${user?.id}`;
+    await navigator.clipboard.writeText(link);
+    toast("The invite link copied", {
+      className: "app-toast",
+      position: "top-center",
+    });
+  };
+
   return (
     <div className="main-page">
       <Box className="fp-header">
         <div className="fp-title fade-down">INvite friends!</div>
-        <div className="fp-subtitle fade-left">Earn bonuses for you and your friends</div>
+        <div className="fp-subtitle fade-left">
+          Earn bonuses for you and your friends
+        </div>
       </Box>
       <Box className="fp-status-section">
         <InviteItem
@@ -85,8 +101,10 @@ const FriendsPage = () => {
         </div>
       </Box>
       <Box className="fp-invitebtn-section">
-        <button className="invite">invite a friend</button>
-        <button className="copy">
+        <button className="invite" onClick={copyInviteLink}>
+          invite a friend
+        </button>
+        <button className="copy" onClick={copyInviteLink}>
           <img src={copyIcon} alt="" />
         </button>
       </Box>
