@@ -69,7 +69,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const [missions, setMissions] = useState<MyMissionsIFC[]>([
     // {
-    //   id: "agent",
+    //   id: "accountant",
     //   level: 1,
     // },
   ]);

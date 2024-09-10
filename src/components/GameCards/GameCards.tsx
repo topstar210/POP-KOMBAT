@@ -108,6 +108,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
               return (
                 <UpgradeCard
                   key={i}
+                  id={missionData.id}
                   name={missionData.name}
                   img_link={missionData.img_link}
                   cost={missionData.cost}
@@ -126,7 +127,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <div className="app-mission-section">
           <img
-            src={mission?.img_link ? mission?.img_link : defaultImg}
+            src={mission?.id ? `./images/card/${mission.id}.png` : defaultImg}
             alt="mission-img"
             className="mission-img"
             width={103}

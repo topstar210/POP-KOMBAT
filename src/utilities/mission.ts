@@ -94,6 +94,7 @@ const calcCardVal = (
  */
 export const getMissionData = (id: string, level: number) => {
   const cardData = getMissionDataById(id);
+  if (!cardData) return {};
   if (level === 1) {
     return cardData;
   } else {

@@ -11,6 +11,7 @@ interface UpgradeCardProps extends UpgradeCardIFC {
 }
 
 const UpgradeCard = ({
+  id,
   name,
   level,
   img_link,
@@ -28,14 +29,18 @@ const UpgradeCard = ({
     >
       <div className="app-upgcard-body">
         <div>
-          <img src={defaultImg} alt="" sizes="48px" />
+          <img
+            src={`./images/card/${id}.png` || defaultImg}
+            alt=""
+            sizes="48px"
+          />
         </div>
         <div>
           <div className="upgcard-title">{name}</div>
           <div className="upgcard-profit-perhour">
             <div className="font-xs">Profit per hour</div>
             <div className="app-upgcard-row">
-              <img src={img_link || tokenIcon} alt="" width={14} />
+              <img src={tokenIcon} alt="" width={14} />
               <span className="font-xs">{formatToFixed(reward)}</span>
             </div>
           </div>
