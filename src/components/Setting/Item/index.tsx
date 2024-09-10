@@ -20,7 +20,7 @@ const SettingItem = ({
 }: ItemProps) => {
   return (
     <div className="app-settingitem" onClick={onClick}>
-      {icon && <img src={icon} alt="" width={32} height={32} />}
+      {icon && <img src={icon} alt="" className="app-settingitem-icon" width={32} height={32} />}
       <div className="app-settingitem-info">
         <div className="title">{title}</div>
         {description && <div className="description">{description}</div>}
