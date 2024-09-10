@@ -23,6 +23,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
     let totalReward = 0;
     missions.map((mission) => {
       const res = getMissionData(mission.id, mission.level);
+      if(!res.reward) return;
       totalReward += res.reward;
     });
     setReward(totalReward);
