@@ -20,7 +20,7 @@ const InfoSection = ({
       {...props}
       onClick={onClick}
     >
-      {/* <img src={img} alt="" width={27} /> */}
+      <img src={img} alt="" width={27} />
       <span>{value}</span>
     </div>
   );
