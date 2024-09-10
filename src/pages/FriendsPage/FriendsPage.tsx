@@ -1,11 +1,14 @@
+import { useEffect, useState } from "react";
 import "./FriendsPage.css";
 
 import toast from "react-simple-toasts";
 import { Box } from "@/components/system";
 import InviteItem from "@/components/Friend/InviteItem";
-import InfoItem from "@/components/Friend/InfoItem";
+import FriendItem from "@/components/Friend/InfoItem";
 import { formatNum } from "@/utilities/number";
 import { useApp } from "@/providers/useApp";
+import { fetchData } from "@/services/apiService";
+import { levelUpBouns } from "@/data/constant";
 
 import tokenIcon from "@/assets/icons/token.png";
 import copyIcon from "@/assets/icons/copy.png";
@@ -14,6 +17,16 @@ import userAvatar from "@/assets/imgs/avatar/user1.jfif";
 const FriendsPage = () => {
   const { initData } = useApp();
   const user = initData?.user;
+
+  const [friends, setFriends] = useState<any>([]);
+
+  useEffect(() => {
+    const getFetchData = async () => {
+      const { friends } = await fetchData(`friend/${user?.id}`);
+      setFriends(friends);
+    };
+    getFetchData();
+  }, []);
 
   const copyInviteLink = async () => {
     const link = `https://t.me/pop_kombat_bot?start=${user?.id}`;
@@ -46,10 +59,16 @@ const FriendsPage = () => {
       <Box className="fp-yourfriends">
         <h2>Your Friends (**)</h2>
         <div className="fp-friends-list">
-          <InfoItem />
-          <InfoItem />
-          <InfoItem />
-          <InfoItem />
+          {friends.length ? (
+            friends.map((friend:any, i:number) => (
+              <FriendItem
+                name={`${friend.inviteUserDetails[0].firstName} ${friend.inviteUserDetails[0].lastName}`}
+                key={i}
+              />
+            ))
+          ) : (
+            <div>You haven't invited anyone yet</div>
+          )}
         </div>
       </Box>
       <Box className="fp-levelbonus">
@@ -68,34 +87,40 @@ const FriendsPage = () => {
               </tr>
             </thead>
             <tbody>
-              {[1, 2, 3, 4].map((val: any) => (
-                <tr key={val}>
-                  <td>
-                    <div>
-                      <img
-                        src={userAvatar}
-                        className="avatar"
-                        width={36}
-                        height={36}
-                        alt=""
-                      />
-                      <span>Legendary</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <img src={tokenIcon} width={18} height={18} alt="" />
-                      <span className="coin">+{formatNum(8000000)}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <img src={tokenIcon} width={18} height={18} alt="" />
-                      <span className="coin">+{formatNum(8000000)}</span>
-                    </div>
-                  </td>
-                </tr>
-              ))}
+              {levelUpBouns.map((val: any) =>
+                val.title ? (
+                  <tr key={val.title}>
+                    <td>
+                      <div>
+                        <img
+                          src={userAvatar}
+                          className="avatar"
+                          width={36}
+                          height={36}
+                          alt=""
+                        />
+                        <span>{val.title}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <img src={tokenIcon} width={18} height={18} alt="" />
+                        <span className="coin">
+                          +{formatNum(val.forFriend)}
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <img src={tokenIcon} width={18} height={18} alt="" />
+                        <span className="coin">+{formatNum(val.premiun)}</span>
+                      </div>
+                    </td>
+                  </tr>
+                ) : (
+                  <tr key={val}></tr>
+                )
+              )}
             </tbody>
           </table>
         </div>

@@ -6,7 +6,14 @@ import { formatToFixed } from "@/utilities/number";
 import tokenIcon from "@/assets/icons/token.png";
 import userAvatar from "@/assets/imgs/avatar/user1.jfif";
 
-const InfoItem = () => {
+
+export interface FriendProps {
+  name?: string;
+  level?: string;
+  coin_val?: string;
+}
+
+const InfoItem = ({name, level, coin_val}:FriendProps) => {
   return (
     <Item className="fp-friend-item">
       <div className="fp-friend-info">
@@ -18,7 +25,7 @@ const InfoItem = () => {
           height={32}
         />
         <div className="">
-          <div className="fp-friend-name">Friend's Name</div>
+          <div className="fp-friend-name">{ name }</div>
           <div className="fp-friend-level">
             <span>Primium </span>
             <img src={tokenIcon} alt="T" width={10} height={10} />
