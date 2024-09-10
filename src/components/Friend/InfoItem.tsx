@@ -13,7 +13,7 @@ export interface FriendProps {
   coin_val?: string;
 }
 
-const InfoItem = ({name, level, coin_val}:FriendProps) => {
+const InfoItem = ({name}:FriendProps) => {
   return (
     <Item className="fp-friend-item">
       <div className="fp-friend-info">
