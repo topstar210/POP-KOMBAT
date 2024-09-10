@@ -25,6 +25,10 @@
   margin-top: 16px;
 }
 
+.fp-levelbonus{
+  margin-bottom: 180px;
+}
+
 .fp-yourfriends > h2,
 .fp-levelbonus > h2 {
   font-size: var(--font-sizelg);
@@ -66,8 +70,9 @@
 }
 
 .fp-invitebtn-section {
-  margin-top: 10px;
-  margin-bottom: 100px;
+  position: fixed;
+  width: -webkit-fill-available;
+  bottom: 100px;
   display: flex;
   justify-content: space-between;
   gap: 8px;
