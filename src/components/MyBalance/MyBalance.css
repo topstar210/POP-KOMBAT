@@ -1,10 +1,14 @@
 .coin-counter{
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   gap: 8px;
   font-size: var(--font-size4xl);
   font-family: var(--font-familyHeading);
   text-shadow: 1px 2px 0px #101010;
   color: #fff;
+}
+.coin-counter span {
+  line-height: 1;
+  padding-top: 10px;
 }
