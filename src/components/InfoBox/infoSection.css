@@ -10,4 +10,6 @@
 .app-info-section span {
   background: red;
   line-height: 1;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
