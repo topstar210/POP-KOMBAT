@@ -4,6 +4,7 @@
   gap: 4px;
   font-size: var(--font-sizexl);
   font-family: var(--font-familyHeading);
+  line-height: 30px;
   text-shadow: 1px 2px 0px #101010;
   color: #fff;
 }
