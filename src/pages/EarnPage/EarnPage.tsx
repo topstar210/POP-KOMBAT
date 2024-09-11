@@ -25,13 +25,13 @@ const EarnPage = () => {
             <div className="er-list">
               <EarnItem
                 icon={spotifyIcon}
-                title="Phasellus mauris volutpat"
+                title="Stream 'Eres Mi Sol' on Spotify"
                 coin={308880}
                 isChecked={false}
               />
               <EarnItem
                 icon={spotifyIcon}
-                title="Phasellus mauris volutpat"
+                title="Follow the Producers Playlist"
                 coin={308880}
                 isChecked={true}
               />
@@ -42,8 +42,8 @@ const EarnPage = () => {
             <div className="er-list">
               <EarnItem
                 icon={calandarIcon}
-                title="Phasellus mauris volutpat"
-                coin={308880}
+                title="Daily Reward"
+                coin={308880} 
                 isChecked={false}
               />
             </div>
