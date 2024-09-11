@@ -24,3 +24,45 @@
   color: #fff;
   margin-top: 32px;
 }
+
+.app-dailyreward-mcontainer {
+  text-align: center;
+  color: #fff;
+}
+.app-dailyreward-mcontainer .daily-img {
+  margin: 0 auto;
+}
+.app-dailyreward-mcontainer button {
+  background: var(--pink, #e6007a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 8px 0px 0px #101010;
+  border-radius: 8px;
+  padding: 20px 32px;
+  color: #fff;
+  font-size: var(--font-size3xl);
+  text-shadow: 1px 2px 0px #101010;
+  font-family: var(--font-familyHeading);
+  width: 100%;
+}
+.app-dailyreward-mcontainer .dailyreward-cards {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 10px;
+}
+.app-dailyreward-mcontainer .dailyreward-card {
+  font-family: var(--font-familyHeading);
+  background: var(--gray-dark);
+  border-radius: 8px;
+  border: 1px solid var(--gray, #6e7d91);
+  color: var(--gray, #6e7d91);
+}
+.app-dailyreward-mcontainer .dailyreward-card.actived {
+  background: linear-gradient(43.45deg, #2e90fa 0%, #00e8fc 99.17%);
+  color: #fff;
+  border-color: var(--blue);
+}
+.app-dailyreward-mcontainer .dailyreward-card.available {
+  border-color: var(--blue);
+  color: #fff;
+}
