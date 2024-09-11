@@ -1,46 +1,46 @@
 export const levels = [
   {
-    title: "Bronze",
+    title: "Fresh Artist",
     balance: 0,
   },
   {
-    title: "Silver",
+    title: "100k monthly listeners",
     balance: 5000,
   },
   {
-    title: "Gold",
+    title: "1M monthly listeners",
     balance: 25000,
   },
   {
-    title: "Platinum",
+    title: "Silver",
     balance: 100000,
   },
   {
-    title: "Diamond",
+    title: "Gold",
     balance: 1000000,
   },
   {
-    title: "Epic",
+    title: "Platinum",
     balance: 2000000,
   },
   {
-    title: "Legendary",
+    title: "Multi-Platinum",
     balance: 10000000,
   },
   {
-    title: "Master",
+    title: "Diamond",
     balance: 50000000,
   },
   {
-    title: "Grandmaster",
+    title: "Icon",
     balance: 100000000,
   },
   {
-    title: "Lord",
+    title: "Superstar",
     balance: 1000000000,
   },
   {
-    title: "Creator",
+    title: "World Dominator",
     balance: 18000000000,
   },
 ];
@@ -48,52 +48,52 @@ export const levels = [
 export const levelUpBouns = [
   {},
   {
-    title: "Silver",
+    title: "100k monthly listeners",
     forFriend: 20000,
     premiun: 25000
   },
   {
-    title: "Gold",
+    title: "1M monthly listeners",
     forFriend: 30000,
     premiun: 50000
   },
   {
-    title: "Platinum",
+    title: "Silver",
     forFriend: 40000,
     premiun: 75000
   },
   {
-    title: "Diamond",
+    title: "Gold",
     forFriend: 60000,
     premiun: 100000
   },
   {
-    title: "Epic",
+    title: "Platinum",
     forFriend: 100000,
     premiun: 150000
   },
   {
-    title: "Legendary",
+    title: "Multi-Platinum",
     forFriend: 250000,
     premiun: 500000
   },
   {
-    title: "Master",
+    title: "Diamond",
     forFriend: 500000,
     premiun: 1000000
   },
   {
-    title: "Grandmaster",
+    title: "Icon",
     forFriend: 1000000,
     premiun: 2000000
   },
   {
-    title: "Lord",
+    title: "Superstar",
     forFriend: 3000000,
     premiun: 6000000
   },
   {
-    title: "Creator",
+    title: "World Dominator",
     forFriend: 6000000,
     premiun: 12000000
   },
