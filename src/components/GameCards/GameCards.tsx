@@ -127,7 +127,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <div className="app-mission-section">
           <img
-            src={mission?.id ? `./images/card/${mission.id}.png` : defaultImg}
+            src={mission?.id ? `./images/card/${mission.id}_3x.png` : defaultImg}
             alt="mission-img"
             className="mission-img"
             width={103}

@@ -34,7 +34,7 @@ export const mineData: any = {
       reward_decay: 0.03,
     },
     {
-      id: "family_and_Friends",
+      id: "family_and_friends",
       name: "Family and Friends",
       level: 1,
       img_link: "",
