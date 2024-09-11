@@ -24,7 +24,7 @@ const BoostPage = () => {
         </div>
       </Box>
       <Box className="bp-boosters">
-        <h2>Free Daily Boosterss</h2>
+        <h2>Free Daily Boosters</h2>
         <div className="bp-daily-booster-list">
           <div className="app-boostitem">
             <img src={energyIcon} alt="" width={32} height={32} />
@@ -37,7 +37,7 @@ const BoostPage = () => {
         </div>
       </Box>
       <Box className="bp-boosters">
-        <h2>Boosterss</h2>
+        <h2>Boosters</h2>
         <div className="bp-booster-list">
           <div className="app-boostitem" style={{ height: 56 }}>
             <img src={arrowFigerUpIcon} alt="" width={32} height={32} />
