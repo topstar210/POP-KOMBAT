@@ -62,7 +62,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     // },
   ]);
   const [curEenergy, setCurEenergy] = useState(initGameData.energy);
-  const [isProfitPerH, setIsProfitPerH] = useState(true);
+  const [isProfitPerH, setIsProfitPerH] = useState(false);
 
   const handleSetGameData = async (values: any) => {
     const user = initData?.user;

@@ -20,7 +20,7 @@ interface Tabmune {
 const tabmenu: Tabmune[] = [
   {
     id: "home",
-    title: "Exchange",
+    title: "Blast",
     icon: exchangeIcon,
     route: "/home",
   },
@@ -52,7 +52,7 @@ const tabmenu: Tabmune[] = [
 
 const Tabbar = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("exchange");
+  const [activeTab, setActiveTab] = useState("home");
 
   const { navigator } = useApp();
   const [location] = useIntegration(navigator);
