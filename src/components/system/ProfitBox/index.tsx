@@ -51,7 +51,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
     <>
       <div className={`system-profit-box ${className}`}>
         <div className="system-profit-detail">
-          <div>Profit per hour</div>
+          <div>Pops per hour</div>
           <div className="system-profit-status">
             <img src={tokenIcon} alt="Token" />
             <div>+{formatToFixed(reward)}</div>
@@ -76,7 +76,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
         onClose={() => handleSetIsProfitPerH(false)}
       >
         <div className="app-profitperhour-modal">
-          <p>You 've got {formatNum(reward ?? 0)} from Your profit per hour</p>
+          <p>You 've got {formatNum(reward ?? 0)} from Your Pops per hour</p>
           <div className="token-row">
             <img src={tokenIcon} alt="" width={28} height={28} />
             <span>+{formatNum(reward ?? 0)}</span>
