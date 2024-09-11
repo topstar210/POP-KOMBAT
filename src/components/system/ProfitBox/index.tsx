@@ -71,7 +71,10 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
         </div>
       </div>
 
-      <Modal isOpen={isProfitPerH} onClose={() => handleSetIsProfitPerH(false)}>
+      <Modal
+        isOpen={isProfitPerH && reward > 0}
+        onClose={() => handleSetIsProfitPerH(false)}
+      >
         <div className="app-profitperhour-modal">
           <p>You 've got {formatNum(reward ?? 0)} from Your profit per hour</p>
           <div className="token-row">

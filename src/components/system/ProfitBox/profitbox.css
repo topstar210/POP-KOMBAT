@@ -50,6 +50,7 @@
 .app-profitperhour-modal p{
   padding-top: 30px;
   text-align: center;
+  color: #fff;
 }
 .app-profitperhour-modal > .token-row {
   display: flex;
