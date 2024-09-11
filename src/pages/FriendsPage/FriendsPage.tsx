@@ -67,7 +67,7 @@ const FriendsPage = () => {
               />
             ))
           ) : (
-            <div>You haven't invited anyone yet</div>
+            <div style={{color:"#fff"}}>You haven't invited anyone yet</div>
           )}
         </div>
       </Box>
