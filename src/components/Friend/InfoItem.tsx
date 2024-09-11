@@ -27,7 +27,7 @@ const InfoItem = ({name}:FriendProps) => {
         <div className="">
           <div className="fp-friend-name">{ name }</div>
           <div className="fp-friend-level">
-            <span>Primium </span>
+            <span>Premium </span>
             <img src={tokenIcon} alt="T" width={10} height={10} />
             <span className="coin">{formatToFixed(8888888)}</span>
           </div>
