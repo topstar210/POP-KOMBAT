@@ -11,7 +11,7 @@ import { AppRoot } from "@telegram-apps/telegram-ui";
 import { type FC, useEffect } from "react";
 
 import AppRouter from "@/navigation/AppRouter";
-import { AuthProvider } from "@/providers/useApp";
+import { AppProvider } from "@/providers/useApp";
 
 export const App: FC = () => {
   const lp = useLaunchParams();
@@ -36,9 +36,9 @@ export const App: FC = () => {
       appearance={miniApp.isDark ? "dark" : "light"}
       platform={["macos", "ios"].includes(lp.platform) ? "ios" : "base"}
     >
-      <AuthProvider>
+      <AppProvider>
         <AppRouter />
-      </AuthProvider>
+      </AppProvider>
     </AppRoot>
   );
 };

@@ -45,3 +45,29 @@
 .system-profit-setting-btn {
   padding-left: 7px;
 }
+
+
+.app-profitperhour-modal p{
+  padding-top: 30px;
+  text-align: center;
+}
+.app-profitperhour-modal > .token-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px;
+  font-size: var(--font-sizexl);
+}
+.app-profitperhour-modal button {
+  background: var(--pink, #e6007a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 8px 0px 0px #101010;
+  border-radius: 8px;
+  padding: 20px 32px;
+  color: #fff;
+  font-size: var(--font-size3xl);
+  text-shadow: 1px 2px 0px #101010;
+  font-family: var(--font-familyHeading);
+  width: 100%;
+}

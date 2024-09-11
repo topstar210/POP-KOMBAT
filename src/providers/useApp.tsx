@@ -28,6 +28,8 @@ interface AppContextType {
   handleDecrementCurEnergy: () => void;
   missions: MyMissionsIFC[];
   handleSetMission: (values: MyMissionsIFC) => void;
+  isProfitPerH: boolean;
+  handleSetIsProfitPerH: (status?: boolean) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -46,13 +48,22 @@ const initGameData: GameDataIFC = {
   isInvite3Friend: false,
 };
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
+export const AppProvider = ({ children }: { children: ReactNode }) => {
   const initDataRaw = useLaunchParams().initDataRaw;
   const initData = useInitData();
 
   const [gameData, setGameData] = useState<GameDataIFC>({
     ...initGameData,
   });
+  const [missions, setMissions] = useState<MyMissionsIFC[]>([
+    // {
+    //   id: "accountant",
+    //   level: 1,
+    // },
+  ]);
+  const [curEenergy, setCurEenergy] = useState(initGameData.energy);
+  const [isProfitPerH, setIsProfitPerH] = useState(true);
+
   const handleSetGameData = async (values: any) => {
     const user = initData?.user;
     let data = {
@@ -67,12 +78,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     } catch (error) {}
   };
 
-  const [missions, setMissions] = useState<MyMissionsIFC[]>([
-    // {
-    //   id: "accountant",
-    //   level: 1,
-    // },
-  ]);
   const handleSetMission = async (mission: MyMissionsIFC) => {
     const existInd = missions.findIndex((res) => mission.id === res.id);
     let copiedMission = [...missions];
@@ -93,7 +98,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  const [curEenergy, setCurEenergy] = useState(initGameData.energy);
   useEffect(() => {
     const initAppData = async () => {
       const user = initData?.user;
@@ -114,19 +118,32 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     };
     initAppData();
 
-    const interval = setInterval(() => {
+    const intervalForEnergy = setInterval(() => {
       setCurEenergy((prevCurEenergy) =>
         prevCurEenergy < initGameData.energy
           ? prevCurEenergy + 1
           : initGameData.energy
       );
     }, 1000);
-    return () => clearInterval(interval);
+
+    const intervalProfitPerHour = setInterval(() => {
+      setIsProfitPerH(true);
+    }, 3600000);
+
+    return () => {
+      clearInterval(intervalProfitPerHour);
+      clearInterval(intervalForEnergy);
+    };
   }, []);
+
   const handleDecrementCurEnergy = () => {
     setCurEenergy((prevCurEenergy) =>
       prevCurEenergy > 0 ? prevCurEenergy - 1 : 0
     );
+  };
+
+  const handleSetIsProfitPerH = (status = false) => {
+    setIsProfitPerH(status);
   };
 
   // Create a new application navigator and attach it to the browser history, so it could modify
@@ -158,6 +175,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         handleDecrementCurEnergy,
         missions,
         handleSetMission,
+        isProfitPerH,
+        handleSetIsProfitPerH,
       }}
     >
       {children}

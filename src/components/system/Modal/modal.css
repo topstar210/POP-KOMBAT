@@ -12,7 +12,7 @@
   position: absolute;
   bottom: 0;
   z-index: 12;
-  min-height: 300px;
+  min-height: 250px;
   width: -webkit-fill-available;
   background: linear-gradient(8.76deg, #101010 6.66%, #2c323a 93.3%);
   border-top: 4px solid var(--pink, #e6007a);
