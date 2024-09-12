@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useIntegration } from "@telegram-apps/react-router-integration";
 import { useApp } from "@/providers/useApp";
 
-import exchangeIcon from "@/assets/icons/exchange.png";
-import mineIcon from "@/assets/icons/mine.png";
+import blastIcon from "@/assets/icons/blast.png";
+import promoIcon from "@/assets/icons/promo.png";
 import friendsIcon from "@/assets/icons/friend.png";
 import earnIcon from "@/assets/icons/earn.png";
 import airdropIcon from "@/assets/icons/airdrop.png";
@@ -21,13 +21,13 @@ const tabmenu: Tabmune[] = [
   {
     id: "home",
     title: "Blast",
-    icon: exchangeIcon,
+    icon: blastIcon,
     route: "/home",
   },
   {
     id: "mine",
-    title: "Mine",
-    icon: mineIcon,
+    title: "Promo",
+    icon: promoIcon,
     route: "/mine",
   },
   {
