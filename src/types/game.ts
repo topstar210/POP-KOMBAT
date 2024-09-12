@@ -8,8 +8,6 @@ export interface GameDataIFC {
   totalEarning: number; // user total earning so far
   balance: number; // user balance
   energy: number;
-  yesterdayLogin?: boolean;
-  todayLogin?: boolean;
   isJoinTG: boolean;
   isJoinX: boolean;
   isJoinBinance: boolean;

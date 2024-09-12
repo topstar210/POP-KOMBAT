@@ -39,8 +39,6 @@ const initGameData: GameDataIFC = {
   totalEarning: 1000,
   balance: 1000,
   energy: 1000,
-  yesterdayLogin: false,
-  todayLogin: false,
   isJoinTG: false,
   isJoinX: false,
   isJoinBinance: false,
