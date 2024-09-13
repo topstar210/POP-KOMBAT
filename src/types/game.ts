@@ -13,6 +13,7 @@ export interface GameDataIFC {
   isJoinBinance: boolean;
   isInvite1Friend: boolean;
   isInvite3Friend: boolean;
+  isDailyRewardAvailable: boolean;
 }
 
 export interface LevelIFC {

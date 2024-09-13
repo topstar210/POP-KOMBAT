@@ -44,6 +44,7 @@ const initGameData: GameDataIFC = {
   isJoinBinance: false,
   isInvite1Friend: false,
   isInvite3Friend: false,
+  isDailyRewardAvailable: false,
 };
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
