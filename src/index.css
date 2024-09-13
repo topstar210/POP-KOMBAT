@@ -148,3 +148,7 @@ select {
   font-size: 13.3px;
   color: #2c323a;
 }
+
+button.disabled{
+  background: var(--gray-dark);
+}

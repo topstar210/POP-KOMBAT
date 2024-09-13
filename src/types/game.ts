@@ -14,6 +14,7 @@ export interface GameDataIFC {
   isInvite1Friend: boolean;
   isInvite3Friend: boolean;
   isDailyRewardAvailable: boolean;
+  consecutiveDays: number; // for daily reward
 }
 
 export interface LevelIFC {

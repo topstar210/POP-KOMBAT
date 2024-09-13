@@ -45,6 +45,7 @@ const initGameData: GameDataIFC = {
   isInvite1Friend: false,
   isInvite3Friend: false,
   isDailyRewardAvailable: false,
+  consecutiveDays: 0
 };
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
@@ -54,18 +55,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [gameData, setGameData] = useState<GameDataIFC>({
     ...initGameData,
   });
-  const [missions, setMissions] = useState<MyMissionsIFC[]>([
-    // {
-    //   id: "accountant",
-    //   level: 1,
-    // },
-  ]);
+  const [missions, setMissions] = useState<MyMissionsIFC[]>([]);
   const [curEenergy, setCurEenergy] = useState(initGameData.energy);
   const [isProfitPerH, setIsProfitPerH] = useState(false);
 
-  /**
-   * @todo: Saving game valance so that to save on Backend side
-   */
   const handleSetGameData = async (values: any) => {
     const user = initData?.user;
     let data = {
