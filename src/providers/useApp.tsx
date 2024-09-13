@@ -62,6 +62,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [curEenergy, setCurEenergy] = useState(initGameData.energy);
   const [isProfitPerH, setIsProfitPerH] = useState(false);
 
+  /**
+   * @todo: Saving game valance so that to save on Backend side
+   */
   const handleSetGameData = async (values: any) => {
     const user = initData?.user;
     let data = {
@@ -105,7 +108,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
         // get game data of user
         const gameRes = await fetchData(`games/${user?.id}`);
-        handleSetGameData({ ...gameRes });
+        handleSetGameData({
+          ...gameRes.gameData,
+          isDailyRewardAvailable: gameRes.isDailyRewardAvailable,
+        });
 
         // get mission data of user
         const missionRes = await fetchData(`missions/${user?.id}`);
