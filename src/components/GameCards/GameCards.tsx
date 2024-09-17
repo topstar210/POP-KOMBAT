@@ -71,7 +71,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
     try {
       handleSetMission({
         id: data.id || "",
-        level: data.level + 1,
+        level: data.level,
       });
       toast(`${data.name} level was set to  ${data.level + 1}`, {
         className: "app-toast",
