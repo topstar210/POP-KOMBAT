@@ -1,5 +1,5 @@
 export const mineData: any = {
-  equipments: {
+  equipment: {
     desktop_computer: {
       name: "Desktop Computer",
       data_by_level: [
@@ -1401,7 +1401,7 @@ export const mineData: any = {
         { cost: 1813407, return: 1360 },
       ],
     },
-    bribe_radio_dj: {
+    radio_broadcasting: {
       name: "Bribe Radio DJ",
       data_by_level: [
         { cost: 1750, return: 345 },
@@ -1528,7 +1528,7 @@ export const mineData: any = {
       ],
     },
   },
-  liveShows: {
+  live_shows: {
     lighting: {
       name: "Lighting",
       data_by_level: [
