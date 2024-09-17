@@ -634,7 +634,7 @@ export const mineData: any = {
     },
   },
   team: {
-    family_and_friends: {
+    family_friends: {
       name: "Family and Friends",
       data_by_level: [
         { cost: 100, return: 10 },
