@@ -13,7 +13,7 @@ export const formatToFixed = (num: number) => {
   } else if (num >= 1000000000000) {
     return (num / 1000000000000).toFixed(2) + "T";
   } else {
-    return num.toString();
+    return num.toFixed(3).toString();
   }
 };
 

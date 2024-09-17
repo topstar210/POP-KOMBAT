@@ -11,7 +11,7 @@ import { formatNum } from "@/utilities/number";
 import UpgradeCard from "./UpgradeCard/UpgradeCard";
 import SpecialList from "./SpecialList";
 
-import { mineData } from "@/data/mine";
+import { mineData } from "@/data/mission";
 
 import defaultImg from "@/assets/imgs/mission-image.png";
 import tokenIcon from "@/assets/imgs/token-image.png";
@@ -90,34 +90,34 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       >
         {mineData[activeTab] && (
           <div className="card-group">
-            {mineData[activeTab].map((data: UpgradeCardIFC, i: any) => {
-              let missionData;
-              const settedMission = missions.find(
-                (mission) => mission.id === data.id
-              );
-              if (settedMission) {
-                missionData = getMissionData(
-                  settedMission.id,
-                  settedMission.level + 1
-                );
-                missionData.level -= 1;
-              } else {
-                missionData = { ...data, level: 0 };
-              }
+            {Object.entries(mineData[activeTab]).map(
+              (data: any[], i: number) => {
+                const missionId = data[0];
+                const missionName = data[1].name;
 
-              return (
-                <UpgradeCard
-                  key={i}
-                  id={missionData.id}
-                  name={missionData.name}
-                  img_link={missionData.img_link}
-                  cost={missionData.cost}
-                  level={missionData.level}
-                  reward={missionData.reward}
-                  onClick={() => openMissionData(missionData)}
-                />
-              );
-            })}
+                let missionData;
+                const settedMission = missions.find(
+                  (mission) => mission.id === missionId
+                );
+                missionData = getMissionData(
+                  missionId,
+                  settedMission ? settedMission.level + 1 : 1
+                );
+
+                return (
+                  <UpgradeCard
+                    key={i}
+                    id={missionId}
+                    name={missionName}
+                    img_link={""}
+                    cost={missionData.cost}
+                    level={missionData.level}
+                    reward={missionData.reward}
+                    onClick={() => openMissionData(missionData)}
+                  />
+                );
+              }
+            )}
           </div>
         )}
 
@@ -127,7 +127,9 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <div className="app-mission-section">
           <img
-            src={mission?.id ? `./images/card/${mission.id}_3x.png` : defaultImg}
+            src={
+              mission?.id ? `./images/card/${mission.id}_3x.png` : defaultImg
+            }
             alt="mission-img"
             className="mission-img"
             width={103}

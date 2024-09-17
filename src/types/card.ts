@@ -6,8 +6,6 @@ export interface UpgradeCardIFC {
   description?: string;
   cost: number;
   reward: number;
-  cost_increase?: number;
-  reward_decay?: number;
 }
 
 export interface MyCardIFC {
