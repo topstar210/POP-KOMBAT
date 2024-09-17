@@ -1,5 +1,4 @@
 import { mineData } from "@/data/mission";
-import { UpgradeCardIFC } from "@/types/card";
 
 /**
  *  return mission object by id
