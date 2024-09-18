@@ -1,7 +1,9 @@
 import "./tabSection.css";
+import { useState } from "react";
 import type { GameDataIFC } from "@/types/game";
 
 import heroCharacter from "@/assets/imgs/heroCharacter.png";
+import pressHeroCharacter from "@/assets/imgs/heroCharacter-clicked.png";
 
 interface TabSectionProps {
   gameData: GameDataIFC;
@@ -17,7 +19,10 @@ const TabSection = ({
   className,
   ...props
 }: TabSectionProps) => {
+  const [onPress, setOnPress] = useState(true);
+
   const handleTouch = (e: any) => {
+    setOnPress(true);
     const parent = e.currentTarget;
     const rect = parent.getBoundingClientRect();
 
@@ -48,30 +53,39 @@ const TabSection = ({
       const grandparent = parent.parentElement;
       grandparent.appendChild(plusOne);
 
-      // Animate the .app-tab-pan
-      const appTabPan = parent;
-      const rotateX = ((y - rect.height / 2) / rect.height) * 30; // Adjust the factor to control the rotation
-      const rotateY = ((x - rect.width / 2) / rect.width) * -30; // Adjust the factor to control the rotation
-      appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-      // Reset the animation
-      setTimeout(() => {
-        appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
-      }, 150);
-
       plusOne.addEventListener("animationend", () => {
         plusOne.remove();
       });
+
+      // // Animate the .app-tab-pan
+      // const appTabPan = parent;
+      // const rotateX = ((y - rect.height / 2) / rect.height) * 30; // Adjust the factor to control the rotation
+      // const rotateY = ((x - rect.width / 2) / rect.width) * -30; // Adjust the factor to control the rotation
+      // appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+      // // Reset the animation
+      // setTimeout(() => {
+      //   appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
+      // }, 150);
       // animation section end -----------------------------------------------------
     }
+  };
+
+  const handleTouchEnd = (e: any) => {
+    setOnPress(false);
   };
 
   return (
     <div className={`app-tabsection ${className}`} {...props}>
       <div style={{ position: "relative" }}>
-        <div className="app-tab-pan" onTouchStart={handleTouch}>
+        <div
+          className={`app-tab-pan ${onPress ? "pressed" : ""}`}
+          onTouchStart={handleTouch}
+          onTouchEnd={handleTouchEnd}
+        >
           <div className="app-tab-pan-in">
-            <img src={heroCharacter} alt="" />
+            {onPress && <div className="pressed-blur"></div>}
+            <img src={onPress ? pressHeroCharacter : heroCharacter} alt="" />
           </div>
         </div>
       </div>

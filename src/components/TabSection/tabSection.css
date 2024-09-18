@@ -16,6 +16,9 @@
   transition: transform 0.3s ease;
   transform-style: preserve-3d; /* Ensure child elements are transformed in 3D space */
 }
+.app-tab-pan.pressed {
+  box-shadow: 0px 0px 0px 0px #101010;
+}
 .app-tab-pan-in {
   position: relative;
   z-index: 1;
@@ -30,6 +33,17 @@
   border: 7px solid;
   overflow: hidden;
   border-image-source: linear-gradient(43.45deg, #2e90fa 0%, #aad2fd 99.17%);
+}
+.pressed-blur {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  background: #fff;
+  filter: blur(40px);
+  z-index: 1;
+}
+.app-tab-pan-in img {
+  z-index: 2;
 }
 
 .app-tab-pan-in:before {
