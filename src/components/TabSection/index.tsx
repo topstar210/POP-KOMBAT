@@ -19,7 +19,7 @@ const TabSection = ({
   className,
   ...props
 }: TabSectionProps) => {
-  const [onPress, setOnPress] = useState(true);
+  const [onPress, setOnPress] = useState(false);
 
   const handleTouch = (e: any) => {
     setOnPress(true);
@@ -71,7 +71,7 @@ const TabSection = ({
     }
   };
 
-  const handleTouchEnd = (e: any) => {
+  const handleTouchEnd = () => {
     setOnPress(false);
   };
 
