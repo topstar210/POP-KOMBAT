@@ -2,6 +2,8 @@ export const mineData: any = {
   equipment: {
     desktop_computer: {
       name: "Desktop Computer",
+      description:
+        "The brain of your setup. Process, produce, and perfect with precision",
       data_by_level: [
         { cost: 525, return: 79 },
         { cost: 698, return: 84 },
@@ -23,6 +25,8 @@ export const mineData: any = {
     },
     bro_tools: {
       name: "Bro Tools",
+      description:
+        "Seamless recording, intuitive editing, and endless possibilities for every Producer",
       data_by_level: [
         { cost: 485, return: 76 },
         { cost: 638, return: 80 },
@@ -44,6 +48,8 @@ export const mineData: any = {
     },
     studio_desk: {
       name: "Studio Desk",
+      description:
+        "Noah's Ark held the world, your studio desk holds your gear. Enough room for everything's place.",
       data_by_level: [
         { cost: 588, return: 82 },
         { cost: 718, return: 87 },
@@ -65,6 +71,8 @@ export const mineData: any = {
     },
     studio_monitors: {
       name: "Studio Monitors",
+      description:
+        "Earth shattering sound. Turn it up to 11 and pump those jams!",
       data_by_level: [
         { cost: 340, return: 45 },
         { cost: 380, return: 46 },
@@ -86,6 +94,8 @@ export const mineData: any = {
     },
     cables: {
       name: "Cables",
+      description:
+        "The silent links that keep your gear talking. No buzz, no fuss, just flawless connectivity.",
       data_by_level: [
         { cost: 567, return: 94 },
         { cost: 662, return: 96 },
@@ -107,6 +117,7 @@ export const mineData: any = {
     },
     microphones: {
       name: "Microphones",
+      description: "The ultimate accessory for all musical Divas",
       data_by_level: [
         { cost: 500, return: 50 },
         { cost: 614, return: 54 },
@@ -128,6 +139,7 @@ export const mineData: any = {
     },
     keyboards: {
       name: "Keyboards",
+      description: "Your digital hands shaping the soundwaves.",
       data_by_level: [
         { cost: 750, return: 100 },
         { cost: 935, return: 112 },
@@ -149,6 +161,8 @@ export const mineData: any = {
     },
     audio_interface: {
       name: "Audio Interface",
+      discription:
+        "Digital to analogue wizardry. Crystal-clear sound, zero latency, pure connection.",
       data_by_level: [
         { cost: 1000, return: 80 },
         { cost: 1168, return: 85 },
@@ -170,6 +184,7 @@ export const mineData: any = {
     },
     displays: {
       name: "Displays",
+      description: "Visualise your production in real time!",
       data_by_level: [
         { cost: 2500, return: 270 },
         { cost: 2756, return: 289 },
@@ -191,6 +206,8 @@ export const mineData: any = {
     },
     studio_throne: {
       name: "Studio Throne",
+      description:
+        "Your command seat. Ergonomically surporting your voyage through the sonic realm.",
       data_by_level: [
         { cost: 1000, return: 100 },
         { cost: 1138, return: 107 },
@@ -212,6 +229,7 @@ export const mineData: any = {
     },
     music_samples: {
       name: "Music Samples",
+      description: "You're only as powerful as your samples.",
       data_by_level: [
         { cost: 2095, return: 283 },
         { cost: 2205, return: 287 },
@@ -233,6 +251,7 @@ export const mineData: any = {
     },
     headphones: {
       name: "Headphones",
+      description: "Your sonic sanctuary.",
       data_by_level: [
         { cost: 500, return: 70 },
         { cost: 790, return: 78 },
@@ -254,6 +273,7 @@ export const mineData: any = {
     },
     midi_controller: {
       name: "MIDI Controller",
+      description: "Unlock full creative freedom",
       data_by_level: [
         { cost: 1000, return: 100 },
         { cost: 1103, return: 107 },
@@ -275,6 +295,7 @@ export const mineData: any = {
     },
     plugins: {
       name: "Plugins",
+      description: "Let's add a little sauceeee.",
       data_by_level: [
         { cost: 1000, return: 100 },
         { cost: 1103, return: 107 },
@@ -296,6 +317,8 @@ export const mineData: any = {
     },
     mini_fridge: {
       name: "Mini Fridge",
+      description:
+        "What's better than a beer in the studio? A cold beer in the studio.",
       data_by_level: [
         { cost: 500, return: 50 },
         { cost: 648, return: 55 },
@@ -317,6 +340,7 @@ export const mineData: any = {
     },
     subwoofer: {
       name: "Subwoofer",
+      description: "All about that Bass",
       data_by_level: [
         { cost: 1000, return: 125 },
         { cost: 1103, return: 134 },
@@ -338,6 +362,7 @@ export const mineData: any = {
     },
     synthesisers: {
       name: "Synthesisers",
+      description: "Unlock your inner Rick Wakeman.",
       data_by_level: [
         { cost: 760, return: 175 },
         { cost: 935, return: 195 },
@@ -359,6 +384,7 @@ export const mineData: any = {
     },
     coffee_machine: {
       name: "Coffee Machine",
+      description: "Loaded with space coffee - the ultimate studio fuel.",
       data_by_level: [
         { cost: 1000, return: 200 },
         { cost: 1235, return: 218 },
@@ -380,6 +406,8 @@ export const mineData: any = {
     },
     control_surface: {
       name: "Control Surface",
+      description:
+        "Control your tracks destiny with more buttons than a cadburys factory.",
       data_by_level: [
         { cost: 1275, return: 190 },
         { cost: 1593, return: 208 },
@@ -401,6 +429,7 @@ export const mineData: any = {
     },
     laptop: {
       name: "Laptop",
+      description: "Your portable powerhouse. Make music anywhere, anytime.",
       data_by_level: [
         { cost: 2000, return: 110 },
         { cost: 2293, return: 118 },
@@ -422,6 +451,7 @@ export const mineData: any = {
     },
     vocal_booth: {
       name: "Vocal Booth",
+      description: "Capture every vocal nuance without distraction.",
       data_by_level: [
         { cost: 2000, return: 265 },
         { cost: 2485, return: 295 },
@@ -443,6 +473,8 @@ export const mineData: any = {
     },
     hard_drives: {
       name: "Hard Drives",
+      description:
+        "The vault for your genius. Store, secure, and access your creative gold. Just keep it away from liquids...",
       data_by_level: [
         { cost: 3000, return: 100 },
         { cost: 3485, return: 107 },
@@ -464,6 +496,7 @@ export const mineData: any = {
     },
     vape: {
       name: "Vape",
+      description: "Your pocket-sized escape. ",
       data_by_level: [
         { cost: 487, return: 318 },
         { cost: 684, return: 337 },
@@ -485,6 +518,8 @@ export const mineData: any = {
     },
     preamp: {
       name: "PreAmp",
+      description:
+        "Your class A secret weapon. Enhance clarity and bring out the best in your audio.",
       data_by_level: [
         { cost: 1250, return: 160 },
         { cost: 1378, return: 171 },
@@ -506,6 +541,8 @@ export const mineData: any = {
     },
     outboard_gear: {
       name: "Outboard gear",
+      description:
+        "Your analog edge to transform studio sound with warmth and clarity.",
       data_by_level: [
         { cost: 5000, return: 500 },
         { cost: 6231, return: 557 },
@@ -527,6 +564,8 @@ export const mineData: any = {
     },
     mixing_desk: {
       name: "Mixing Desk",
+      description:
+        "Master of sonic expression and perfect balance. Showcase your art in its true form.",
       data_by_level: [
         { cost: 19845, return: 1450 },
         { cost: 27563, return: 1600 },
@@ -548,6 +587,8 @@ export const mineData: any = {
     },
     acoustic_treatment: {
       name: "Acoustic Treatment",
+      description:
+        "Shape your sound with a true reflection of the jam pumping out of your speakers.",
       data_by_level: [
         { cost: 15789, return: 535 },
         { cost: 17089, return: 545 },
@@ -569,6 +610,7 @@ export const mineData: any = {
     },
     sampler: {
       name: "Sampler",
+      description: "Reimagine sounds, build your own sonic universe.",
       data_by_level: [
         { cost: 3500, return: 120 },
         { cost: 3915, return: 131 },
@@ -590,6 +632,8 @@ export const mineData: any = {
     },
     decks: {
       name: "Decks",
+      description:
+        "Re-rewind. Enter, selecta. Blend, mix and spin those turn tables.",
       data_by_level: [
         { cost: 3000, return: 325 },
         { cost: 3308, return: 348 },
@@ -612,6 +656,8 @@ export const mineData: any = {
     },
     acid_gummies: {
       name: "Acid Gummies",
+      description:
+        "Inspiration from another dimension. Expand your mind with these sweet, sugarcoated, trippy treats (dont eat too many).",
       data_by_level: [
         { cost: 90000, return: 69420 },
         { cost: 99225, return: -420 },
@@ -636,6 +682,8 @@ export const mineData: any = {
   team: {
     family_friends: {
       name: "Family and Friends",
+      description:
+        "While you're chasing dreams, they're your biggest fans, with you every step of the way.",
       data_by_level: [
         { cost: 100, return: 10 },
         { cost: 110, return: 11 },
@@ -657,6 +705,8 @@ export const mineData: any = {
     },
     manager: {
       name: "Manager",
+      description:
+        "Handling the deals, dodging the drama, and showcasing your music to every man and his dog. ",
       data_by_level: [
         { cost: 500, return: 60 },
         { cost: 551, return: 64 },
@@ -678,6 +728,8 @@ export const mineData: any = {
     },
     hype_guy: {
       name: "Hype Guy",
+      description:
+        "Pushing your music, fueling your energy, and amplifying your vibe. They're hyping every track and keeping the crowds lit.",
       data_by_level: [
         { cost: 835, return: 110 },
         { cost: 987, return: 123 },
@@ -699,6 +751,8 @@ export const mineData: any = {
     },
     bloggers: {
       name: "Bloggers",
+      description:
+        "Your sound shapes the vibe; their words spread it like wildfire.",
       data_by_level: [
         { cost: 1195, return: 61 },
         { cost: 1523, return: 64 },
@@ -720,6 +774,8 @@ export const mineData: any = {
     },
     playlister: {
       name: "Playlister",
+      description:
+        "Playlists keep your songs alive and your name relevant. Your music starts the vibe - they make sure it never fades.",
       data_by_level: [
         { cost: 5014, return: 297 },
         { cost: 3308, return: 300 },
@@ -741,6 +797,8 @@ export const mineData: any = {
     },
     promoter: {
       name: "Promoter",
+      description:
+        "Turning your music into a movement, they fan the flames of your fire, making sure the world knows your name.",
       data_by_level: [
         { cost: 5000, return: 560 },
         { cost: 5513, return: 599 },
@@ -783,6 +841,8 @@ export const mineData: any = {
     },
     street_team: {
       name: "Street team",
+      description:
+        "The heartbeat of grassroots promotion, energizing the streets with passionate fans and vibrant music vibes.",
       data_by_level: [
         { cost: 5000, return: 370 },
         { cost: 5513, return: 396 },
@@ -803,6 +863,8 @@ export const mineData: any = {
     },
     session_musician: {
       name: "Session Musician",
+      description:
+        "Lay down the vision; they bring it to life—adding the layers and grooves that turn your tracks into magic.",
       data_by_level: [
         { cost: 5000, return: 390 },
         { cost: 5513, return: 417 },
@@ -823,6 +885,8 @@ export const mineData: any = {
     },
     studio_engineer: {
       name: "Studio Engineer",
+      description:
+        "Master of the buttons, they bring your musical vision to life with precision and finesse.",
       data_by_level: [
         { cost: 5000, return: 390 },
         { cost: 5513, return: 417 },
@@ -843,6 +907,8 @@ export const mineData: any = {
     },
     booking_agent: {
       name: "Booking Agent",
+      description:
+        "They're crafting the perfect tour and lining up gigs that'll command crowds.",
       data_by_level: [
         { cost: 10285, return: 1003 },
         { cost: 11457, return: 1047 },
@@ -863,6 +929,8 @@ export const mineData: any = {
     },
     sound_guy: {
       name: "Sound Guy",
+      description:
+        "They bring the precision, crafting a flawless audio experience that makes your sound shine.",
       data_by_level: [
         { cost: 1438, return: 189 },
         { cost: 1970, return: 197 },
@@ -883,6 +951,8 @@ export const mineData: any = {
     },
     publicist: {
       name: "Publicist",
+      description:
+        "Crafting the narrative that keeps the world talking, they gas up your image and sell your story to the masses.",
       data_by_level: [
         { cost: 5000, return: 279 },
         { cost: 5513, return: 297 },
@@ -903,6 +973,8 @@ export const mineData: any = {
     },
     lighting_guy: {
       name: "Lighting Guy",
+      description:
+        "They turn every drop into a full-blown sensory assault. Your sound’s deadly, and they make sure it looks lethal.",
       data_by_level: [
         { cost: 5000, return: 278 },
         { cost: 5513, return: 295 },
@@ -923,6 +995,8 @@ export const mineData: any = {
     },
     tour_manager: {
       name: "Tour Manager",
+      description:
+        "The mastermind behind the scenes, orchestrating the chaos of the road into a symphony of seamless events.",
       data_by_level: [
         { cost: 5000, return: 327 },
         { cost: 5513, return: 347 },
@@ -943,6 +1017,8 @@ export const mineData: any = {
     },
     vlog_squad: {
       name: "Vlog Squad",
+      description:
+        "Your vlog squad is a dynamic ensemble of storytellers, each member bringing their unique flair to the mix.",
       data_by_level: [
         { cost: 56368, return: 3735 },
         { cost: 67354, return: 3764 },
@@ -964,6 +1040,8 @@ export const mineData: any = {
     },
     accountant: {
       name: "Accountant",
+      description:
+        "While you're spinning tracks, they're spinning numbers, keeping your cash flow tight and your taxman off your back.",
       data_by_level: [
         { cost: 64238, return: 5537 },
         { cost: 79785, return: 5674 },
@@ -984,6 +1062,8 @@ export const mineData: any = {
     },
     pyrotechnician: {
       name: "Pyrotechnician",
+      description:
+        "Your beats spark the energy; they unleash the flames—creating a show that burns into memory.",
       data_by_level: [
         { cost: 80000, return: 4000 },
         { cost: 93713, return: 4280 },
@@ -1004,6 +1084,8 @@ export const mineData: any = {
     },
     visual_artist: {
       name: "Visual Artist",
+      description:
+        "With the artistic prowess to design stages that transform the audience’s sensory experience, they create worlds.",
       data_by_level: [
         { cost: 77534, return: 2990 },
         { cost: 89645, return: 3035 },
@@ -1024,6 +1106,8 @@ export const mineData: any = {
     },
     security: {
       name: "Security",
+      description:
+        "You create the beats; they create the buffer—keeping the chaos at bay so you can focus on the music.",
       data_by_level: [
         { cost: 138764, return: 8050 },
         { cost: 174875, return: 8160 },
@@ -1046,6 +1130,8 @@ export const mineData: any = {
   promotion: {
     toktik: {
       name: "TokTik",
+      description:
+        "Tap into the trends with your tracks and run up those streams with every scroll.",
       data_by_level: [
         { cost: 489, return: 110 },
         { cost: 551, return: 95 },
@@ -1067,6 +1153,7 @@ export const mineData: any = {
     },
     itsagram: {
       name: "It'sagram",
+      description: "Reel' in your future fans with a little viral sauceeee",
       data_by_level: [
         { cost: 3500, return: 600 },
         { cost: 3983, return: 640 },
@@ -1088,6 +1175,8 @@ export const mineData: any = {
     },
     ex: {
       name: "eX",
+      description:
+        "Culture runs free and musical memes cultivate a cult like following on eX",
       data_by_level: [
         { cost: 535, return: 100 },
         { cost: 613, return: 95 },
@@ -1109,6 +1198,8 @@ export const mineData: any = {
     },
     acebook: {
       name: "AceBook",
+      description:
+        "Drop your tracks on Acebook and let the algorithm run them up. Build your social network!",
       data_by_level: [
         { cost: 498, return: 90 },
         { cost: 524, return: 85 },
@@ -1129,6 +1220,7 @@ export const mineData: any = {
     },
     music_videos: {
       name: "Music Videos",
+      description: "It's a video, for your song. Watch it on UsTube.",
       data_by_level: [
         { cost: 1028, return: 90 },
         { cost: 1103, return: 86 },
@@ -1150,6 +1242,8 @@ export const mineData: any = {
     },
     playlists: {
       name: "Playlists",
+      description:
+        "You're on the playlist! Take over your future fans daily mix...",
       data_by_level: [
         { cost: 500, return: 70 },
         { cost: 615, return: 75 },
@@ -1171,6 +1265,8 @@ export const mineData: any = {
     },
     ustube: {
       name: "UsTube",
+      description:
+        "Fly on the wall content, letting your fans into your inner circle. ",
       data_by_level: [
         { cost: 14000, return: 504 },
         { cost: 12195, return: 551 },
@@ -1192,6 +1288,7 @@ export const mineData: any = {
     },
     website: {
       name: "Website",
+      description: "You never know who'll accidetally stumble upon your site.",
       data_by_level: [
         { cost: 5000, return: 950 },
         { cost: 5510, return: 1010 },
@@ -1213,6 +1310,8 @@ export const mineData: any = {
     },
     vlogs: {
       name: "Vlogs",
+      description:
+        "A Producers lifestyle is a full on fever dream and the people want to see it!",
       data_by_level: [
         { cost: 2000, return: 110 },
         { cost: 2396, return: 115 },
@@ -1234,6 +1333,7 @@ export const mineData: any = {
     },
     livestreams: {
       name: "Livestreams",
+      description: "Chat, we cooking? ",
       data_by_level: [
         { cost: 5017, return: 1000 },
         { cost: 5782, return: 987 },
@@ -1255,6 +1355,8 @@ export const mineData: any = {
     },
     fan_club: {
       name: "Fan Club",
+      description:
+        "You're only as strong as your fans - let them fester in an echo chamber of devotion.",
       data_by_level: [
         { cost: 2500, return: 275 },
         { cost: 2756, return: 294 },
@@ -1276,6 +1378,8 @@ export const mineData: any = {
     },
     blogs: {
       name: "Blogs",
+      description:
+        "Buzz around your beats with a killer blog that sells your story.",
       data_by_level: [
         { cost: 2500, return: 350 },
         { cost: 2756, return: 375 },
@@ -1297,6 +1401,8 @@ export const mineData: any = {
     },
     influencers: {
       name: "Influencers",
+      description:
+        "Influencers run the attention economy - get them onside if you want to ride.",
       data_by_level: [
         { cost: 3586, return: 819 },
         { cost: 3859, return: 535 },
@@ -1318,6 +1424,7 @@ export const mineData: any = {
     },
     mailing_list: {
       name: "Mailing list",
+      description: "Mom, new Producers track just dropped!",
       data_by_level: [
         { cost: 10000, return: 1100 },
         { cost: 11025, return: 1170 },
@@ -1339,6 +1446,8 @@ export const mineData: any = {
     },
     megaphone: {
       name: "Megaphone",
+      description:
+        "Shout about your music louder than Annalisa Flanagan, anytime, anyplace.",
       data_by_level: [
         { cost: 7500, return: 1100 },
         { cost: 8250, return: 1200 },
@@ -1360,6 +1469,8 @@ export const mineData: any = {
     },
     paid_ads: {
       name: "Paid Ads",
+      description:
+        "Data-driven decisions dominate the charts. Growth hack your way to the top.",
       data_by_level: [
         { cost: 5000, return: 975 },
         { cost: 5823, return: 1035 },
@@ -1382,6 +1493,7 @@ export const mineData: any = {
     },
     radio_plugger: {
       name: "Radio Plugger",
+      description: "Radio is just a radio-plugger away",
       data_by_level: [
         { cost: 2500, return: 495 },
         { cost: 3057, return: 515 },
@@ -1403,6 +1515,8 @@ export const mineData: any = {
     },
     radio_broadcasting: {
       name: "Bribe Radio DJ",
+      description:
+        "Take over the airwaves—radio gives your sound the social validity and reach it needs to blow up!",
       data_by_level: [
         { cost: 1750, return: 345 },
         { cost: 2139, return: 365 },
@@ -1424,6 +1538,7 @@ export const mineData: any = {
     },
     public_stunts: {
       name: "Public Stunts",
+      description: "Make waves with moments to be remembered.",
       data_by_level: [
         { cost: 6500, return: 790 },
         { cost: 7503, return: 815 },
@@ -1445,6 +1560,8 @@ export const mineData: any = {
     },
     ladscripture: {
       name: "LadScripture",
+      description:
+        "The biggest network of virality - telling your story to the lads, since the start of time #scriptures.",
       data_by_level: [
         { cost: 1000, return: 230 },
         { cost: 1235, return: 250 },
@@ -1466,6 +1583,8 @@ export const mineData: any = {
     },
     livenation: {
       name: "LiveNation",
+      description:
+        "Showcase your talent with the worlds biggest multinational entertainment company.",
       data_by_level: [
         { cost: 4200, return: 390 },
         { cost: 4631, return: 417 },
@@ -1487,6 +1606,8 @@ export const mineData: any = {
     },
     rolling_stoned: {
       name: "Rolling Stoned",
+      description:
+        "Get Rolling Stoned and drop your story on the biggest media outlet in music.",
       data_by_level: [
         { cost: 2100, return: 195 },
         { cost: 2352, return: 208 },
@@ -1508,6 +1629,7 @@ export const mineData: any = {
     },
     ticket_faster: {
       name: "Ticket Faster",
+      description: "Turn that hype into sold out stadiums with Ticket Faster!",
       data_by_level: [
         { cost: 7834, return: 9701 },
         { cost: 8937, return: 8896 },
@@ -1531,6 +1653,8 @@ export const mineData: any = {
   live_shows: {
     lighting: {
       name: "Lighting",
+      description:
+        "Synthesise the senses with a light show that brings the soundscape to life.",
       data_by_level: [
         { cost: 2985, return: 295 },
         { cost: 3308, return: 300 },
@@ -1553,6 +1677,8 @@ export const mineData: any = {
     },
     pa_system: {
       name: "PA System",
+      description:
+        "Everyone's got a plan until they get punched in the face by the PA's sonic storm.",
       data_by_level: [
         { cost: 5000, return: 560 },
         { cost: 5513, return: 599 },
@@ -1575,6 +1701,8 @@ export const mineData: any = {
     },
     pyrotechnics: {
       name: "Pyrotechnics",
+      description:
+        "A full blown sensory assault is only possible with pyrotechnics.",
       data_by_level: [
         { cost: 5000, return: 720 },
         { cost: 5513, return: 770 },
@@ -1597,6 +1725,8 @@ export const mineData: any = {
     },
     venue: {
       name: "Venue",
+      description:
+        "Venues define the bounds of your shows possibilities. Make sure it lives up to your music.",
       data_by_level: [
         { cost: 49873, return: 2690 },
         { cost: 55125, return: 2780 },
@@ -1619,6 +1749,8 @@ export const mineData: any = {
     },
     vfx: {
       name: "VFX",
+      description:
+        "VFX cranks up the intensity, turning every beat into a mind-bending visual spectacle.",
       data_by_level: [
         { cost: 38260, return: 8970 },
         { cost: 44387, return: 9680 },

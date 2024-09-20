@@ -36,18 +36,20 @@ export const getMissionData = (id: string, level: number) => {
     return {
       id,
       name: "",
+      description: "",
       cost: 0,
       level: 0,
       reward: 0,
     };
 
-  const { name, data_by_level } = missionData;
+  const { name, description, data_by_level } = missionData;
   const dataByLevel = data_by_level[level];
 
   const reward = calcReward(dataByLevel.cost, dataByLevel.return);
   return {
     id,
     name,
+    description,
     cost: dataByLevel.cost,
     level,
     reward,

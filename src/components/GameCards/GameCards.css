@@ -43,7 +43,7 @@
   box-shadow: 1px 2px 0px 0px #101010;
 }
 .app-mission-section .app-mission-des {
-  padding: 0 32px;
+  padding: 0 16px;
 }
 .app-mission-section .app-mission-des .token-row {
   display: flex;

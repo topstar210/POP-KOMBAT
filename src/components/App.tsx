@@ -33,8 +33,7 @@ export const App: FC = () => {
 
   return (
     <AppRoot
-      // appearance={miniApp.isDark ? "dark" : "light"}
-      appearance="dark"
+      appearance={miniApp.isDark ? "dark" : "light"}
       platform={["macos", "ios"].includes(lp.platform) ? "ios" : "base"}
     >
       <AppProvider>
