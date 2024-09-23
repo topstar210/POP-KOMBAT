@@ -26,13 +26,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
+  width: 100%;
+  height: 100%;
   box-shadow: 0px 0px 7.6px 7px #10101066 inset;
-  background: var(--blue, #2e90fa);
-  border: 7px solid;
+  /* background: var(--blue, #2e90fa); */
+  background: url(../../assets/imgs/tab-background.png);
+  background-size: cover;
   overflow: hidden;
-  border-image-source: linear-gradient(43.45deg, #2e90fa 0%, #aad2fd 99.17%);
+  /* border-image-source: linear-gradient(43.45deg, #2e90fa 0%, #aad2fd 99.17%); */
 }
 .pressed-blur {
   position: absolute;
@@ -46,7 +47,7 @@
   z-index: 2;
 }
 
-.app-tab-pan-in:before {
+/* .app-tab-pan-in:before {
   z-index: -1;
   position: absolute;
   left: 0;
@@ -58,7 +59,7 @@
   height: calc(100% - 14px);
   border-radius: 50%;
   overflow: hidden;
-}
+} */
 
 @keyframes riseAndDisappear {
   0% {
