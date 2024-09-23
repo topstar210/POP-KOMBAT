@@ -30,7 +30,7 @@ const EarnItem = ({
       <div className="item-earn-info">
         <div className="title">{title}</div>
         <div className="coin">
-          <img src={tokenIcon} alt="T" />
+          <img src={tokenIcon} alt="T" width={18} height={18} />
           &nbsp;
           <span> +{formatToFixed(coin)}</span>
         </div>

@@ -45,7 +45,7 @@ const BoostPage = () => {
               <div>
                 <div className="title">Multitap</div>
                 <div className="coin">
-                  <img src={tokenIcon} alt="T" />
+                  <img src={tokenIcon} alt="T" width={18} height={18} />
                   &nbsp;
                   <span> +{formatToFixed(123456)}</span>&nbsp; lvl 10
                 </div>
@@ -60,7 +60,7 @@ const BoostPage = () => {
               <div>
                 <div className="title">Energy Limit</div>
                 <div className="coin">
-                  <img src={tokenIcon} alt="T" />
+                  <img src={tokenIcon} alt="T" width={18} height={18} />
                   &nbsp;
                   <span> +{formatToFixed(123456)}</span>&nbsp; lvl 10
                 </div>

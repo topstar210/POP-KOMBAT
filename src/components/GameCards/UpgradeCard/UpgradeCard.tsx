@@ -30,9 +30,10 @@ const UpgradeCard = ({
       <div className="app-upgcard-body">
         <div>
           <img
-            src={`./images/card/${id}.png` || defaultImg}
+            src={`./images/card/${id}_3x.png` || defaultImg}
             alt=""
-            sizes="48px"
+            width={48}
+            height={48}
           />
         </div>
         <div>
@@ -40,7 +41,7 @@ const UpgradeCard = ({
           <div className="upgcard-profit-perhour">
             <div className="font-xs">Profit per hour</div>
             <div className="app-upgcard-row">
-              <img src={tokenIcon} alt="" width={14} />
+              <img src={tokenIcon} alt="" width={14} height={14} />
               <span className="font-xs">{formatToFixed(reward)}</span>
             </div>
           </div>
@@ -51,7 +52,7 @@ const UpgradeCard = ({
         <span className="level">lvl {level}</span>
         <div className="vertical-divider"></div>
         <div className="app-upgcard-row">
-          <img src={tokenIcon} alt="" width={12} />
+          <img src={tokenIcon} alt="" width={12} height={12} />
           <span>{formatToFixed(cost)}</span>
         </div>
       </div>

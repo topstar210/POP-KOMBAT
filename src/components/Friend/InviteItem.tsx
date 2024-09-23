@@ -19,7 +19,7 @@ const InviteItem = ({ title, coinVal, onClick }: InviteItemProps) => {
       <div className="fp-status-data">
         <h1>{title}</h1>
         <div>
-          <img src={tokenIcon} alt="T" />
+          <img src={tokenIcon} alt="T" width={18} height={18} />
           &nbsp;
           <span> +{formatNum(coinVal)}</span>&nbsp; for you and a friend
         </div>

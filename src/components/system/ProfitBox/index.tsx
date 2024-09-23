@@ -53,7 +53,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
         <div className="system-profit-detail">
           <div>Pops per hour</div>
           <div className="system-profit-status">
-            <img src={tokenIcon} alt="Token" />
+            <img src={tokenIcon} alt="Token" width={16} height={16} />
             <div>+{formatToFixed(reward)}</div>
             <button>
               <img src={warningIcon} alt="Token" />
