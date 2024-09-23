@@ -20,7 +20,15 @@ const ComingSoon = () => {
         }}
       >
         <div style={{ textAlign: "center", marginTop: "-80px" }}>
-          <img src={tokenImg} width={239} alt="" />
+          <img
+            src={tokenImg}
+            width={239}
+            style={{
+              borderRadius: "50%",
+              boxShadow: "1px 2px 0px 0px #000",
+            }}
+            alt=""
+          />
           <div
             className="luckiest"
             style={{

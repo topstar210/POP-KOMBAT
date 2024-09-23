@@ -23,7 +23,11 @@
   border: none;
   text-shadow: 1px 1px 1px #000;
   text-transform: uppercase;
-  font-family: "Luckiest Guy", cursive;
+  font-family: var(--font-familyHeading);
+  font-weight: 400;
+  font-size: var(--font-sizexs);
+  -webkit-text-stroke: 1px #000000;
+  -webkit-text-fill-color: white;
   color: #fff;
 }
 .tab-container button.active {

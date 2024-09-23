@@ -7,17 +7,23 @@
 }
 .er-header img {
   margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 1px 2px 0px 0px var(--black);
 }
 .er-header h1 {
   font-family: var(--font-familyHeading);
   font-size: var(--font-size3xl);
-  text-shadow: 2px 3px 1px #101010;
+  text-shadow: 1px 2px 0px #101010;
   font-weight: 400;
   color: #fff;
+  -webkit-text-stroke: 1px #000000;
+  -webkit-text-fill-color: white;
 }
 
 .er-list-cointainer h2 {
-  text-shadow: 1px 2px 1px #101010;
+  text-shadow: 1px 2px 0px #101010;
+  -webkit-text-stroke: 1px #000000;
+  -webkit-text-fill-color: white;
   font-family: var(--font-familyHeading);
   font-size: var(--font-sizebase);
   font-weight: 400;

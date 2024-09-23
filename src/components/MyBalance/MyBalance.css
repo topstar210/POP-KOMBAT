@@ -5,10 +5,17 @@
   gap: 8px;
   font-size: var(--font-size4xl);
   font-family: var(--font-familyHeading);
+  font-weight: 400;
   text-shadow: 1px 2px 0px #101010;
+  -webkit-text-stroke: 1px #000000;
+  -webkit-text-fill-color: white;
   color: #fff;
 }
 .coin-counter span {
   line-height: 1;
   padding-top: 5px;
+}
+.coin-counter img{
+  border-radius: 50%;
+  box-shadow: 1px 2px 0px 0px var(--black);
 }
