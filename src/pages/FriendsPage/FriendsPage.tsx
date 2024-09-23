@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./FriendsPage.css";
 
-import toast from "react-simple-toasts";
 import { Box } from "@/components/system";
 import InviteItem from "@/components/Friend/InviteItem";
 import FriendItem from "@/components/Friend/InfoItem";
@@ -9,6 +8,7 @@ import { formatNum } from "@/utilities/number";
 import { useApp } from "@/providers/useApp";
 import { fetchData } from "@/services/apiService";
 import { levelUpBouns } from "@/data/constant";
+import { useNotification } from "@/providers/useNotification";
 
 import tokenIcon from "@/assets/icons/token.png";
 import copyIcon from "@/assets/icons/copy.png";
@@ -16,6 +16,7 @@ import userAvatar from "@/assets/imgs/avatar/user1.jfif";
 
 const FriendsPage = () => {
   const { initData } = useApp();
+  const { notification } = useNotification();
   const user = initData?.user;
 
   const [friends, setFriends] = useState<any>([]);
@@ -31,10 +32,7 @@ const FriendsPage = () => {
   const copyInviteLink = async () => {
     const link = `https://t.me/pop_kombat_bot?start=${user?.id}`;
     await navigator.clipboard.writeText(link);
-    toast("The invite link copied", {
-      className: "app-toast",
-      position: "top-center",
-    });
+    notification("The invite link copied");
   };
 
   return (
@@ -60,14 +58,14 @@ const FriendsPage = () => {
         <h2>Your Friends (**)</h2>
         <div className="fp-friends-list">
           {friends.length ? (
-            friends.map((friend:any, i:number) => (
+            friends.map((friend: any, i: number) => (
               <FriendItem
                 name={`${friend.inviteUserDetails[0].firstName} ${friend.inviteUserDetails[0].lastName}`}
                 key={i}
               />
             ))
           ) : (
-            <div style={{color:"#fff"}}>You haven't invited anyone yet</div>
+            <div style={{ color: "#fff" }}>You haven't invited anyone yet</div>
           )}
         </div>
       </Box>

@@ -143,12 +143,25 @@ select {
   background: #fff;
   border: 1px solid var(--black, #101010);
   box-shadow: 0px 1px 0px 0px #101010;
-  border-radius: 8;
+  border-radius: 8px;
   padding: 4px 8px;
   font-size: 13.3px;
   color: #2c323a;
+  min-width: 343px;
+  display: flex;
+  justify-content: start !important;
+}
+.app-toast-container {
+  display: flex;
+  gap: 8px;
+  justify-items: center;
+}
+.app-toast-close-btn{
+  position: absolute;
+  right: 10px;
+  top: 7px;
 }
 
-button.disabled{
+button.disabled {
   background: var(--gray-dark);
 }

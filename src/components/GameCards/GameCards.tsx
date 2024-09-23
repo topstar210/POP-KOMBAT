@@ -1,12 +1,12 @@
 import "./GameCards.css";
 import { useState } from "react";
-import toast from "react-simple-toasts";
 import { Tap, Modal } from "@/components/system";
 import { type Tab as TabInterface } from "@/components/system/Tab";
 import { type UpgradeCardIFC } from "@/types/card";
 import { useApp } from "@/providers/useApp";
 import { getMissionData } from "@/utilities/mission";
 import { formatNum } from "@/utilities/number";
+import { useNotification } from "@/providers/useNotification";
 
 import UpgradeCard from "./UpgradeCard/UpgradeCard";
 import SpecialList from "./SpecialList";
@@ -44,6 +44,7 @@ const categories: TabInterface[] = [
 ];
 
 const GameCards = ({ className, ...props }: GameCardsProps) => {
+  const { notification } = useNotification();
   const { missions, handleSetMission, gameData } = useApp();
 
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
@@ -61,11 +62,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
 
   const handleClickSetMission = (data: any) => {
     if (data.cost > gameData.balance) {
-      toast("You don't have enough balance", {
-        className: "app-toast",
-        position: "top-center",
-      });
-      setIsOpenModal(false);
+      notification("You don't have enough balance");
       return true;
     }
     try {
@@ -73,10 +70,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
         id: data.id || "",
         level: data.level,
       });
-      toast(`${data.name} level was set to  ${data.level + 1}`, {
-        className: "app-toast",
-        position: "top-center",
-      });
+      notification(`${data.name} level was set to  ${data.level + 1}`);
     } catch (error) {}
     setIsOpenModal(false);
   };
