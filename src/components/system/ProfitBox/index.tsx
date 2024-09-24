@@ -10,7 +10,6 @@ import { formatNum } from "@/utilities/number";
 
 import settingIcon from "@/assets/icons/settings.png";
 import tokenIcon from "@/assets/icons/token.png";
-import warningIcon from "@/assets/icons/warning-circle.svg";
 
 interface ProfitBoxProps {
   className?: string;
