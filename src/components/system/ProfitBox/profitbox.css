@@ -6,7 +6,7 @@
   height: 38px;
   border-radius: 8px;
   padding: 8px;
-  gap: 8px;
+  /* gap: 8px; */
   border: 1px solid var(--black, #101010);
   box-shadow: 0px 1px 0px 0px var(--black, #101010);
   background: var(--white, #ffffff);
@@ -35,9 +35,9 @@
 }
 
 .system-profit-setting-divider {
-  border: 0.5px solid var(--gray, #6e7d91);
   height: 22px;
-  width: 0;
+  width: 0.5px;
+  background: var(--gray);
   gap: 0px;
   position: absolute;
 }
@@ -46,8 +46,7 @@
   padding-left: 7px;
 }
 
-
-.app-profitperhour-modal p{
+.app-profitperhour-modal p {
   padding-top: 30px;
   text-align: center;
   color: #fff;
