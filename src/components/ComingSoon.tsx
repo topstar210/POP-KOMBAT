@@ -34,7 +34,9 @@ const ComingSoon = () => {
             style={{
               fontSize: "33.3px",
               marginTop: "10px",
-              textShadow: "1px 2px 0px #101010",
+              WebkitTextStroke: "1px #000000",
+              WebkitTextFillColor: "white",
+              textShadow: "2px 5px 0px #101010",
               color: "#fff",
             }}
           >

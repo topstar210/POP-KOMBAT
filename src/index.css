@@ -15,17 +15,17 @@
   --teal: #00f0b5;
   --yellow-light: #fef6b8;
 
-  --font-familyBody: "Outfit", sans-serif;
+  --font-familyBody: "Outfit", sans-serif ;
   --font-familyHeading: "Luckiest Guy", cursive;
-  --font-sizexxs: 9.25px;
-  --font-sizexs: 11.1px;
-  --font-sizesm: 13.3px;
-  --font-sizebase: 16px;
-  --font-sizelg: 19.2px;
-  --font-sizexl: 23.04px;
-  --font-size2xl: 27.3px;
-  --font-size3xl: 33.18px;
-  --font-size4xl: 40px;
+  --font-sizexxs: 0.578rem;
+  --font-sizexs: 0.694rem;
+  --font-sizesm: 0.833rem;
+  --font-sizebase: 1rem;
+  --font-sizelg: 1.2rem;
+  --font-sizexl: 1.44rem;
+  --font-size2xl: 1.728rem;
+  --font-size3xl: 2.074rem;
+  --font-size4xl: 2.488rem;
   --line-heighthxs: 12px;
 }
 
