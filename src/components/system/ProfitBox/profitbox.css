@@ -71,3 +71,6 @@
   font-family: var(--font-familyHeading);
   width: 100%;
 }
+.app-profitperhour-modal span {
+  color: #fff;
+}
