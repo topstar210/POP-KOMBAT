@@ -62,6 +62,7 @@
   border-radius: 8px;
   border: 1px solid var(--gray, #6e7d91);
   color: var(--gray, #6e7d91);
+  padding: 3px;
 }
 .app-dailyreward-mcontainer .dailyreward-card.actived {
   background: linear-gradient(43.45deg, #2e90fa 0%, #00e8fc 99.17%);
