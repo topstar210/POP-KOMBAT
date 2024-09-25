@@ -5,6 +5,7 @@ import EarnItem from "@/components/Earn/Item";
 import { Modal } from "@/components/system";
 import { useApp } from "@/providers/useApp";
 import { fetchData, postData } from "@/services/apiService";
+import { useNotification } from "@/providers/useNotification";
 
 import tokenimg from "@/assets/imgs/token-image.png";
 import spotifyIcon from "@/assets/icons/spotify.png";
@@ -70,6 +71,7 @@ const dailyRewardData = [
 
 const EarnPage = () => {
   const { initData, gameData, handleSetGameData } = useApp();
+  const { notification } = useNotification()
 
   const [openDailyModal, setOpenDailyModal] = useState(
     gameData.isDailyRewardAvailable
@@ -101,6 +103,7 @@ const EarnPage = () => {
       handleSetGameData({
         balance: gameData.balance + rewardAmount,
       });
+      notification("You got your reward today.");
       setOpenDailyModal(false);
     });
   };
