@@ -24,22 +24,27 @@ const categories: TabInterface[] = [
   {
     id: "team",
     name: "Team",
+    transform: 0
   },
   {
     id: "equipment",
     name: "Equipment",
+    transform: 100
   },
   {
     id: "promotion",
     name: "Promotion",
+    transform: 200
   },
   {
     id: "live_shows",
     name: "Live Shows",
+    transform: 300
   },
   {
     id: "special",
     name: "Special",
+    transform: 400
   },
 ];
 
