@@ -21,7 +21,7 @@ const TabSection = ({
 }: TabSectionProps) => {
   const [onPress, setOnPress] = useState(false);
 
-  const handleTouch = (e: any) => {
+  const handleTouch = () => {
     setOnPress(true);
     // const parent = e.currentTarget;
     // const rect = parent.getBoundingClientRect();
