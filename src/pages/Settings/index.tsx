@@ -1,26 +1,26 @@
 import "./Setting.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import { Box, SwitchBtn } from "@/components/system";
 import SettingItem from "@/components/Setting/Item";
 
 const Setting = () => {
-  const navigate = useNavigate();
   const [isFeedBack, setIsFeedBack] = useState(true);
-  const [isAnimation, setIsAnimation] = useState(false);
+  // const navigate = useNavigate();
+  // const [isAnimation, setIsAnimation] = useState(false);
 
-  const handleClickLanguage = () => {
-    navigate("/setting/language");
-  };
+  // const handleClickLanguage = () => {
+  //   navigate("/setting/language");
+  // };
 
   const switchFeedback = () => {
     setIsFeedBack(!isFeedBack);
   };
 
-  const switchAnimationSetting = () => {
-    setIsAnimation(!isAnimation);
-  };
+  // const switchAnimationSetting = () => {
+  //   setIsAnimation(!isAnimation);
+  // };
 
   return (
     <div className="main-page">
@@ -28,11 +28,11 @@ const Setting = () => {
         <h1>Settings</h1>
       </div>
       <Box className="setting-list">
-        <SettingItem
+        {/* <SettingItem
           title="Select Language"
           description="English"
           onClick={handleClickLanguage}
-        />
+        /> */}
         <SettingItem title="Delete Account" />
 
         <Box>
@@ -40,10 +40,10 @@ const Setting = () => {
             <span>Haptic Feedback</span>
             <SwitchBtn turn={isFeedBack} onClick={switchFeedback} />
           </div>
-          <div className="row">
+          {/* <div className="row">
             <span>Coin Animation</span>
             <SwitchBtn turn={isAnimation} onClick={switchAnimationSetting} />
-          </div>
+          </div> */}
         </Box>
       </Box>
     </div>
