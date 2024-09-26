@@ -57,16 +57,16 @@ const TabSection = ({
         plusOne.remove();
       });
 
-      // // Animate the .app-tab-pan
-      // const appTabPan = parent;
-      // const rotateX = ((y - rect.height / 2) / rect.height) * 30; // Adjust the factor to control the rotation
-      // const rotateY = ((x - rect.width / 2) / rect.width) * -30; // Adjust the factor to control the rotation
-      // appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      // Animate the .app-tab-pan
+      const appTabPan = parent;
+      const rotateX = ((y - rect.height / 2) / rect.height) * 30; // Adjust the factor to control the rotation
+      const rotateY = ((x - rect.width / 2) / rect.width) * -30; // Adjust the factor to control the rotation
+      appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-      // // Reset the animation
-      // setTimeout(() => {
-      //   appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
-      // }, 150);
+      // Reset the animation
+      setTimeout(() => {
+        appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
+      }, 150);
       // animation section end -----------------------------------------------------
     }
   };
@@ -79,13 +79,13 @@ const TabSection = ({
     <div className={`app-tabsection ${className}`} {...props}>
       <div style={{ position: "relative" }}>
         <div
-          className={`app-tab-pan ${onPress ? "pressed" : ""}`}
+          className={`app-tab-pan ${onPress ? "pressed!!!" : ""}`}
           onTouchStart={handleTouch}
           onTouchEnd={handleTouchEnd}
         >
           <div className="app-tab-pan-in">
-            {onPress && <div className="pressed-blur"></div>}
-            <img src={onPress ? pressHeroCharacter : heroCharacter} alt="" />
+            {/* {onPress && <div className="pressed-blur"></div>} */}
+            <img src={false ? pressHeroCharacter : heroCharacter} alt="" />
           </div>
         </div>
       </div>
