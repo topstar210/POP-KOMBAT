@@ -65,7 +65,7 @@ const Tabbar = () => {
         isSet = true;
       }
     });
-    !isSet && setActiveTab("");
+    !isSet && setActiveTab("home");
   }, [location]);
 
   const handleTabClick = (tab: Tabmune) => {
