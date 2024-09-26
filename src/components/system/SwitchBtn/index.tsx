@@ -12,10 +12,15 @@ const SwitchBtn = ({ turn, onClick }: SwitchBtnProps) => {
   return (
     <>
       <div
-        className={`sys-switch-wrap ${turn ? "rightcontent" : ""}`}
+        className={`sys-switch-wrap`}
         onClick={onClick}
       >
-        <div className="sys-switch-btn">
+        <div
+          className="sys-switch-btn"
+          style={{
+            transform: `translateX(${turn ? "43px" : "0"})`,
+          }}
+        >
           <div className={`sys-switch-btn-inner ${turn ? "smile" : "annoy"}`}>
             <img src={turn ? smile : annoy} alt="" />
           </div>
