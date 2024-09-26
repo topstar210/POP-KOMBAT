@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Box, Ranking, ProfitBox } from "@/components/system";
 import { MyBalance, InfoBox, TabSection, GameCards } from "@/components";
 import { useApp } from "@/providers/useApp";
@@ -6,8 +7,13 @@ import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
 
 const MinePage = () => {
+  const navigate = useNavigate();
   const { gameData, curEenergy, handleSetGameData, handleDecrementCurEnergy } =
     useApp();
+
+  const handleClickBoost = () => {
+    navigate("/boost");
+  };
 
   return (
     <div className="main-page">
@@ -49,7 +55,12 @@ const MinePage = () => {
               value={`${curEenergy} / ${gameData.energy}`}
               img={energyIcon}
             />
-            <InfoBox className="fade-left" value={`Boost`} img={boostIcon} />
+            <InfoBox
+              className="fade-left"
+              value={`Boost`}
+              img={boostIcon}
+              onClick={handleClickBoost}
+            />
           </Box>
         </div>
       </Box>
