@@ -15,7 +15,8 @@ const Modal = ({
   onClose,
   ...props
 }: ModalProps) => {
-  const [isRendered, setIsRendered] = useState(isOpen);
+  const [isRendered, setIsRendered] = useState(isOpen); // Controls if the modal is rendered
+  const [isAnimating, setIsAnimating] = useState(false); // Controls animation state
   const modalRef = useRef<HTMLDivElement>(null);
 
   const closeModal = () => {
@@ -36,11 +37,17 @@ const Modal = ({
 
     if (isOpen) {
       setIsRendered(true);
+
+      // Delay adding the animation class to ensure the modal is in the DOM first
+      const timer = setTimeout(() => {
+        setIsAnimating(true); // Trigger the animation
+      }, 10); // Small delay to allow rendering
+      return () => clearTimeout(timer);
     } else {
       // Delay hiding until after the animation finishes
       const timer = setTimeout(() => {
         setIsRendered(false);
-      }, 1000); // Match the CSS transition duration
+      }, 600); // Match the CSS transition duration
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
@@ -48,7 +55,7 @@ const Modal = ({
   if (!isRendered) return null;
 
   return (
-    <div className={`app-modal-cover ${isOpen ? "open" : ""}`} onClick={handleOverlayClick}>
+    <div className={`app-modal-cover ${isAnimating ? "open" : ""}`} onClick={handleOverlayClick}>
       <div
         className={`app-modal ${className} ${isOpen ? "open" : ""}`}
         ref={modalRef}
