@@ -69,5 +69,12 @@
   font-size: var(--font-size3xl);
   text-shadow: 1px 2px 0px #101010;
   font-family: var(--font-familyHeading);
+  -webkit-text-stroke: 1px #000000;
+  -webkit-text-fill-color: white;
   width: 100%;
+}
+
+button.insufficient {
+  padding: 24px 0px;
+  background: var(--gray-dark, #2C323A);
 }

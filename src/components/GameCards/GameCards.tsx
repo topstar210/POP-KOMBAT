@@ -76,7 +76,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
         level: data.level,
       });
       notification(`${data.name} level was set to  ${data.level + 1}`);
-    } catch (error) {}
+    } catch (error) { }
     setIsOpenModal(false);
   };
 
@@ -147,8 +147,8 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
             <img src={tokenIcon} alt="" width={28} height={28} />
             <span>{formatNum(mission?.cost ?? 0)}</span>
           </div>
-          <button onClick={() => handleClickSetMission(mission)}>
-            Go ahead
+          <button onClick={() => handleClickSetMission(mission)} className={`${Number(mission?.cost) > gameData.balance ? 'insufficient' : ''}`}>
+            {Number(mission?.cost) > gameData.balance ? `insufficient Funds` : `Go ahead`}
           </button>
         </div>
       </Modal>
