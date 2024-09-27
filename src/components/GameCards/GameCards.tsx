@@ -9,7 +9,8 @@ import { formatNum } from "@/utilities/number";
 import { useNotification } from "@/providers/useNotification";
 
 import UpgradeCard from "./UpgradeCard/UpgradeCard";
-import SpecialList from "./SpecialList";
+// import SpecialList from "./SpecialList";
+import tokenImg from "@/assets/imgs/token-image.png";
 
 import { mineData } from "@/data/mission";
 
@@ -120,7 +121,40 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
           </div>
         )}
 
-        {activeTab === "special" && <SpecialList />}
+        {/* {activeTab === "special" && <SpecialList />} */}
+        {activeTab === "special" && <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "380px",
+        }}
+      >
+        <div style={{ textAlign: "center", marginTop: "-80px" }}>
+          <img
+            src={tokenImg}
+            width={239}
+            style={{
+              borderRadius: "50%",
+              boxShadow: "1px 2px 0px 0px #000",
+            }}
+            alt=""
+          />
+          <div
+            className="luckiest"
+            style={{
+              fontSize: "33.3px",
+              marginTop: "10px",
+              WebkitTextStroke: "1px #000000",
+              WebkitTextFillColor: "white",
+              textShadow: "2px 5px 0px #101010",
+              color: "#fff",
+            }}
+          >
+            Coming Soon
+          </div>
+        </div>
+      </div>}
       </Tap>
 
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
