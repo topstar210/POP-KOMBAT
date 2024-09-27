@@ -12,6 +12,7 @@ import spotifyIcon from "@/assets/icons/spotify.png";
 import calandarIcon from "@/assets/icons/calandar.png";
 import xIcon from "@/assets/icons/x.png";
 import telegramIcon from "@/assets/icons/telegram.png";
+import discordIcon from "@/assets/icons/discord.png";
 import binanceIcon from "@/assets/icons/binance.png";
 import inviteIcon from "@/assets/icons/invite.png";
 import dailyReward from "@/assets/imgs/modal/daily_reward.png";
@@ -157,6 +158,12 @@ const EarnPage = () => {
               <EarnItem
                 icon={xIcon}
                 title="Follow Producers on X"
+                coin={308880}
+                isChecked={false}
+              />
+              <EarnItem
+                icon={discordIcon}
+                title="Join the producers Discord"
                 coin={308880}
                 isChecked={false}
               />
