@@ -8,7 +8,7 @@ import blastIcon from "@/assets/icons/blast.png";
 import promoIcon from "@/assets/icons/promo.png";
 import friendsIcon from "@/assets/icons/friend.png";
 import earnIcon from "@/assets/icons/earn.png";
-import airdropIcon from "@/assets/icons/airdrop.png";
+import airdropIcon from "@/assets/icons/token.png";
 
 interface Tabmune {
   id: string;
@@ -82,7 +82,7 @@ const Tabbar = () => {
             className={`${tab.id === activeTab && "active"}`}
             onClick={() => handleTabClick(tab)}
           >
-            {tab.id === activeTab && <img src={tab.icon} alt={tab.id} />}
+            {tab.id === activeTab && <img src={tab.icon} alt={tab.id} width={24} height={24} />}
             <div>{tab.title}</div>
           </button>
         ))}
