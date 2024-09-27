@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import "./modal.css";
 
 interface ModalProps {
@@ -15,6 +15,9 @@ const Modal = ({
   onClose,
   ...props
 }: ModalProps) => {
+  const [isRendered, setIsRendered] = useState(isOpen);
+  const modalRef = useRef<HTMLDivElement>(null);
+
   const closeModal = () => {
     if (onClose) onClose(); // Call the optional close callback if provided
   };
@@ -30,13 +33,27 @@ const Modal = ({
     document.getElementsByClassName("tabbar")[0].style.display = isOpen
       ? "none"
       : "block";
+
+    if (isOpen) {
+      setIsRendered(true);
+    } else {
+      // Delay hiding until after the animation finishes
+      const timer = setTimeout(() => {
+        setIsRendered(false);
+      }, 1000); // Match the CSS transition duration
+      return () => clearTimeout(timer);
+    }
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isRendered) return null;
 
   return (
-    <div className="app-modal-cover" onClick={handleOverlayClick}>
-      <div className={`app-modal ${className}`} {...props}>
+    <div className={`app-modal-cover ${isOpen ? "open" : ""}`} onClick={handleOverlayClick}>
+      <div
+        className={`app-modal ${className} ${isOpen ? "open" : ""}`}
+        ref={modalRef}
+        {...props}
+      >
         <button className="app-modal-close" onClick={closeModal}></button>
         {children}
       </div>
