@@ -33,7 +33,7 @@
 .app-mission-section h2 {
   font-size: var(--font-size2xl);
 }
-.app-mission-section .mission-img {
+/* .app-mission-section .mission-img { */
   /* background: radial-gradient(
     45.78% 52.5% at 48.61% 45%,
     #6e7d91 0%,
@@ -41,7 +41,7 @@
   ); */
   /* border: 1px solid var(--black, #101010);
   box-shadow: 1px 2px 0px 0px #101010; */
-}
+/* } */
 .app-mission-section .app-mission-des {
   padding: 0 16px;
 }
