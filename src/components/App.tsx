@@ -24,7 +24,7 @@ export const App: FC = () => {
     // @ts-ignore
     if (window.Telegram?.WebApp) {
       // @ts-ignore
-      window.Telegram.WebApp.expand();
+      window.Telegram.WebApp.ready(); window.Telegram.WebApp.expand();
     }
   }, []);
 
