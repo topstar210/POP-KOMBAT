@@ -1,0 +1,18 @@
+.animated-div {
+    position: absolute;
+    bottom: -100px;
+    /* Start off-screen */
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: bottom 0.4s ease;
+}
+
+.animated-div.rise {
+    bottom: 65px;
+    /* The position when it has risen */
+}
+
+.animated-div.hide {
+    bottom: -150px;
+    /* Move it back off-screen */
+}
