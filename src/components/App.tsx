@@ -20,6 +20,15 @@ export const App: FC = () => {
   const viewport = useViewport();
 
   useEffect(() => {
+    // Ensure Telegram WebApp is available before calling expand
+    // @ts-ignore
+    if (window.Telegram?.WebApp) {
+      // @ts-ignore
+      window.Telegram.WebApp.expand();
+    }
+  }, []);
+
+  useEffect(() => {
     return bindMiniAppCSSVars(miniApp, themeParams);
   }, [miniApp, themeParams]);
 
