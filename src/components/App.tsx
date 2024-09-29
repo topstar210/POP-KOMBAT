@@ -24,13 +24,19 @@ export const App: FC = () => {
     const webApp = window.Telegram?.WebApp;
 
     if (webApp) {
-      // Tell Telegram the app is ready
-      webApp.ready();
+      webApp.ready(); // Tell Telegram the app is ready
 
-      setTimeout(()=>{
-        // Expand the app to full screen
-        webApp.expand();
-      },300)
+      // Repeatedly try to expand the app at intervals
+      const intervalId = setInterval(() => {
+        console.log('Attempting to expand the app');
+        webApp.expand(); // Try expanding repeatedly
+      }, 500); // Repeat every 500 milliseconds
+
+      // Stop after 5 seconds of trying to expand
+      setTimeout(() => {
+        clearInterval(intervalId);
+        console.log('Stopped trying to expand');
+      }, 5000); // Stop expanding after 5 seconds
     }
   }, []);
 
