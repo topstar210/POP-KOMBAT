@@ -20,11 +20,15 @@ export const App: FC = () => {
   const viewport = useViewport();
 
   useEffect(() => {
-    // Ensure Telegram WebApp is available before calling expand
-    // @ts-ignore
-    if (window.Telegram?.WebApp) {
-      // @ts-ignore
-      window.Telegram.WebApp.ready(); window.Telegram.WebApp.expand();
+    //@ts-ignore
+    const webApp = window.Telegram?.WebApp;
+
+    if (webApp) {
+      // Tell Telegram the app is ready
+      webApp.ready();
+
+      // Expand the app to full screen
+      webApp.expand();
     }
   }, []);
 
