@@ -27,8 +27,10 @@ export const App: FC = () => {
       // Tell Telegram the app is ready
       webApp.ready();
 
-      // Expand the app to full screen
-      webApp.expand();
+      setTimeout(()=>{
+        // Expand the app to full screen
+        webApp.expand();
+      },300)
     }
   }, []);
 
