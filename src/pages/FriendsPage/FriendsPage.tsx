@@ -54,21 +54,6 @@ const FriendsPage = () => {
           coinVal={25000}
         />
       </Box>
-      <Box className="fp-yourfriends">
-        <h2>Your Friends (**)</h2>
-        <div className="fp-friends-list">
-          {friends.length ? (
-            friends.map((friend: any, i: number) => (
-              <FriendItem
-                name={`${friend.inviteUserDetails[0].firstName} ${friend.inviteUserDetails[0].lastName}`}
-                key={i}
-              />
-            ))
-          ) : (
-            <div style={{ color: "#fff" }}>You haven't invited anyone yet</div>
-          )}
-        </div>
-      </Box>
       <Box className="fp-levelbonus">
         <h2>Level Up Bonuses</h2>
         <div className="fp-bounse-levels">
@@ -121,6 +106,21 @@ const FriendsPage = () => {
               )}
             </tbody>
           </table>
+        </div>
+      </Box>
+      <Box className="fp-yourfriends">
+        <h2>Your Friends (**)</h2>
+        <div className="fp-friends-list">
+          {friends.length ? (
+            friends.map((friend: any, i: number) => (
+              <FriendItem
+                name={`${friend.inviteUserDetails[0].firstName} ${friend.inviteUserDetails[0].lastName}`}
+                key={i}
+              />
+            ))
+          ) : (
+            <div style={{ color: "#fff" }}>You haven't invited anyone yet</div>
+          )}
         </div>
       </Box>
       <Box className="fp-invitebtn-section">
