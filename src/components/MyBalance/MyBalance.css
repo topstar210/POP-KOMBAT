@@ -6,8 +6,8 @@
   font-size: var(--font-size4xl);
   font-family: var(--font-familyHeading);
   font-weight: 400;
-  text-shadow: 2px 5px 0px #101010;
-  -webkit-text-stroke: 2px #000000;
+  text-shadow: 1px 2px 0px #101010;
+  -webkit-text-stroke: 1px #000000;
   -webkit-text-fill-color: white;
   color: #fff;
 }
