@@ -1,3 +1,4 @@
+import "./HomePage.css"
 import { useNavigate } from "react-router-dom";
 
 import { Box, Avatar, Ranking, ProfitBox } from "@/components/system";
@@ -46,32 +47,34 @@ const HomePage = () => {
       </Box>
       <Box className="display-section">
         <div className="display-section-cover">
-          <MyBalance className="fade-in" value={gameData.balance} />
-          <TabSection
-            gameData={gameData}
-            setBalance={handleSetGameData}
-            setDecrementCurEnergy={handleDecrementCurEnergy}
-            className="zoom-in"
-          />
-          <Box
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <InfoBox
-              className="fade-right"
-              value={`${curEenergy} / ${gameData.energy}`}
-              img={energyIcon}
+          <div className="display-section-container">
+            <MyBalance className="fade-in" value={gameData.balance} />
+            <TabSection
+              gameData={gameData}
+              setBalance={handleSetGameData}
+              setDecrementCurEnergy={handleDecrementCurEnergy}
+              className="zoom-in"
             />
-            <InfoBox
-              className="fade-left"
-              value={`Boost`}
-              img={boostIcon}
-              onClick={handleClickBoost}
-            />
-          </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <InfoBox
+                className="fade-right"
+                value={`${curEenergy} / ${gameData.energy}`}
+                img={energyIcon}
+              />
+              <InfoBox
+                className="fade-left"
+                value={`Boost`}
+                img={boostIcon}
+                onClick={handleClickBoost}
+              />
+            </Box>
+          </div>
         </div>
       </Box>
     </div>

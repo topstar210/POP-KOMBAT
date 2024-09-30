@@ -1,0 +1,6 @@
+.display-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
