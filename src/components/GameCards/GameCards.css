@@ -51,13 +51,28 @@
   justify-content: center;
   gap: 4px;
 }
-.app-mission-section > .token-row {
+.app-mission-section .app-mission-priceandlevel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.app-mission-section .app-mission-priceandlevel .token-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   margin: 16px;
   font-size: var(--font-sizexl);
+  font-weight: 700;
+}
+.app-mission-priceandlevel .level{
+  font-size: var(--font-sizexl);
+  font-weight: 700;
+  color: var(--pink-light, #FF8FCA);
+}
+.app-mission-des > .token-row .amount {
+  font-weight: 700;
 }
 .app-mission-section button {
   background: var(--pink, #e6007a);

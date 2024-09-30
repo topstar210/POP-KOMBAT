@@ -27,6 +27,7 @@
 .app-upgcard-row {
   display: flex;
   gap: 2px;
+  font-weight: 700;
 }
 
 .app-upgcard-bottom {
@@ -38,6 +39,7 @@
 
 .app-upgcard-bottom .app-upgcard-row {
   font-size: var(--font-sizexs);
+  font-weight: 700;
 }
 
 .vertical-divider {

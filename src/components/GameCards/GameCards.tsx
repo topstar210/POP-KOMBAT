@@ -123,38 +123,38 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
 
         {/* {activeTab === "special" && <SpecialList />} */}
         {activeTab === "special" && <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "380px",
-        }}
-      >
-        <div style={{ textAlign: "center", marginTop: "-80px" }}>
-          <img
-            src={tokenImg}
-            width={239}
-            style={{
-              borderRadius: "50%",
-              boxShadow: "1px 2px 0px 0px #000",
-            }}
-            alt=""
-          />
-          <div
-            className="luckiest"
-            style={{
-              fontSize: "33.3px",
-              marginTop: "10px",
-              WebkitTextStroke: "1px #000000",
-              WebkitTextFillColor: "white",
-              textShadow: "2px 5px 0px #101010",
-              color: "#fff",
-            }}
-          >
-            Coming Soon
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "380px",
+          }}
+        >
+          <div style={{ textAlign: "center", marginTop: "-80px" }}>
+            <img
+              src={tokenImg}
+              width={239}
+              style={{
+                borderRadius: "50%",
+                boxShadow: "1px 2px 0px 0px #000",
+              }}
+              alt=""
+            />
+            <div
+              className="luckiest"
+              style={{
+                fontSize: "33.3px",
+                marginTop: "10px",
+                WebkitTextStroke: "1px #000000",
+                WebkitTextFillColor: "white",
+                textShadow: "2px 5px 0px #101010",
+                color: "#fff",
+              }}
+            >
+              Coming Soon
+            </div>
           </div>
-        </div>
-      </div>}
+        </div>}
       </Tap>
 
       <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
@@ -174,12 +174,17 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
             <div className="token-row">
               <span>Profit per hour &nbsp;&nbsp;</span>
               <img src={tokenIcon} alt="" width={14} height={14} />
-              <span>+{formatNum(mission?.reward ?? 0)}</span>
+              <span className="amount">+{formatNum(mission?.reward ?? 0)}</span>
             </div>
           </div>
-          <div className="token-row">
-            <img src={tokenIcon} alt="" width={28} height={28} />
-            <span>{formatNum(mission?.cost ?? 0)}</span>
+          <div className="app-mission-priceandlevel">
+            <div className="token-row">
+              <img src={tokenIcon} alt="" width={28} height={28} />
+              <span>+{formatNum(mission?.cost ?? 0)}</span>
+            </div>
+            <div className="level">
+              lvl {mission?.level}
+            </div>
           </div>
           <button onClick={() => handleClickSetMission(mission)} className={`${Number(mission?.cost) > gameData.balance ? 'insufficient' : ''}`}>
             {Number(mission?.cost) > gameData.balance ? `insufficient Funds` : `Go ahead`}
