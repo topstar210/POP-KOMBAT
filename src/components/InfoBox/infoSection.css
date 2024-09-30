@@ -1,6 +1,6 @@
 .app-info-section{
   display: flex;
-  align-items: end;
+  align-items: center;
   gap: 4px;
   font-size: var(--font-sizexl);
   font-family: var(--font-familyHeading);

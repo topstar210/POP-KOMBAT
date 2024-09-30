@@ -1,6 +1,6 @@
 .coin-counter {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   gap: 8px;
   font-size: var(--font-size4xl);
