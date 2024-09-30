@@ -21,12 +21,11 @@
   width: 20%;
   background: none;
   border: none;
-  text-shadow: 1px 1px 1px #000;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: var(--font-familyHeading);
   font-weight: 400;
   font-size: var(--font-sizexs);
-  -webkit-text-stroke: 1px #000000;
+  -webkit-text-stroke: 1px #101010;
   -webkit-text-fill-color: white;
   color: #fff;
 }
