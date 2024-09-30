@@ -11,7 +11,7 @@
   -webkit-text-fill-color: white;
   color: #fff;
 }
-.coin-counter span {
+.coin-counter div {
   line-height: 1;
   margin-top: 5px;
 }
