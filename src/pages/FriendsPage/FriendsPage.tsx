@@ -128,7 +128,7 @@ const FriendsPage = () => {
           invite a friend
         </button>
         <button className="copy" onClick={copyInviteLink}>
-          <img src={copyIcon} alt="" />
+          <img src={copyIcon} alt="" width={32} />
         </button>
       </Box>
     </div>
