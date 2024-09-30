@@ -11,9 +11,9 @@
   -webkit-text-fill-color: white;
   color: #fff;
 }
-.coin-counter div {
-  line-height: 0;
-  margin-top: 5px;
+.coin-counter span {
+  line-height: 36px;
+  margin-top: 15px;
 }
 .coin-counter img {
   border-radius: 50%;
