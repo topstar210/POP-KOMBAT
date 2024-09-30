@@ -56,7 +56,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
             <div>+{formatToFixed(reward)}</div>
           </div>
         </div>
-        <div className="">
+        <div className="system-profit-setting">
           <div className="system-profit-setting-divider"></div>
           <button
             className="system-profit-setting-btn"
