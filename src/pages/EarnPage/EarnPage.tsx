@@ -124,12 +124,14 @@ const EarnPage = () => {
                 icon={spotifyIcon}
                 title="Stream 'Eres Mi Sol' on Spotify"
                 coin={308880}
+                onClick={() => window.open('https://open.spotify.com/track/1tGWEUKMKepGp8EjYjHuVv?si=626d9af2741c43ab', '_blank')}
                 isChecked={false}
               />
               <EarnItem
                 icon={spotifyIcon}
                 title="Follow the Producers Playlist"
                 coin={308880}
+                onClick={() => window.open('https://open.spotify.com/playlist/2xQ2XHsFqIkLx2BBmzx4yQ?si=a324ecb37cdb4c6f', '_blank')}
                 isChecked={true}
               />
             </div>
@@ -154,18 +156,21 @@ const EarnPage = () => {
                 title="Join our TG Channel"
                 coin={308880}
                 isChecked={false}
+                onClick={() => window.open('https://t.me/producersnftofficial', '_blank')}
               />
               <EarnItem
                 icon={xIcon}
                 title="Follow Producers on X"
                 coin={308880}
                 isChecked={false}
+                onClick={() => window.open('https://x.com/producersnft', '_blank')}
               />
               <EarnItem
                 icon={discordIcon}
                 title="Join the producers Discord"
                 coin={308880}
                 isChecked={false}
+                onClick={() => window.open('https://discord.gg/producers-nft-official', '_blank')}
               />
               <EarnItem
                 icon={binanceIcon}
