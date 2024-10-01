@@ -62,7 +62,11 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
   };
 
   const openMissionData = (modalData: UpgradeCardIFC) => {
-    setMission(modalData);
+    const data = getMissionData(
+      modalData.id || "",
+      modalData.level + 1
+    );
+    setMission(data);
     setIsOpenModal(true);
   };
 
@@ -101,7 +105,7 @@ const GameCards = ({ className, ...props }: GameCardsProps) => {
                 );
                 missionData = getMissionData(
                   missionId,
-                  settedMission ? settedMission.level + 1 : 1
+                  settedMission ? settedMission.level : 0
                 );
 
                 return (
