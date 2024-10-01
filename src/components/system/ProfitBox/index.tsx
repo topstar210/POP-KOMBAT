@@ -53,7 +53,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
           <div>Pops per hour</div>
           <div className="system-profit-status">
             <img src={tokenIcon} alt="Token" width={16} height={16} />
-            <div>+{formatToFixed(reward)}</div>
+            <div>+{Math.floor(Number(formatToFixed(reward)))}</div>
           </div>
         </div>
         <div className="system-profit-setting">
@@ -75,7 +75,7 @@ const ProfitBox = ({ className }: ProfitBoxProps) => {
           <p>You 've got {formatNum(reward ?? 0)} from Your Pops per hour</p>
           <div className="token-row">
             <img src={tokenIcon} alt="" width={28} height={28} />
-            <span>+{formatNum(reward ?? 0)}</span>
+            <span>+{Math.floor(Number(formatNum(reward ?? 0)))}</span>
           </div>
           <button onClick={() => handleClickClaim()}>Claim</button>
         </div>
