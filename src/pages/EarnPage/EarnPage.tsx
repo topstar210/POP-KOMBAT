@@ -123,14 +123,14 @@ const EarnPage = () => {
               <EarnItem
                 icon={spotifyIcon}
                 title="Stream 'Eres Mi Sol' on Spotify"
-                coin={308880}
+                coin={420690}
                 onClick={() => window.open('https://open.spotify.com/track/1tGWEUKMKepGp8EjYjHuVv?si=626d9af2741c43ab', '_blank')}
                 isChecked={false}
               />
               <EarnItem
                 icon={spotifyIcon}
                 title="Follow the Producers Playlist"
-                coin={308880}
+                coin={420690}
                 onClick={() => window.open('https://open.spotify.com/playlist/2xQ2XHsFqIkLx2BBmzx4yQ?si=a324ecb37cdb4c6f', '_blank')}
                 isChecked={true}
               />
@@ -154,42 +154,42 @@ const EarnPage = () => {
               <EarnItem
                 icon={telegramIcon}
                 title="Join our TG Channel"
-                coin={308880}
+                coin={250000}
                 isChecked={false}
                 onClick={() => window.open('https://t.me/producersnftofficial', '_blank')}
               />
               <EarnItem
                 icon={xIcon}
                 title="Follow Producers on X"
-                coin={308880}
+                coin={300000}
                 isChecked={false}
                 onClick={() => window.open('https://x.com/producersnft', '_blank')}
               />
               <EarnItem
                 icon={discordIcon}
                 title="Join the producers Discord"
-                coin={308880}
+                coin={420000}
                 isChecked={false}
                 onClick={() => window.open('https://discord.gg/producers-nft-official', '_blank')}
               />
               <EarnItem
                 icon={binanceIcon}
                 title="Sign up to Binance"
-                coin={308880}
+                coin={500000}
                 isChecked={false}
               />
               <EarnItem
                 icon={inviteIcon}
                 title="Invite a Friend"
-                coin={308880}
+                coin={620490}
                 isChecked={false}
               />
-              <EarnItem
+              {/* <EarnItem
                 icon={inviteIcon}
                 title="Invite 3 Friends"
                 coin={308880}
                 isChecked={false}
-              />
+              /> */}
             </div>
           </div>
         </div>
