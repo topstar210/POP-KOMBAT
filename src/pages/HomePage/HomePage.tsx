@@ -1,12 +1,15 @@
 import "./HomePage.css"
 import { useNavigate } from "react-router-dom";
 
-import { Box, Avatar, Ranking, ProfitBox } from "@/components/system";
+import { Box, Avatar, Ranking, ProfitBox, Modal } from "@/components/system";
 import { MyBalance, InfoBox, TabSection } from "@/components";
 import { useApp } from "@/providers/useApp";
+import { formatToFixed } from "@/utilities/number";
 
 import energyIcon from "@/assets/icons/energyIcon.png";
 import boostIcon from "@/assets/icons/boost.png";
+import binanceImg from "@/assets/imgs/binance.png";
+import tokenImg from "@/assets/imgs/token-image.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -16,6 +19,8 @@ const HomePage = () => {
     curEenergy,
     handleSetGameData,
     handleDecrementCurEnergy,
+    showTotalEarning,
+    setShowTotalEarning
   } = useApp();
   const userData = initData.user;
 
@@ -77,6 +82,24 @@ const HomePage = () => {
           </div>
         </div>
       </Box>
+
+      <Modal isOpen={showTotalEarning} onClose={() => setShowTotalEarning(false)}>
+        <div className="app-earning-modal">
+          <img
+            src={binanceImg}
+            alt="b-img"
+            className="b-img"
+            width={92}
+            height={92}
+          />
+          <div className="totalearning">
+            <img src={tokenImg} width={40} alt="" />
+            {formatToFixed(gameData.balance)}
+          </div>
+          <p>The exchange has started working for you</p>
+          <button onClick={() => setShowTotalEarning(false)}>Thank you</button>
+        </div>
+      </Modal>
     </div>
   );
 };

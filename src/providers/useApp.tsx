@@ -30,6 +30,8 @@ interface AppContextType {
   handleSetMission: (values: MyMissionsIFC) => void;
   isProfitPerH: boolean;
   handleSetIsProfitPerH: (status?: boolean) => void;
+  showTotalEarning: boolean;
+  setShowTotalEarning: any;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -51,6 +53,7 @@ const initGameData: GameDataIFC = {
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const initDataRaw = useLaunchParams().initDataRaw;
   const initData = useInitData();
+  const [showTotalEarning, setShowTotalEarning] = useState<boolean>(true);
 
   const [gameData, setGameData] = useState<GameDataIFC>({
     ...initGameData,
@@ -175,6 +178,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         handleSetMission,
         isProfitPerH,
         handleSetIsProfitPerH,
+        showTotalEarning,
+        setShowTotalEarning
       }}
     >
       {children}
