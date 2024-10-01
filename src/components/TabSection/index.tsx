@@ -132,7 +132,7 @@ const TabSection = ({
         >
           <div className="app-tab-pan-in">
             {/* {onPress && <div className="pressed-blur"></div>} */}
-            <img src={false ? pressHeroCharacter : heroCharacter} alt="" />
+            <img src={false ? pressHeroCharacter : heroCharacter} width={213} height={285} alt="" />
           </div>
         </div>
       </div>
