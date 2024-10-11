@@ -16,55 +16,58 @@ const MinePage = () => {
   };
 
   return (
-    <div className="main-page">
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Ranking
-          level={gameData.level}
-          className="fade-right"
-          style={{ width: "105px" }}
-        />
-        <ProfitBox className="fade-left" />
-      </Box>
-      <Box className="display-section">
-        <div className="display-section-cover">
-          <MyBalance className="fade-in" value={gameData.balance} />
-
-          <GameCards />
-
-          <TabSection
-            gameData={gameData}
-            setBalance={handleSetGameData}
-            setDecrementCurEnergy={handleDecrementCurEnergy}
-            className="zoom-in"
+    <>
+      <div className="main-page">
+        <Box
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "16px"
+          }}
+        >
+          <Ranking
+            level={gameData.level}
+            className="fade-right"
+            style={{ width: "50%" }}
           />
-          <Box
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <InfoBox
-              className="fade-right"
-              value={`${curEenergy} / ${gameData.energy}`}
-              img={energyIcon}
+          <ProfitBox className="fade-left" style={{ width: "50%" }} />
+        </Box>
+        <Box className="display-section">
+          <div className="display-section-cover">
+            <MyBalance className="fade-in" value={gameData.balance} />
+
+            <GameCards />
+
+            <TabSection
+              gameData={gameData}
+              setBalance={handleSetGameData}
+              setDecrementCurEnergy={handleDecrementCurEnergy}
+              className="zoom-in"
             />
-            <InfoBox
-              className="fade-left"
-              value={`Boost`}
-              img={boostIcon}
-              onClick={handleClickBoost}
-            />
-          </Box>
-        </div>
-      </Box>
-    </div>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <InfoBox
+                className="fade-right"
+                value={`${curEenergy} / ${gameData.energy}`}
+                img={energyIcon}
+              />
+              <InfoBox
+                className="fade-left"
+                value={`Boost`}
+                img={boostIcon}
+                onClick={handleClickBoost}
+              />
+            </Box>
+          </div>
+        </Box>
+      </div>
+    </>
   );
 };
 

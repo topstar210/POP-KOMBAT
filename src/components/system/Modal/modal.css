@@ -1,47 +1,47 @@
 .app-modal-cover {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 11;
-  width: 100vw;
-  height: 100vh;
-  background: #10101066;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 11;
+	width: 100vw;
+	height: 100vh;
+	background: #10101066;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .app-modal-cover.open {
-  opacity: 1;
-  visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 
 .app-modal {
-  position: absolute;
-  bottom: 0;
-  z-index: 12;
-  min-height: 250px;
-  width: -webkit-fill-available;
-  background: linear-gradient(8.76deg, #101010 6.66%, #2c323a 93.3%);
-  border-top: 4px solid var(--pink, #e6007a);
-  box-shadow: 0px -76px 108px 0px #e6007a66;
-  border-radius: 36px 36px 0 0;
-  padding: 16px 16px 32px 16px;
-  overflow: hidden;
-  transform: translateY(100%);
-  transition: transform 0.5s ease;
+	position: absolute;
+	bottom: 0;
+	z-index: 12;
+	min-height: 250px;
+	width: -webkit-fill-available;
+	background: linear-gradient(8.76deg, #101010 6.66%, #2c323a 93.3%);
+	border-top: 4px solid var(--pink, #e6007a);
+	box-shadow: 0px -76px 108px 0px #e6007a66;
+	border-radius: 36px 36px 0 0;
+	padding: 16px 16px 32px 16px;
+	overflow: hidden;
+	transform: translateY(100%);
+	transition: transform 0.5s ease;
 }
 .app-modal.open {
-  transform: translateY(0);
+	transform: translateY(0);
 }
 
 .app-modal-close {
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  background: url(/src/assets/icons/close_circle.png);
-  background-size: cover;
-  width: 23px;
-  height: 23px;
-  border-radius: 23px;
-  border: 0;
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	background: url(/src/assets/icons/icon-xClose.svg);
+	background-size: cover;
+	width: 23px;
+	height: 23px;
+	border-radius: 23px;
+	border: 0;
 }

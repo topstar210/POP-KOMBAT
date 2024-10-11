@@ -1,71 +1,78 @@
+.sys-tab-wrapper {
+	width: 100%;
+	position: sticky;
+	top: 0px;
+	padding-top: 16px;
+	margin-top: 8px;
+	backdrop-filter: blur(2px);
+}
+
 .sys_nav {
-  display: flex;
-  justify-content: space-between;
-  background: var(--gray-dark, #2c323a);
-  border-radius: 8px;
-  border: 1px solid var(--black, #101010);
-  box-shadow: 0px 1px 0px 0px #101010;
-  margin-top: 17px;
-  padding: 8px 2px;
-  position: sticky;
-  top: 0;
-  z-index: 9;
+	display: flex;
+	justify-content: space-between;
+	background: var(--gray-dark);
+	border-radius: 8px;
+	border: 1px solid var(--black, #101010);
+	box-shadow: 0px 4px 0px 0px #101010;
+	padding: 8px 2px;
+	z-index: 9;
 }
 
 .sys_nav__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
 }
 
 .sys_nav__item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
 }
 
 .sys_nav__link {
-  transition: color 0.3s ease-in-out;
-  text-decoration: none;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: var(--font-sizexs);
-  border-radius: 8px;
+	transition: color 0.3s ease-in-out;
+	text-decoration: none;
+	background: transparent;
+	border: none;
+	color: #fff;
+	font-size: var(--font-sizexs);
+	font-weight: 500;
+	border-radius: 8px;
 }
 
 .sys_nav__link_active {
-  color: #ffffff;
-  font-weight: 500;
+	color: #ffffff;
+	font-weight: 500;
 }
 
 .sys_nav__slider {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 8px 2px;
-  pointer-events: none;
-  z-index: 0;
+	position: absolute;
+	top: 16;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 8px 2px;
+	pointer-events: none;
+	z-index: 0;
 }
 
 .sys_nav__slider-rect {
-  width: calc(20% - 2px);
-  height: 32px;
-  border-radius: 8px;
-  background: var(--pink);
-  border: 1px solid var(--black, #101010);
-  box-shadow: 0px 1px 0px 0px #101010;
-  transition: transform 0.4s;
+	width: calc(20% - 2px);
+	height: 32px;
+	border-radius: 4px;
+	background: var(--pink);
+	border: 1px solid var(--black, #101010);
+	box-shadow: 0px 1px 0px 0px #101010;
+	transition: transform 0.4s;
 }
 
 .system-tab-data {
-  padding: 17px 0;
+	padding: 17px 0;
 }

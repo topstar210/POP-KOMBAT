@@ -1,86 +1,99 @@
 .app-tabsection {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 32px 0;
-  perspective: 1000px; /* Add perspective for 3D effect */
+	position: relative;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	margin: 0;
+	perspective: 1000px; /* Add perspective for 3D effect */
 }
+
 .app-tab-pan {
-  position: relative;
-  width: 343px;
-  height: 343px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 2px 5px 0px 0px #101010;
-  transition: transform 0.3s ease;
-  transform-style: preserve-3d; /* Ensure child elements are transformed in 3D space */
+	position: relative;
+	width: 343px;
+	height: 343px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 2px 5px 0px 0px #101010;
+	transition: transform 0.3s ease;
+	transform-style: preserve-3d; /* Ensure child elements are transformed in 3D space */
 }
+
 .app-tab-pan.pressed {
-  box-shadow: 0px 0px 0px 0px #101010;
+	box-shadow: 0px 0px 0px 0px #101010;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		#fff 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
 }
 .app-tab-pan-in {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  /* width: 100%;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	/* width: 100%;
   height: 100%; */
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
-  box-shadow: 0px 0px 7.6px 7px #10101066 inset;
-  background: var(--blue, #2e90fa);
-  border: 7px solid;
-  /* background: url(../../assets/imgs/tab-background.png); */
-  background-size: cover;
-  overflow: hidden;
-  border-image-source: linear-gradient(43.45deg, #2e90fa 0%, #aad2fd 99.17%);
+	width: calc(100% - 14px);
+	height: calc(100% - 14px);
+	box-shadow: 0px 0px 7.6px 7px #10101066 inset;
+	background: var(--blue, #2e90fa);
+
+	border: 7px solid;
+	/* background: url(../../assets/imgs/tab-background.png); */
+	background-size: cover;
+	overflow: hidden;
+	border-image-source: linear-gradient(43.45deg, #2e90fa 0%, #aad2fd 99.17%);
 }
+
+.app-tab-pan-in.pressed-background {
+	background: radial-gradient(circle, #fff 0%, #2e90fa 100%);
+}
+
 .pressed-blur {
-  position: absolute;
-  width: 55%;
-  height: 55%;
-  background: #fff;
-  filter: blur(40px);
-  z-index: 1;
+	position: absolute;
+	width: 55%;
+	height: 55%;
+	background: #fff;
+	filter: blur(40px);
+	z-index: 1;
 }
 .app-tab-pan-in img {
-  z-index: 2;
+	z-index: 2;
 }
 
 .app-tab-pan-in:before {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  background: url(/src/assets/imgs/bg-pattern.png);
-  opacity: 0.4;
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
-  border-radius: 50%;
-  overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	background: url(/src/assets/imgs/bg-pattern.png);
+	opacity: 0.4;
+	width: calc(100% - 14px);
+	height: calc(100% - 14px);
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 @keyframes riseAndDisappear {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-80px);
-    opacity: 0;
-  }
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-80px);
+		opacity: 0;
+	}
 }
 
 .plus-one {
-  position: absolute;
-  z-index: 9;
-  color: white;
-  font-size: var(--font-sizexl);
-  font-family: var(--font-familyHeading);
-  animation: riseAndDisappear 1.2s forwards;
-  pointer-events: none;
+	position: absolute;
+	z-index: 9;
+	color: white;
+	font-size: var(--font-sizexl);
+	font-family: var(--font-familyHeading);
+	animation: riseAndDisappear 1.2s forwards;
+	pointer-events: none;
 }

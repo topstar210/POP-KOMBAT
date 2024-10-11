@@ -6,138 +6,90 @@ import heroCharacter from "@/assets/imgs/heroCharacter.png";
 import pressHeroCharacter from "@/assets/imgs/heroCharacter-clicked.png";
 
 interface TabSectionProps {
-  gameData: GameDataIFC;
-  setBalance: (values: any) => void;
-  setDecrementCurEnergy: () => void;
-  className?: string;
+	gameData: GameDataIFC;
+	setBalance: (values: any) => void;
+	setDecrementCurEnergy: () => void;
+	className?: string;
 }
 
 const TabSection = ({
-  gameData,
-  setBalance,
-  setDecrementCurEnergy,
-  className,
-  ...props
+	gameData,
+	setBalance,
+	setDecrementCurEnergy,
+	className,
+	...props
 }: TabSectionProps) => {
-  const [onPress, setOnPress] = useState(false);
+	const [onPress, setOnPress] = useState(false);
 
-  const handleTouch = () => {
-    setOnPress(true);
-    // const parent = e.currentTarget;
-    // const rect = parent.getBoundingClientRect();
+	const handleTouch = () => {
+		setOnPress(true); // Set onPress to true when the touch starts
+	};
 
-    // if (e.touches.length > 5) return;
+	const handleTouchEnd = (e: any) => {
+		setOnPress(false); // Set onPress to false when the touch ends
+		const parent = e.currentTarget;
+		const rect = parent.getBoundingClientRect();
 
-    // // Loop through each touch point (multi-touch)
-    // for (let i = 0; i < e.touches.length; i++) {
-    //   setBalance({
-    //     balance: gameData.balance + 1,
-    //     totalEarning: gameData.totalEarning + 1,
-    //   });
+		if (e.changedTouches.length > 5) return;
 
-    //   setDecrementCurEnergy();
+		for (let i = 0; i < e.changedTouches.length; i++) {
+			setBalance({
+				balance: gameData.balance + 1,
+				totalEarning: gameData.totalEarning + 1
+			});
 
-    //   /**
-    //    * animation section start -----------------------------------------------------
-    //    */
-    //   const touch = e.touches[i];
-    //   const x = touch.clientX - rect.left - 8;
-    //   const y = touch.clientY - rect.top - 8;
+			setDecrementCurEnergy();
 
-    //   const plusOne = document.createElement("div");
-    //   plusOne.className = "plus-one";
-    //   plusOne.textContent = "+1";
-    //   plusOne.style.left = `${x}px`;
-    //   plusOne.style.top = `${y}px`;
+			const touch = e.changedTouches[i];
+			const x = touch.clientX - rect.left - 8;
+			const y = touch.clientY - rect.top - 8;
 
-    //   const grandparent = parent.parentElement;
-    //   grandparent.appendChild(plusOne);
+			const plusOne = document.createElement("div");
+			plusOne.className = "plus-one";
+			plusOne.textContent = "+1";
+			plusOne.style.left = `${x}px`;
+			plusOne.style.top = `${y}px`;
 
-    //   plusOne.addEventListener("animationend", () => {
-    //     plusOne.remove();
-    //   });
+			const grandparent = parent.parentElement;
+			grandparent.appendChild(plusOne);
 
-    //   // Animate the .app-tab-pan
-    //   const appTabPan = parent;
-    //   const rotateX = ((y - rect.height / 2) / rect.height) * 30; // Adjust the factor to control the rotation
-    //   const rotateY = ((x - rect.width / 2) / rect.width) * -30; // Adjust the factor to control the rotation
-    //   appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+			plusOne.addEventListener("animationend", () => {
+				plusOne.remove();
+			});
 
-    //   // Reset the animation
-    //   setTimeout(() => {
-    //     appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
-    //   }, 150);
-    //   // animation section end -----------------------------------------------------
-    // }
-  };
+			const appTabPan = parent;
+			const rotateX = ((y - rect.height / 2) / rect.height) * 30;
+			const rotateY = ((x - rect.width / 2) / rect.width) * -30;
+			appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-  const handleTouchEnd = (e:any) => {
-    setOnPress(false);
-    const parent = e.currentTarget;
-    const rect = parent.getBoundingClientRect();
+			setTimeout(() => {
+				appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
+			}, 150);
+		}
+	};
 
-
-    if (e.changedTouches.length > 5) return;
-
-    // Loop through each touch point (multi-touch)
-    for (let i = 0; i < e.changedTouches.length; i++) {
-      setBalance({
-        balance: gameData.balance + 1,
-        totalEarning: gameData.totalEarning + 1,
-      });
-
-      setDecrementCurEnergy();
-
-      /**
-       * animation section start -----------------------------------------------------
-       */
-      const touch = e.changedTouches[i];
-      const x = touch.clientX - rect.left - 8;
-      const y = touch.clientY - rect.top - 8;
-
-      const plusOne = document.createElement("div");
-      plusOne.className = "plus-one";
-      plusOne.textContent = "+1";
-      plusOne.style.left = `${x}px`;
-      plusOne.style.top = `${y}px`;
-
-      const grandparent = parent.parentElement;
-      grandparent.appendChild(plusOne);
-
-      plusOne.addEventListener("animationend", () => {
-        plusOne.remove();
-      });
-
-      // Animate the .app-tab-pan
-      const appTabPan = parent;
-      const rotateX = ((y - rect.height / 2) / rect.height) * 30; // Adjust the factor to control the rotation
-      const rotateY = ((x - rect.width / 2) / rect.width) * -30; // Adjust the factor to control the rotation
-      appTabPan.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-      // Reset the animation
-      setTimeout(() => {
-        appTabPan.style.transform = "rotateX(0deg) rotateY(0deg)";
-      }, 150);
-      // animation section end -----------------------------------------------------
-    }
-  };
-
-  return (
-    <div className={`app-tabsection ${className}`} {...props}>
-      <div style={{ position: "relative" }}>
-        <div
-          className={`app-tab-pan ${onPress ? "pressed!!!" : ""}`}
-          onTouchStart={handleTouch}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div className="app-tab-pan-in">
-            {/* {onPress && <div className="pressed-blur"></div>} */}
-            <img src={false ? pressHeroCharacter : heroCharacter} width={213} height={285} alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className={`app-tabsection ${className}`} {...props}>
+			<div style={{ position: "relative" }}>
+				<div
+					className={`app-tab-pan ${onPress ? "pressed" : ""}`}
+					onTouchStart={handleTouch}
+					onTouchEnd={handleTouchEnd}
+				>
+					<div
+						className={`app-tab-pan-in ${onPress ? "pressed-background" : ""}`}
+					>
+						<img
+							src={onPress ? heroCharacter : heroCharacter} // Switch between images based on `onPress`
+							width={213}
+							height={285}
+							alt="Hero Character"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default TabSection;

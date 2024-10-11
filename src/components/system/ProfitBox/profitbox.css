@@ -1,84 +1,85 @@
 .system-profit-box {
-  display: flex;
-  justify-content: center;
-  padding-right: 38px;
-  align-items: center;
-  width: 131px;
-  height: 38px;
-  border-radius: 8px;
-  border: 1px solid var(--black, #101010);
-  box-shadow: 0px 1px 0px 0px var(--black, #101010);
-  background: var(--white, #ffffff);
-  color: var(--black);
-  position: relative;
+	display: flex;
+	justify-content: center;
+	padding-right: 38px;
+	align-items: center;
+	width: 131px;
+	height: 38px;
+	border-radius: 8px;
+	border: 1px solid var(--black, #101010);
+	box-shadow: 0px 1px 0px 0px var(--black, #101010);
+	background: var(--white, #ffffff);
+	color: var(--black);
+	position: relative;
 }
 
 .system-profit-detail {
-  font-size: var(--font-sizexs);
-  text-align: center;
+	font-size: var(--font-sizexs);
+	text-align: center;
 }
 
 .system-profit-box button {
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
+	background: none;
+	border: none;
+	display: flex;
+	align-items: center;
 }
 
 .system-profit-status {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  font-size: var(--font-sizesm);
-  font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	font-size: var(--font-sizesm);
+	font-weight: 700;
 }
 
 .system-profit-setting-divider {
-  height: 22px;
-  width: 0.5px;
-  background: var(--gray);
-  gap: 0px;
-  position: absolute;
+	height: 22px;
+	width: 0.5px;
+	background: var(--gray);
+	gap: 0px;
+	position: absolute;
 }
 
-.system-profit-setting-btn {
-  padding-left: 7px;
+.system-profit-setting-btn img {
+	height: 24px;
+	width: 24px;
 }
 
 .app-profitperhour-modal p {
-  padding-top: 30px;
-  text-align: center;
-  color: #fff;
+	padding-top: 30px;
+	text-align: center;
+	color: #fff;
 }
 
-.app-profitperhour-modal>.token-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 16px;
-  font-size: var(--font-sizexl);
+.app-profitperhour-modal > .token-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin: 16px;
+	font-size: var(--font-sizexl);
 }
 
 .app-profitperhour-modal button {
-  background: var(--pink, #e6007a);
-  border: 1px solid var(--black, #101010);
-  box-shadow: 0px 8px 0px 0px #101010;
-  border-radius: 8px;
-  padding: 20px 32px;
-  color: #fff;
-  font-size: var(--font-size3xl);
-  text-shadow: 1px 2px 0px #101010;
-  font-family: var(--font-familyHeading);
-  width: 100%;
+	background: var(--pink, #e6007a);
+	border: 1px solid var(--black, #101010);
+	box-shadow: 0px 8px 0px 0px #101010;
+	border-radius: 8px;
+	padding: 20px 32px;
+	color: #fff;
+	font-size: var(--font-size3xl);
+	text-shadow: 1px 2px 0px #101010;
+	font-family: var(--font-familyHeading);
+	width: 100%;
 }
 
 .app-profitperhour-modal span {
-  color: #fff;
+	color: #fff;
 }
 
 .system-profit-setting {
-  position: absolute;
-  right: 0;
+	position: absolute;
+	right: 0;
 }

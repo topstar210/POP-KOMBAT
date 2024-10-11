@@ -1,106 +1,108 @@
 .fp-header {
-  display: flex;
-  flex-direction: column;
-  padding: 16px 0;
-  gap: 10;
-  color: #fff;
-  text-align: center;
-  margin-top: 16px;
+	display: flex;
+	flex-direction: column;
+	padding: 16px 0;
+	gap: 10;
+	color: #fff;
+	text-align: center;
+	margin-top: 16px;
 }
 
 .fp-title {
-  font-size: var(--font-size3xl); 
-  font-family: var(--font-familyHeading);
-  color: #fff;
-  text-shadow: 1px 2px 0px #101010;
-  -webkit-text-stroke: 1px #000000;
-  -webkit-text-fill-color: white;
+	font-size: var(--font-size3xl);
+	font-family: var(--font-familyHeading);
+	color: #fff;
+	text-shadow: 1px 2px 0px #101010;
+	-webkit-text-stroke: 1px #000000;
+	-webkit-text-fill-color: white;
 }
 
 .fp-subtitle {
-  font-size: var(--font-sizelg);
-  font-family: var(--font-familyBody);
-  font-weight: 300;
+	font-size: var(--font-sizelg);
+	font-family: var(--font-familyBody);
+	font-weight: 300;
 }
 
 .fp-status-section {
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
 }
 
-.fp-yourfriends{
-  margin-bottom: 180px;
+.fp-yourfriends {
+	margin-bottom: 180px;
 }
 
 .fp-yourfriends > h2,
 .fp-levelbonus > h2 {
-  font-size: var(--font-sizelg);
-  font-family: var(--font-familyHeading);
-  font-weight: 400;
-  color: #fff;
-  text-shadow: 0px 1px 0px #101010;
-  -webkit-text-stroke: 1px #000000;
-  -webkit-text-fill-color: white;
+	font-size: var(--font-sizelg);
+	font-family: var(--font-familyHeading);
+	font-weight: 400;
+	color: #fff;
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+		1px 1px 0 black;
 }
 
 .fp-bounse-levels {
-  padding: 8px;
-  border-radius: 4px;
-  background: var(--gray-dark, #2c323a);
-  border: 1px solid var(--black, #101010);
-  box-shadow: 1px 2px 0px 0px #101010;
+	padding: 8px;
+	border-radius: 4px;
+	background: var(--gray-dark, #2c323a);
+	border: 1px solid var(--black, #101010);
+	box-shadow: 1px 2px 0px 0px #101010;
 }
 .fp-bounseinfo-table {
-  width: 100%;
+	width: 100%;
 }
 .fp-bounseinfo-table thead {
-  text-align: left;
+	text-align: left;
 }
 .fp-bounseinfo-table tbody td,
 .fp-bounseinfo-table thead th {
-  font-size: var(--font-sizexs);
-  color: #fff;
+	font-size: var(--font-sizexs);
+	color: #fff;
 }
 .fp-bounseinfo-table tbody td {
-  border-bottom: 0.5px solid var(--gray, #6e7d91);
-  padding: 4px 0;
+	border-bottom: 0.5px solid var(--gray, #6e7d91);
+	padding: 4px 0;
 }
 .fp-bounseinfo-table tbody td div {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
 }
 .fp-bounseinfo-table tbody td div span.coin {
-  color: var(--yellow-light);
-  font-weight: 400;
+	color: var(--yellow-light);
+	font-weight: 400;
 }
 
 .fp-invitebtn-section {
-  position: fixed;
-  width: -webkit-fill-available;
-  bottom: 100px;
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
+	position: fixed;
+	width: -webkit-fill-available;
+	bottom: 100px;
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
 }
 
 .fp-invitebtn-section button {
-  background: var(--blue, #2e90fa);
-  border: 1px solid var(--black, #101010);
-  box-shadow: 1px 2px 0px 0px #101010;
-  border-radius: 8px;
+	background: var(--blue, #2e90fa);
+	border: 1px solid var(--black);
+	box-shadow: 1px 2px 0px 0px var(--black);
+	border-radius: 8px;
 }
 
 .fp-invitebtn-section button.invite {
-  font-family: var(--font-familyHeading);
-  padding: 16px 32px;
-  color: #fff;
-  flex: 1;
-  font-weight: 400;
-  text-shadow: 0px 2px 0px #101010;
-  -webkit-text-stroke: 1px #000000;
+	font-family: var(--font-familyHeading);
+	font-size: var(--font-sizexl);
+	padding: 16px 32px;
+	color: #fff;
+	flex: 1;
+	font-weight: 400;
+	text-shadow: 0px 2px 0px var(--black);
+	-webkit-text-stroke: 1px var(--black);
 }
 .fp-invitebtn-section button.copy {
-  padding: 8px;
+	padding: 8px;
 }

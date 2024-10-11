@@ -20,15 +20,19 @@
   -webkit-text-fill-color: white;
 }
 
+.er-list-cointainer {
+	margin-bottom: 32px;
+}
+
 .er-list-cointainer h2 {
-  text-shadow: 0px 1px 0px #101010;
-  -webkit-text-stroke: 1px #000000;
-  -webkit-text-fill-color: white;
-  font-family: var(--font-familyHeading);
-  font-size: var(--font-sizebase);
-  font-weight: 400;
-  color: #fff;
-  margin-top: 32px;
+	font-family: var(--font-familyHeading);
+	font-size: var(--font-sizebase);
+	font-weight: 400;
+
+	color: white;
+	-webkit-text-stroke: 0.3px black;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+		1px 2px 0 black;
 }
 
 .app-dailyreward-mcontainer {

@@ -1,49 +1,70 @@
 .sys-switch-wrap {
-  background: var(--blue, #2e90fa);
-  border: 0.5px solid var(--black, #101010);
-  width: 80px;
-  height: 36px;
-  border-radius: 80px;
+	background: var(--blue, #2e90fa);
+	border: 0.5px solid var(--black, #101010);
+	width: 80px;
+	height: 36px;
+	border-radius: 80px;
+}
+
+.sys-switch-wrap {
+	width: 80px;
+	height: 36px;
+	border-radius: 80px;
+	background-color: #ccc;
+	transition: 0.3s ease;
+	position: relative;
+}
+
+.sys-switch-wrap.on {
+	background-color: var(--blue);
+}
+
+.sys-switch-wrap.off {
+	background-color: var(--gray);
 }
 
 .rightcontent {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
 }
 
 .sys-switch-btn {
-  width: 30px;
-  height: 30px;
-  margin: 2px;
-  background: #fff;
-  border-radius: 30px;
-  border: 0.5px solid var(--black, #101010);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.4s;
+	width: 30px;
+	height: 30px;
+	margin: 2px;
+	background: #fff;
+	border-radius: 30px;
+	border: 0.5px solid var(--black, #101010);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.4s ease;
 }
 
 .sys-switch-btn-inner {
-  border: 0.5px solid var(--gray-light, #e2e5e9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  height: 70%;
-  border-radius: 50%;
+	border: 0.5px solid var(--gr, #e2e5e9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
 }
 
 .sys-switch-btn-inner.smile {
-  background-color: var(--blue, #2e90fa);
+	background-color: var(--blue, #2e90fa);
+	transform: rotate(0);
+	transition: all ease 0.4s;
 }
 .sys-switch-btn-inner.annoy {
-  background-color: var(--pink, #e6007a);
+	background-color: var(--pink, #e6007a);
+	transform: rotate(-180deg);
+	transition: all ease 0.4s;
 }
 
 .sys-switch-btn-inner img {
-  width: 70%;
+	width: 70%;
 }

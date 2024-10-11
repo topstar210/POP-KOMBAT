@@ -1,43 +1,44 @@
 .display-section-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	gap: 24px;
+	height: auto;
+	margin: auto;
 }
 
-
 .app-earning-modal {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    color: #fff;
-    font-size: var(--font-sizebase);
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	color: #fff;
+	font-size: var(--font-sizebase);
 }
 
 .app-earning-modal .totalearning {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-weight: 700;
-    font-size: var(--font-size3xl);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	font-weight: 700;
+	font-size: var(--font-size3xl);
 }
 
 .app-earning-modal p {
-    font-size: var(--font-sizexl);
+	font-size: var(--font-sizexl);
 }
 
 .app-earning-modal button {
-    background: var(--pink, #e6007a);
-    border: 1px solid var(--black, #101010);
-    box-shadow: 0px 8px 0px 0px #101010;
-    border-radius: 8px;
-    padding: 24px 32px;
-    color: #fff;
-    font-size: var(--font-size3xl);
-    text-shadow: 1px 2px 0px #101010;
-    font-family: var(--font-familyHeading);
-    -webkit-text-stroke: 1px #000000;
-    -webkit-text-fill-color: white;
-    width: 100%;
+	background: var(--pink, #e6007a);
+	border: 1px solid var(--black, #101010);
+	box-shadow: 0px 8px 0px 0px #101010;
+	border-radius: 8px;
+	padding: 24px 32px;
+	color: #fff;
+	font-size: var(--font-size3xl);
+	text-shadow: 1px 2px 0px #101010;
+	font-family: var(--font-familyHeading);
+	-webkit-text-stroke: 1px #000000;
+	-webkit-text-fill-color: white;
+	width: 100%;
 }

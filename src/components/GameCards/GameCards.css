@@ -1,95 +1,100 @@
 .card-group {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+	display: grid;
+	gap: 8px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .app-special-cardtab {
-  display: flex;
-  gap: 10px;
-  font-weight: 800;
-  margin-bottom: 17px;
+	display: flex;
+	gap: 10px;
+	font-weight: 800;
+	margin-bottom: 17px;
 }
 
 .app-special-cardtab button {
-  color: #fff;
-  background: transparent;
-  border: none;
-  font-size: var(--font-sizexs);
+	color: var(--white);
+	background: transparent;
+	border: none;
+	font-size: var(--font-sizexs);
 }
 
 .app-special-cardtab button.active {
-  color: var(--teal);
-  text-decoration: underline;
+	color: var(--teal);
+	text-decoration: underline;
 }
 
 .app-mission-section {
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-  color: #fff;
-  font-size: var(--font-sizebase);
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+	font-size: var(--font-sizebase);
 }
 .app-mission-section h2 {
-  font-size: var(--font-size2xl);
+	font-size: var(--font-size2xl);
 }
 /* .app-mission-section .mission-img { */
-  /* background: radial-gradient(
+/* background: radial-gradient(
     45.78% 52.5% at 48.61% 45%,
     #6e7d91 0%,
     #2c323a 100%
   ); */
-  /* border: 1px solid var(--black, #101010);
+/* border: 1px solid var(--black, #101010);
   box-shadow: 1px 2px 0px 0px #101010; */
 /* } */
 .app-mission-section .app-mission-des {
-  padding: 0 16px;
+	padding: 0 16px;
 }
 .app-mission-section .app-mission-des .token-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
 }
-.app-mission-section .app-mission-priceandlevel{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+.app-mission-section .app-mission-priceandlevel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
 }
 .app-mission-section .app-mission-priceandlevel .token-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 16px;
-  font-size: var(--font-sizexl);
-  font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin: 16px;
+	font-size: var(--font-sizexl);
+	font-weight: 700;
 }
-.app-mission-priceandlevel .level{
-  font-size: var(--font-sizexl);
-  font-weight: 700;
-  color: var(--pink-light, #FF8FCA);
+.app-mission-priceandlevel .level {
+	font-size: var(--font-sizexl);
+	font-weight: 700;
+	color: var(--pink-light, #ff8fca);
 }
+
+.profit-per-hour {
+	font-size: var(--font-sizexs);
+}
+
 .app-mission-des > .token-row .amount {
-  font-weight: 700;
+	font-weight: 700;
 }
 .app-mission-section button {
-  background: var(--pink, #e6007a);
-  border: 1px solid var(--black, #101010);
-  box-shadow: 0px 8px 0px 0px #101010;
-  border-radius: 8px;
-  padding: 24px 32px;
-  color: #fff;
-  font-size: var(--font-size3xl);
-  text-shadow: 1px 2px 0px #101010;
-  font-family: var(--font-familyHeading);
-  -webkit-text-stroke: 1px #000000;
-  -webkit-text-fill-color: white;
-  width: 100%;
+	background: var(--pink, #e6007a);
+	border: 1px solid var(--black, #101010);
+	box-shadow: 0px 8px 0px 0px #101010;
+	border-radius: 8px;
+	padding: 16px 32px;
+	color: #fff;
+	font-size: var(--font-size3xl);
+	text-shadow: 1px 2px 0px #101010;
+	font-family: var(--font-familyHeading);
+	-webkit-text-stroke: 1px #000000;
+	-webkit-text-fill-color: white;
+	width: 100%;
 }
 
 button.insufficient {
-  padding: 24px 0px;
-  background: var(--gray-dark, #2C323A);
+	padding: 16px 0px;
+	background: var(--gray-dark, #2c323a);
 }
