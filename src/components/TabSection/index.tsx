@@ -3,7 +3,7 @@ import { useState } from "react";
 import type { GameDataIFC } from "@/types/game";
 
 import heroCharacter from "@/assets/imgs/heroCharacter.png";
-import pressHeroCharacter from "@/assets/imgs/heroCharacter-clicked.png";
+// import pressHeroCharacter from "@/assets/imgs/heroCharacter-clicked.png";
 
 interface TabSectionProps {
 	gameData: GameDataIFC;

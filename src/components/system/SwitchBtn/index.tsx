@@ -1,4 +1,3 @@
-import React from "react";
 import "./switchbtn.css";
 
 import smile from "@/assets/icons/smile.png";
@@ -13,9 +12,8 @@ const SwitchBtn = ({ turn, onClick }: SwitchBtnProps) => {
 	return (
 		<>
 			<div
-				className={`sys-switch-wrap ${
-					turn ? "on" : "off"
-				}`} /* Toggle background color */
+				className={`sys-switch-wrap ${turn ? "on" : "off"
+					}`} /* Toggle background color */
 				onClick={onClick}
 			>
 				<div
