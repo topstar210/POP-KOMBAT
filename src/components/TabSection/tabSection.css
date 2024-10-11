@@ -1,10 +1,11 @@
 .app-tabsection {
 	position: relative;
 	display: flex;
-	justify-content: end;
+	justify-content: center;
 	align-items: center;
 	margin: 0;
-	perspective: 1000px; /* Add perspective for 3D effect */
+	perspective: 1000px;
+	/* Add perspective for 3D effect */
 }
 
 .app-tab-pan {
@@ -15,17 +16,17 @@
 	overflow: hidden;
 	box-shadow: 2px 5px 0px 0px #101010;
 	transition: transform 0.3s ease;
-	transform-style: preserve-3d; /* Ensure child elements are transformed in 3D space */
+	transform-style: preserve-3d;
+	/* Ensure child elements are transformed in 3D space */
 }
 
 .app-tab-pan.pressed {
 	box-shadow: 0px 0px 0px 0px #101010;
-	background: radial-gradient(
-		50% 50% at 50% 50%,
-		#fff 0%,
-		rgba(255, 255, 255, 0) 100%
-	);
+	background: radial-gradient(50% 50% at 50% 50%,
+			#fff 0%,
+			rgba(255, 255, 255, 0) 100%);
 }
+
 .app-tab-pan-in {
 	position: relative;
 	z-index: 1;
@@ -59,6 +60,7 @@
 	filter: blur(40px);
 	z-index: 1;
 }
+
 .app-tab-pan-in img {
 	z-index: 2;
 }
@@ -82,6 +84,7 @@
 		transform: translateY(0);
 		opacity: 1;
 	}
+
 	100% {
 		transform: translateY(-80px);
 		opacity: 0;
