@@ -98,3 +98,84 @@ export const levelUpBouns = [
     premiun: 12000000
   },
 ]
+
+export const energyValBylvl = {
+  2:{
+    lvl: 2,
+    cost: 2300,
+    multitap_value: 1,
+    energy_value: 1200
+  },
+  3:{
+    lvl: 3,
+    cost: 2875,
+    multitap_value: 2,
+    energy_value: 1400
+  },
+  4:{
+    lvl: 4,
+    cost: 3306,
+    multitap_value: 3,
+    energy_value: 1600
+  },
+  5:{
+    lvl: 5,
+    cost: 3802,
+    multitap_value: 4,
+    energy_value: 1800
+  },
+  6:{
+    lvl: 6,
+    cost: 4373,
+    multitap_value: 5,
+    energy_value: 2000
+  },
+  7:{
+    lvl: 7,
+    cost: 5028,
+    multitap_value: 6,
+    energy_value: 2200
+  },
+  8:{
+    lvl: 8,
+    cost: 5783,
+    multitap_value: 7,
+    energy_value: 2400
+  },
+  9:{
+    lvl: 9,
+    cost: 6650,
+    multitap_value: 8,
+    energy_value: 2600
+  },
+  10:{
+    lvl: 10,
+    cost: 7648,
+    multitap_value: 5,
+    energy_value: 2800
+  },
+  11:{
+    lvl: 11,
+    cost: 8795,
+    multitap_value: 10,
+    energy_value: 3000
+  },
+  12:{
+    lvl: 12,
+    cost: 10114,
+    multitap_value: 11,
+    energy_value: 3200
+  },
+  13:{
+    lvl: 13,
+    cost: 11631,
+    multitap_value: 12,
+    energy_value: 3400
+  },
+  14:{
+    lvl: 14,
+    cost: 13376,
+    multitap_value: 13,
+    energy_value: 3600
+  }
+}
