@@ -5,16 +5,22 @@ import { useEffect, useState } from "react";
 import { type LevelIFC } from "@/types/game";
 
 interface RankingProps {
+	totalEarning: number;
 	level: number;
 	className?: string;
 	style: {};
 }
-const Ranking = ({ level, style, className, ...props }: RankingProps) => {
+const Ranking = ({ level, totalEarning, style, className, ...props }: RankingProps) => {
 	const [levelData, setLevelData] = useState<LevelIFC | null>(null);
+	const [progressToNext, setProgressToNext] = useState<number>(0);
 
 	useEffect(() => {
-		const res: LevelIFC = getLevelInfo(level);
-		setLevelData(res);
+		const currLvl: LevelIFC = getLevelInfo(level);
+		const nextLvl: LevelIFC = getLevelInfo(level + 1);
+		const currToEarning = totalEarning - currLvl.balance;
+		const currToNext = nextLvl.balance - currLvl.balance;
+		setProgressToNext(currToEarning * 100 / currToNext);
+		setLevelData(currLvl);
 	}, [level]);
 
 	return (
@@ -27,7 +33,7 @@ const Ranking = ({ level, style, className, ...props }: RankingProps) => {
 				</div>
 			</div>
 			<ProgressBar
-				percent={((levelData?.current || 0) * 100) / (levelData?.length || 0)}
+				percent={progressToNext}
 			/>
 		</div>
 	);

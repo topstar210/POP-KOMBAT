@@ -27,6 +27,7 @@ const MinePage = () => {
           }}
         >
           <Ranking
+            totalEarning={gameData.totalEarning}
             level={gameData.level}
             className="fade-right"
             style={{ width: "50%" }}

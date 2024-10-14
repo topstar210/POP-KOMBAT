@@ -99,7 +99,7 @@ export const levelUpBouns = [
   },
 ]
 
-export const energyValBylvl = {
+export const boostData = {
   2:{
     lvl: 2,
     cost: 2300,

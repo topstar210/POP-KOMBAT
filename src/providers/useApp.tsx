@@ -70,7 +70,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       ...values,
     };
     const userLevel = getLevelByBalance(data.totalEarning);
-    data.level = userLevel.current - 1;
+    data.level = userLevel.current;
     setGameData(data);
     try {
       await postData(`games/${user?.id}`, data);

@@ -8,7 +8,13 @@ export const getLevelInfo = (key: number) => {
   const level = levels[key];
 
   if (!level) {
-    throw new Error("Invalid key: No level exists for the given key");
+    return {
+      title: levels[key-1].title,
+      length: levels.length,
+      current: key + 1,
+      balance: levels[key-1].balance,
+    }
+    // throw new Error("Invalid key: No level exists for the given key");
   }
 
   return {
@@ -41,7 +47,7 @@ export const getLevelByBalance = (totalVal: number) => {
   return {
     title: closestLevel.title,
     length: levels.length,
-    current: lvlInd + 1,
+    current: lvlInd,
     balance: closestLevel.balance,
   };
 };
