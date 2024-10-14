@@ -30,7 +30,7 @@ const FriendsPage = () => {
 	}, []);
 
 	const copyInviteLink = async () => {
-		const link = `https://t.me/pop_kombat_bot?start=${user?.id}`;
+		const link = `https://t.me/fingerblasterbot?start=${user?.id}`;
 		await navigator.clipboard.writeText(link);
 		notification("The invite link copied");
 	};
