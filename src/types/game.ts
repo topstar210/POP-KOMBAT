@@ -4,6 +4,7 @@ export interface MyMissionsIFC {
 }
 
 export interface GameDataIFC {
+  add: number,
   level: number; // user level 0 ~ 10
   totalEarning: number; // user total earning so far
   balance: number; // user balance

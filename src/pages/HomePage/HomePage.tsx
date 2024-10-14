@@ -98,7 +98,7 @@ const HomePage = () => {
 						/>
 						<div className="totalearning">
 							<img src={tokenImg} width={40} alt="" />
-							{formatToFixed(gameData.balance)}
+							{formatToFixed(gameData.totalEarning)}
 						</div>
 						<p>Your team has been spreading the word while you were gone</p>
 						<button onClick={() => setShowTotalEarning(false)}>

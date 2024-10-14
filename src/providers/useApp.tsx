@@ -37,6 +37,7 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const initGameData: GameDataIFC = {
+  add: 1,
   level: 0,
   totalEarning: 1000,
   balance: 1000,
@@ -92,6 +93,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     const missionCost = getMissionData(mission.id, mission.level - 1).cost;
     handleSetGameData({
+      add: missionCost * -1,
       balance: gameData.balance - missionCost,
     });
   };

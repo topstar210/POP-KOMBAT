@@ -34,6 +34,7 @@ const TabSection = ({
 
 		for (let i = 0; i < e.changedTouches.length; i++) {
 			setBalance({
+				add: 1,
 				balance: gameData.balance + 1,
 				totalEarning: gameData.totalEarning + 1
 			});
