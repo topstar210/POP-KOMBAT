@@ -99,299 +99,299 @@ export const levelUpBouns = [
   },
 ]
 
-export const boostData = {
-  2:{
+export const boostData = [
+  {
     lvl: 2,
     cost: 2300,
     multitap_value: 1,
     energy_value: 1200
   },
-  3:{
+  {
     lvl: 3,
     cost: 2875,
     multitap_value: 2,
     energy_value: 1400
   },
-  4:{
+  {
     lvl: 4,
     cost: 3306,
     multitap_value: 3,
     energy_value: 1600
   },
-  5:{
+  {
     lvl: 5,
     cost: 3802,
     multitap_value: 4,
     energy_value: 1800
   },
-  6:{
+  {
     lvl: 6,
     cost: 4373,
     multitap_value: 5,
     energy_value: 2000
   },
-  7:{
+  {
     lvl: 7,
     cost: 5028,
     multitap_value: 6,
     energy_value: 2200
   },
-  8:{
+  {
     lvl: 8,
     cost: 5783,
     multitap_value: 7,
     energy_value: 2400
   },
-  9:{
+  {
     lvl: 9,
     cost: 6650,
     multitap_value: 8,
     energy_value: 2600
   },
-  10:{
+  {
     lvl: 10,
     cost: 7648,
     multitap_value: 5,
     energy_value: 2800
   },
-  11:{
+  {
     lvl: 11,
     cost: 8795,
     multitap_value: 10,
     energy_value: 3000
   },
-  12:{
+  {
     lvl: 12,
     cost: 10114,
     multitap_value: 11,
     energy_value: 3200
   },
-  13:{
+  {
     lvl: 13,
     cost: 11631,
     multitap_value: 12,
     energy_value: 3400
   },
-  14:{
+  {
     lvl: 14,
     cost: 13376,
     multitap_value: 13,
     energy_value: 3600
   },
-  15:{
+  {
     lvl: 15,
     cost: 15382,
     multitap_value: 14,
     energy_value: 3800
   },
-  16:{
+  {
     lvl: 16,
     cost: 17689,
     multitap_value: 15,
     energy_value: 4000
   },
-  17:{
+  {
     lvl: 17,
     cost: 20343,
     multitap_value: 16,
     energy_value: 4200
   },
-  18:{
+  {
     lvl: 18,
     cost: 23394,
     multitap_value: 17,
     energy_value: 4400
   },
-  19:{
+  {
     lvl: 19,
     cost: 26903,
     multitap_value: 18,
     energy_value: 4600
   },
-  20:{
+  {
     lvl: 20,
     cost: 30939,
     multitap_value: 19,
     energy_value: 4800
   },
-  21:{
+  {
     lvl: 21,
     cost: 35579,
     multitap_value: 21,
     energy_value: 5000
   },
-  22:{
+  {
     lvl: 22,
     cost: 40916,
     multitap_value: 23,
     energy_value: 5200
   },
-  23:{
+  {
     lvl: 23,
     cost: 47054,
     multitap_value: 25,
     energy_value: 5400
   },
-  24:{
+  {
     lvl: 24,
     cost: 54112,
     multitap_value: 27,
     energy_value: 5600
   },
-  25:{
+  {
     lvl: 25,
     cost: 62229,
     multitap_value: 29,
     energy_value: 5800
   },
-  26:{
+  {
     lvl: 26,
     cost: 71563,
     multitap_value: 31,
     energy_value: 6000
   },
-  27:{
+  {
     lvl: 27,
     cost: 82297,
     multitap_value: 33,
     energy_value: 6200
   },
-  28:{
+  {
     lvl: 28,
     cost: 94642,
     multitap_value: 35,
     energy_value: 6400
   },
-  29:{
+  {
     lvl: 29,
     cost: 108838,
     multitap_value: 37,
     energy_value: 6600
   },
-  30:{
+  {
     lvl: 30,
     cost: 125164,
     multitap_value: 39,
     energy_value: 6800
   },
-  31:{
+  {
     lvl: 31,
     cost: 143939,
     multitap_value: 41,
     energy_value: 7000
   },
-  32:{
+  {
     lvl: 32,
     cost: 165529,
     multitap_value: 43,
     energy_value: 7200
   },
-  33:{
+  {
     lvl: 33,
     cost: 190359,
     multitap_value: 45,
     energy_value: 7400
   },
-  34:{
+  {
     lvl: 34,
     cost: 218913,
     multitap_value: 47,
     energy_value: 7600
   },
-  35:{
+  {
     lvl: 35,
     cost: 251750,
     multitap_value: 49,
     energy_value: 7800
   },
-  36:{
+  {
     lvl: 36,
     cost: 289512,
     multitap_value: 51,
     energy_value: 8000
   },
-  37:{
+  {
     lvl: 37,
     cost: 332939,
     multitap_value: 53,
     energy_value: 8200
   },
-  38:{
+  {
     lvl: 38,
     cost: 382880,
     multitap_value: 55,
     energy_value: 8400
   },
-  39:{
+  {
     lvl: 39,
     cost: 440312,
     multitap_value: 49,
     energy_value: 7800
   },
-  40:{
+  {
     lvl: 40,
     cost: 506358,
     multitap_value: 59,
     energy_value: 8800
   },
-  41:{
+  {
     lvl: 41,
     cost: 582312,
     multitap_value: 61,
     energy_value: 9000
   },
-  42:{
+  {
     lvl: 42,
     cost: 559659,
     multitap_value: 63,
     energy_value: 9200
   },
-  43:{
+  {
     lvl: 43,
     cost: 770108,
     multitap_value: 65,
     energy_value: 9400
   },
-  44:{
+  {
     lvl: 44,
     cost: 885624,
     multitap_value: 67,
     energy_value: 9600
   },
-  45:{
+  {
     lvl: 45,
     cost: 1018467,
     multitap_value: 70,
     energy_value: 9800
   },
-  46:{
+  {
     lvl: 46,
     cost: 1171238,
     multitap_value: 75,
     energy_value: 10000
   },
-  47:{
+  {
     lvl: 47,
     cost: 1346923,
     multitap_value: 80,
     energy_value: 10200
   },
-  48:{
+  {
     lvl: 48,
     cost: 1548962,
     multitap_value: 85,
     energy_value: 10400
   },
-  49:{
+  {
     lvl: 49,
     cost: 1781306,
     multitap_value: 90,
     energy_value: 10600
   },
-  50:{
+  {
     lvl: 50,
     cost: 5048502,
     multitap_value: 100,
     energy_value: 10800
   }
-}
+]

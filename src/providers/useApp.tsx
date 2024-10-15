@@ -18,6 +18,7 @@ import type { GameDataIFC, MyMissionsIFC } from "@/types/game";
 import { getMissionData } from "@/utilities/mission";
 import { getLevelByBalance } from "@/utilities/level";
 import { postData, fetchData } from "@/services/apiService";
+import { getBoostData } from "@/utilities/boost";
 
 interface AppContextType {
   initData: InitDataParsed;
@@ -74,7 +75,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setGameData(data);
     try {
       await postData(`games/${user?.id}`, data);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const handleSetMission = async (mission: MyMissionsIFC) => {
@@ -89,7 +90,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         missions: copiedMission,
       });
       setMissions(copiedMission);
-    } catch (error) {}
+    } catch (error) { }
 
     const missionCost = getMissionData(mission.id, mission.level - 1).cost;
     handleSetGameData({
@@ -107,8 +108,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
         // get game data of user
         const gameRes = await fetchData(`games/${user?.id}`);
+        const boost = getBoostData(gameRes.gameData.totalEarning);
         handleSetGameData({
           ...gameRes.gameData,
+          energy: boost.energy_value,
           isDailyRewardAvailable: gameRes.isDailyRewardAvailable,
         });
 
@@ -121,27 +124,36 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     };
     initAppData();
 
-    const intervalForEnergy = setInterval(() => {
-      setCurEenergy((prevCurEenergy) =>
-        prevCurEenergy < initGameData.energy
-          ? prevCurEenergy + 1
-          : initGameData.energy
-      );
-    }, 1000);
-
     const intervalProfitPerHour = setInterval(() => {
       setIsProfitPerH(true);
     }, 3600000);
 
     return () => {
       clearInterval(intervalProfitPerHour);
-      clearInterval(intervalForEnergy);
     };
   }, []);
 
+  useEffect(() => {
+    const boost = getBoostData(gameData.totalEarning);
+    setCurEenergy(boost.energy_value)
+
+    const intervalForEnergy = setInterval(() => {
+      setCurEenergy((prevCurEenergy) =>
+        prevCurEenergy < boost.energy_value
+          ? prevCurEenergy + boost.multitap_value
+          : boost.energy_value
+      );
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalForEnergy);
+    }
+  }, [gameData.energy])
+
   const handleDecrementCurEnergy = () => {
+    const boost = getBoostData(gameData.totalEarning);
     setCurEenergy((prevCurEenergy) =>
-      prevCurEenergy > 0 ? prevCurEenergy - 1 : 0
+      prevCurEenergy > 0 ? prevCurEenergy - boost.multitap_value : 0
     );
   };
 

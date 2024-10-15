@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { GameDataIFC } from "@/types/game";
 
 import heroCharacter from "@/assets/imgs/heroCharacter.png";
+import { getBoostData } from "@/utilities/boost";
 // import pressHeroCharacter from "@/assets/imgs/heroCharacter-clicked.png";
 
 interface TabSectionProps {
@@ -20,6 +21,7 @@ const TabSection = ({
 	...props
 }: TabSectionProps) => {
 	const [onPress, setOnPress] = useState(false);
+	const boost = getBoostData(gameData.totalEarning);
 
 	const handleTouch = () => {
 		setOnPress(true); // Set onPress to true when the touch starts
@@ -34,9 +36,9 @@ const TabSection = ({
 
 		for (let i = 0; i < e.changedTouches.length; i++) {
 			setBalance({
-				add: 1,
-				balance: gameData.balance + 1,
-				totalEarning: gameData.totalEarning + 1
+				add: boost.multitap_value,
+				balance: gameData.balance + boost.multitap_value,
+				totalEarning: gameData.totalEarning + boost.multitap_value
 			});
 
 			setDecrementCurEnergy();
@@ -47,7 +49,7 @@ const TabSection = ({
 
 			const plusOne = document.createElement("div");
 			plusOne.className = "plus-one";
-			plusOne.textContent = "+1";
+			plusOne.textContent = `+${boost.multitap_value}`;
 			plusOne.style.left = `${x}px`;
 			plusOne.style.top = `${y}px`;
 
