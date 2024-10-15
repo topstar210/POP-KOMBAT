@@ -1,0 +1,66 @@
+.ranking-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rk-back {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-family: var(--font-familyHeading);
+    font-size: var(--font-sizexl);
+    color: var(--gray-light, #E2E5E9);
+    background: transparent;
+    -webkit-text-stroke: 1px #000000;
+    -webkit-text-fill-color: white;
+    text-shadow: 1px 2px 0px #101010;
+}
+
+.rk-level-avatar {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rk-level-avatar button {
+    width: 48px;
+    height: 48px;
+    background: var(--blue, #2E90FA);
+    border-radius: 8px;
+    border: 1px solid var(--black, #101010);
+    box-shadow: 1px 2px 0px 0px var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rk-info{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    font-size: var(--font-sizesm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rk-info .lvl-from{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px
+}
+
+.rk-info .lvl-title{
+    font-family: var(--font-familyHeading);
+    font-size: var(--font-size4xl);
+    -webkit-text-stroke: 1px #000000;
+    -webkit-text-fill-color: white;
+    text-shadow: 1px 2px 0px #101010;
+}
+.rk-info .lvl-curr{
+    margin-top: 6px;
+}

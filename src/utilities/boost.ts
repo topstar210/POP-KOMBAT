@@ -1,4 +1,4 @@
-import { boostData } from "@/data/constant";
+import { boostData } from "@/data/boost";
 
 export const getBoostData = (totalEarning: number) => {
     let closestLevel = boostData[0];

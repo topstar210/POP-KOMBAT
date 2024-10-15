@@ -7,7 +7,7 @@ import FriendItem from "@/components/Friend/InfoItem";
 import { formatNum } from "@/utilities/number";
 import { useApp } from "@/providers/useApp";
 import { fetchData } from "@/services/apiService";
-import { levelUpBouns } from "@/data/constant";
+import { levelUpBouns } from "@/data/level";
 import { useNotification } from "@/providers/useNotification";
 
 import tokenIcon from "@/assets/icons/token.png";

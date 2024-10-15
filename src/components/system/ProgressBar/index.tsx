@@ -3,9 +3,10 @@ import "./progress.css";
 
 interface ProgressProps {
   percent: number;
+  style?: object;
 }
 
-const Ranking = ({ percent, ...props }: ProgressProps) => {
+const Ranking = ({ percent, style, ...props }: ProgressProps) => {
   const [progress, setProgress] = useState(0);
   const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -18,7 +19,7 @@ const Ranking = ({ percent, ...props }: ProgressProps) => {
   }, [percent]);
 
   return (
-    <div className="system-progress-bar" ref={progressBarRef} {...props}>
+    <div className="system-progress-bar" ref={progressBarRef} style={style} {...props}>
       <div style={{ width: `${progress}px` }} className="system-progress"></div>
     </div>
   );

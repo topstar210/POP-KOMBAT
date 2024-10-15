@@ -13,6 +13,7 @@ import AirdropPage from "@/pages/AirdropPage/AirdropPage";
 import BoostPage from "@/pages/BoostPage/BoostPage";
 import Settings from "@/pages/Settings";
 import SettingLanguage from "@/pages/Settings/SelectLanguage";
+import RankingPage from "@/pages/RankingPage/RankingPage";
 
 // import { IndexPage } from "@/pages/IndexPage/IndexPage";
 import { InitDataPage } from "@/pages/InitDataPage/InitDataPage";
@@ -43,6 +44,7 @@ const AppRouter = () => {
           <Route path="/boost" element={<BoostPage />} />
           <Route path="/setting" element={<Settings />} />
           <Route path="/setting/language" element={<SettingLanguage />} />
+          <Route path="/levels/ranking" element={<RankingPage />} />
 
           <Route path="/init-data" element={<InitDataPage />} />
           <Route path="/launch-params" element={<LaunchParamsPage />} />

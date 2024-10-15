@@ -1,4 +1,4 @@
-import { levels } from "@/data/constant";
+import { levels } from "@/data/level";
 
 /**
  * return user level information by key
