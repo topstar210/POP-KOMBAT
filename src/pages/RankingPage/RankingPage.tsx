@@ -31,7 +31,7 @@ const RankingPage = () => {
   const handleClickPreviousLvl = () => {
     userLvl > 0 ? setUserLvl(userLvl - 1) : 0;
   }
-  console.log(levels.length)
+  
   const handleClickNextLvl = () => {
     userLvl < levels.length - 1 ? setUserLvl(userLvl + 1) : levels.length - 1;
   }
