@@ -41,6 +41,7 @@ const MinePage = () => {
             <GameCards />
 
             <TabSection
+              curEenergy={curEenergy}
               gameData={gameData}
               setBalance={handleSetGameData}
               setDecrementCurEnergy={handleDecrementCurEnergy}

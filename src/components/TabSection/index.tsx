@@ -1,12 +1,14 @@
 import "./tabSection.css";
 import { useState } from "react";
 import type { GameDataIFC } from "@/types/game";
+import { useNotification } from "@/providers/useNotification";
 
 import heroCharacter from "@/assets/imgs/heroCharacter.png";
 import { getBoostData } from "@/utilities/boost";
 // import pressHeroCharacter from "@/assets/imgs/heroCharacter-clicked.png";
 
 interface TabSectionProps {
+	curEenergy: number;
 	gameData: GameDataIFC;
 	setBalance: (values: any) => void;
 	setDecrementCurEnergy: () => void;
@@ -14,12 +16,14 @@ interface TabSectionProps {
 }
 
 const TabSection = ({
+	curEenergy,
 	gameData,
 	setBalance,
 	setDecrementCurEnergy,
 	className,
 	...props
 }: TabSectionProps) => {
+	const { notification } = useNotification();
 	const [onPress, setOnPress] = useState(false);
 	const boost = getBoostData(gameData.totalEarning);
 
@@ -33,6 +37,11 @@ const TabSection = ({
 		const rect = parent.getBoundingClientRect();
 
 		if (e.changedTouches.length > 5) return;
+
+		if(curEenergy < 1) {
+			notification("You don't have enough energe");
+			return;
+		}
 
 		for (let i = 0; i < e.changedTouches.length; i++) {
 			setBalance({

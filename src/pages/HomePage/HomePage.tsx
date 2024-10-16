@@ -58,6 +58,7 @@ const HomePage = () => {
 						<div className="display-section-container">
 							<MyBalance className="fade-in" value={gameData.balance} />
 							<TabSection
+								curEenergy={curEenergy}
 								gameData={gameData}
 								setBalance={handleSetGameData}
 								setDecrementCurEnergy={handleDecrementCurEnergy}
