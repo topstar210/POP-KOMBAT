@@ -2,10 +2,11 @@ import "./Setting.css";
 import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
-import { Box, SwitchBtn } from "@/components/system";
+import { Box, SwitchBtn, Modal } from "@/components/system";
 import SettingItem from "@/components/Setting/Item";
 
 const Setting = () => {
+  const [isOpenDelete, setIsOpenDelete] = useState(false);
   const [isFeedBack, setIsFeedBack] = useState(true);
   // const navigate = useNavigate();
   // const [isAnimation, setIsAnimation] = useState(false);
@@ -22,6 +23,10 @@ const Setting = () => {
   //   setIsAnimation(!isAnimation);
   // };
 
+  const handleClickDeleteAcc = () => {
+    
+  }
+
   return (
     <div className="main-page">
       <div className="setting-header">
@@ -33,7 +38,7 @@ const Setting = () => {
           description="English"
           onClick={handleClickLanguage}
         /> */}
-        <SettingItem title="Delete Account" />
+        <SettingItem title="Delete Account" onClick={() => setIsOpenDelete(true)} />
 
         <Box>
           <div className="row">
@@ -46,6 +51,14 @@ const Setting = () => {
           </div> */}
         </Box>
       </Box>
+      <Modal isOpen={isOpenDelete} onClose={() => { setIsOpenDelete(false) }}>
+        <div className="app-delete-acc">
+          <h1>Are you sure you want to delete your account?</h1>
+          <p>A ll your data, including game progress, will be permanently deleted. This action cannot be undone</p>
+          <button className="app-delete" onClick={handleClickDeleteAcc}>Delete Account</button>
+          <button className="app-delete-cancel" onClick={() => { setIsOpenDelete(false) }}>Cancel</button>
+        </div>
+      </Modal>
     </div>
   );
 };

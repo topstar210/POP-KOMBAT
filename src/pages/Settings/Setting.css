@@ -9,6 +9,39 @@
 }
 
 .setting-list {
-	color: #fff;
-	font-weight: 700;
+  color: #fff;
+  font-weight: 700;
+}
+
+.app-delete-acc h1 {
+  font-size: var(--font-size2xl);
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app-delete-acc p {
+  font-size: var(--font-sizebase);
+  max-width: 320px;
+  margin: 16px auto;
+  text-align: center;
+}
+
+.app-delete-acc button {
+  background: var(--pink, #e6007a);
+  border: 1px solid var(--black, #101010);
+  box-shadow: 0px 8px 0px 0px #101010;
+  border-radius: 8px;
+  padding: 16px 32px;
+  color: #fff;
+  font-size: var(--font-size3xl);
+  text-shadow: 1px 2px 0px #101010;
+  font-family: var(--font-familyHeading);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.app-delete-acc .app-delete-cancel {
+  background: var(--gray-dark, #2C323A);
+  margin-bottom: 0;
 }
