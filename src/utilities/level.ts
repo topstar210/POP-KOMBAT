@@ -9,10 +9,10 @@ export const getLevelInfo = (key: number) => {
 
   if (!level) {
     return {
-      title: levels[key-1].title,
+      title: levels[levels.length-1].title,
       length: levels.length,
       current: key + 1,
-      balance: levels[key-1].balance,
+      balance: levels[levels.length-1].balance,
     }
     // throw new Error("Invalid key: No level exists for the given key");
   }

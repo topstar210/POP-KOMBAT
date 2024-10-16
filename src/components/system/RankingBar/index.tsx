@@ -1,5 +1,5 @@
 import "./rankingBar.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import ProgressBar from "../ProgressBar";
 import { getLevelInfo } from "@/utilities/level";
 import { useEffect, useState } from "react";
@@ -13,6 +13,7 @@ interface RankingProps {
 }
 const Ranking = ({ level, totalEarning, style, className }: RankingProps) => {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const [levelData, setLevelData] = useState<LevelIFC | null>(null);
 	const [progressToNext, setProgressToNext] = useState<number>(0);
 
@@ -26,7 +27,7 @@ const Ranking = ({ level, totalEarning, style, className }: RankingProps) => {
 	}, [level]);
 
 	const handleClickRanking = () => {
-		navigate("/levels/ranking");
+		navigate(`/levels/ranking?path=${location.pathname}`);
 	}
 
 	return (
