@@ -50,7 +50,7 @@ const RankingPage = () => {
         <div className="lvl-progress">
           <ProgressBar
             percent={gameData.totalEarning > nextLvlData.balance ? 100 : userLvl > gameData.level ? 0 : gameData.totalEarning * 100 / nextLvlData.balance}
-            style={{ width: '80%', height: '21px', margin: '0 auto' }}
+            style={{ width: '80%', height: '21px', margin: '0 auto', maxWidth: '300px' }}
           />
           <div className="lvl-curr">{formatNum(gameData.totalEarning)} / {nextLvlData.balance <= 1000000 ? formatNum(nextLvlData.balance) : formatToFixed(nextLvlData.balance)}</div>
         </div>
